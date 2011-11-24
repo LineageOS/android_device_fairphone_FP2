@@ -1,0 +1,9 @@
+#
+# system.prop for copper
+#
+
+DEVICE_PROVISIONED=1
+debug.sf.hw=0
+debug.egl.hw=0
+ro.sf.lcd_density=240
+dalvik.vm.heapsize=36m
