@@ -14,6 +14,7 @@ ifeq ($(QC_PROP),true)
     DYNAMIC_SHARED_LIBV8SO := true
     BOARD_USE_QCOM_LLVM_CLANG_RS := true
     TARGET_USES_ION := true
+    BOARD_USES_ALSA_AUDIO := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     USE_CAMERA_STUB := true
