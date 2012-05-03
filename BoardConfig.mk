@@ -11,6 +11,8 @@ ifeq ($(QC_PROP),true)
     HAVE_ADRENO200_FIRMWARE := true
     BOARD_USES_GENERIC_AUDIO := true
     BOARD_USE_QCOM_TESTONLY := true
+    DYNAMIC_SHARED_LIBV8SO := true
+    BOARD_USE_QCOM_LLVM_CLANG_RS := true
     TARGET_USES_ION := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
