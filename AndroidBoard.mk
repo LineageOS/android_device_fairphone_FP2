@@ -11,7 +11,7 @@ include bootable/bootloader/lk/AndroidBoot.mk
 INSTALLED_BOOTLOADER_TARGET := $(PRODUCT_OUT)/bootloader
 file := $(INSTALLED_BOOTLOADER_TARGET)
 ALL_PREBUILT += $(file)
-$(file): $(TARGET_BOOTLOADER) | $(ACP)
+$(file): $(TARGET_EMMC_BOOTLOADER) | $(ACP)
        $(transform-prebuilt-to-target)
 endif
 
