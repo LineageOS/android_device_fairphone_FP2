@@ -57,7 +57,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 #TARGET_USES_UNCOMPRESSED_KERNEL := true
 
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 vmalloc=400M
 BOARD_EGL_CFG := device/qcom/$(TARGET_PRODUCT)/egl.cfg
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
