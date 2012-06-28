@@ -42,3 +42,7 @@ on emmc-fs
 on post-fs
    mount ext4 /dev/block/mmcblk0p12 /system ro remount barrier=1
 
+service qrngd /system/bin/qrngd -f
+   class main
+   user root
+   group root
