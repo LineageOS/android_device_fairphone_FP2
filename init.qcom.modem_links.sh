@@ -72,6 +72,8 @@ done
 
 case $linksNeeded in
    1)
+      mount -t ext4 -o rw,remount,barrier=1 /dev/block/platform/msm_sdcc.1/by-name/system  /system
+
       cd /firmware/image
 
       case `ls modem.mdt 2>/dev/null` in
@@ -126,6 +128,7 @@ case $linksNeeded in
             log -p w -t PIL no venus image found;;
       esac
 
+      mount -t ext4 -o ro,remount,barrier=1 /dev/block/platform/msm_sdcc.1/by-name/system  /system
       break;;
 
    *)

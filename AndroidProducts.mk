@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/copper.mk
+	$(LOCAL_DIR)/msm8974.mk

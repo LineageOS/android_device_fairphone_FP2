@@ -27,22 +27,44 @@
 #
 #
 
-on emmc-fs
-   mkdir /tombstones 0771 system system
-   mount ext4 /dev/block/mmcblk0p16 /tombstones nosuid nodev barrier=1
-   mkdir /tombstones/modem 0771 system system
-   mkdir /tombstones/lpass 0771 system system
-   mkdir /tombstones/wcnss 0771 system system
-   mkdir /tombstones/dsps 0771 system system
-   mkdir /firmware 0771 system system
-   wait /dev/block/mmcblk0p1
-   mount vfat /dev/block/mmcblk0p1 /firmware ro shortname=lower
-   exec /system/bin/sh /system/etc/init.qcom.modem_links.sh
+on early-init
+    mkdir /firmware 0771 system system
+    symlink /data/tombstones /tombstones
+
+on fs
+    mount_all fstab.msm8974
+
+    # Keeping following partitions outside fstab file. As user may not have
+    # these partition flashed on the device. Failure to mount any partition in fstab file
+    # results in failure to launch late-start class.
+
+    wait /dev/block/platform/msm_sdcc.1/by-name/cache
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/cache /cache nosuid nodev barrier=1
+
+    wait /dev/block/platform/msm_sdcc.1/by-name/persist
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persist /persist nosuid nodev barrier=1
+
+    wait /dev/block/platform/msm_sdcc.1/by-name/modem
+    mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro shortname=lower dmask=177 fmask=177
 
 on post-fs
-   mount ext4 /dev/block/mmcblk0p12 /system ro remount barrier=1
+    start qcmodemlink
+
+on post-fs-data
+    mkdir /data/tombstones 0771 system system
+    mkdir /tombstones/modem 0771 system system
+    mkdir /tombstones/lpass 0771 system system
+    mkdir /tombstones/wcnss 0771 system system
+    mkdir /tombstones/dsps 0771 system system
+
+# Create modem links
+service qcmodemlink /system/bin/sh /system/etc/init.qcom.modem_links.sh
+    class main
+    user root
+    disabled
+    oneshot
 
 service qrngd /system/bin/qrngd -f
    class main
-   user root
-   group root
+   user system
+   group system

@@ -25,12 +25,13 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# mount point  fstype          device                  [device2]
+# mount point	fstype		device			[device2] [length=]
 
-/boot          mtd             boot
-/cache         yaffs2          cache
-/data          yaffs2          userdata
-/misc          mtd             misc
-/recovery      mtd             recovery
-/sdcard                vfat            /dev/block/mmcblk0p1    /dev/block/mmcblk0
-/system                yaffs2          system
+
+/boot		emmc		/dev/block/platform/msm_sdcc.1/by-name/boot
+/cache		ext4		/dev/block/platform/msm_sdcc.1/by-name/cache
+/data		ext4		/dev/block/platform/msm_sdcc.1/by-name/userdata		length=-16384
+/misc		mtd			misc
+/recovery	emmc		/dev/block/platform/msm_sdcc.1/by-name/recovery
+/sdcard		vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1
+/system		ext4		/dev/block/platform/msm_sdcc.1/by-name/system

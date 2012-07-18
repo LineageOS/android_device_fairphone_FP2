@@ -1,5 +1,5 @@
 #
-# system.prop for copper
+# system.prop for msm8974
 #
 
 # Skip /sys/power/wait_for_fb_* nodes and
