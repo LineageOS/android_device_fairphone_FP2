@@ -68,3 +68,7 @@ service qrngd /system/bin/qrngd -f
    class main
    user system
    group system
+
+service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+   user root
+   disabled
