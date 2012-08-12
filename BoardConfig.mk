@@ -20,6 +20,8 @@ ifeq ($(QC_PROP),true)
     MM_AUDIO_FTM_DISABLED := true
     MM_AUDIO_MEASUREMENT_DISABLED := true
     MM_AUDIO_VOEM_DISABLED := true
+    BOARD_HAVE_QCOM_FM := true
+    BOARD_HAVE_BLUETOOTH := true
 
     ifneq ($(BUILD_TINY_ANDROID), true)
     USE_CAMERA_STUB := true
