@@ -66,8 +66,8 @@ service qcmodemlink /system/bin/sh /system/etc/init.qcom.modem_links.sh
 
 service qrngd /system/bin/qrngd -f
    class main
-   user system
-   group system
+   user root
+   group root
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
    user root
