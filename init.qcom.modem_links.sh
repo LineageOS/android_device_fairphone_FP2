@@ -38,7 +38,7 @@ cd /firmware/image
 # Get the list of files in /firmware/image
 # for which sym links have to be created
 
-fwfiles=`ls modem* adsp* wcnss* mba* venus*`
+fwfiles=`ls modem* adsp* wcnss* mba*`
 
 # Check if the links with similar names
 # have been created in /system/etc/firmware
@@ -72,8 +72,6 @@ done
 
 case $linksNeeded in
    1)
-      mount -t ext4 -o rw,remount,barrier=1 /dev/block/platform/msm_sdcc.1/by-name/system  /system
-
       cd /firmware/image
 
       case `ls modem.mdt 2>/dev/null` in
@@ -118,17 +116,6 @@ case $linksNeeded in
             log -p w -t PIL no mba image found;;
       esac
 
-      case `ls venus.mdt 2>/dev/null` in
-         venus.mdt)
-            for imgfile in venus*; do
-               ln -s /firmware/image/$imgfile /system/etc/firmware/$imgfile 2>/dev/null
-            done
-            break;;
-         *)
-            log -p w -t PIL no venus image found;;
-      esac
-
-      mount -t ext4 -o ro,remount,barrier=1 /dev/block/platform/msm_sdcc.1/by-name/system  /system
       break;;
 
    *)

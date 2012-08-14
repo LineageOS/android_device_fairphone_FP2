@@ -31,10 +31,6 @@ else
 
 endif # QC_PROP
 
-BOARD_USES_ADRENO_200 := true
-HAVE_ADRENO200_SOURCE := true
-HAVE_ADRENO200_SC_SOURCE := true
-HAVE_ADRENO200_FIRMWARE := true
 TARGET_HAVE_TSLIB := false
 #TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
 # to get rid of compilation error.
@@ -67,7 +63,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 vmalloc=400M video=vfb:640x400,bpp=32,memsize=2048000
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 vmalloc=400M
 BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_EGL_CFG := device/qcom/$(TARGET_PRODUCT)/egl.cfg

@@ -32,7 +32,7 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on fs
-    mount_all fstab.msm8974
+    mount_all fstab.qcom
 
     # Keeping following partitions outside fstab file. As user may not have
     # these partition flashed on the device. Failure to mount any partition in fstab file
@@ -47,22 +47,12 @@ on fs
     wait /dev/block/platform/msm_sdcc.1/by-name/modem
     mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro shortname=lower dmask=177 fmask=177
 
-on post-fs
-    start qcmodemlink
-
 on post-fs-data
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
-
-# Create modem links
-service qcmodemlink /system/bin/sh /system/etc/init.qcom.modem_links.sh
-    class main
-    user root
-    disabled
-    oneshot
 
 service qrngd /system/bin/qrngd -f
    class main

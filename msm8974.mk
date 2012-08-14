@@ -5,5 +5,5 @@ PRODUCT_DEVICE := msm8974
 
 DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8974/overlay
 
-#fstab.msm8974
-PRODUCT_PACKAGES += fstab.msm8974
+#fstab.qcom
+PRODUCT_PACKAGES += fstab.qcom
