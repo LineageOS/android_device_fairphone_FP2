@@ -24,10 +24,10 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-debug.sf.hw=0
-debug.egl.hw=0
-debug.composition.type=dyn
-debug.compbypass.enable=1
+debug.sf.hw=1
+debug.egl.hw=1
+debug.composition.type=gpu
+debug.compbypass.enable=0
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 
