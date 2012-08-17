@@ -24,6 +24,30 @@ ifeq ($(QC_PROP),true)
     BOARD_HAVE_QCOM_FM := true
     BOARD_HAVE_BLUETOOTH := true
     BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
+
+    ifneq ($(BUILD_TINY_ANDROID), true)
+    BOARD_HAS_QCOM_WLAN := true
+    BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+    BOARD_HOSTAPD_DRIVER := NL80211
+    WPA_SUPPLICANT_VERSION := VER_0_8_X
+    HOSTAPD_VERSION := VER_0_8_X
+    WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
+    WIFI_DRIVER_MODULE_NAME := "wlan"
+    WIFI_DRIVER_MODULE_ARG := ""
+    WIFI_CFG80211_DRIVER_MODULE_PATH := "/system/lib/modules/cfg80211.ko"
+    WIFI_CFG80211_DRIVER_MODULE_NAME := "cfg80211"
+    WIFI_CFG80211_DRIVER_MODULE_ARG  := ""
+    WIFI_DRIVER_FW_PATH_STA := "sta"
+    WIFI_DRIVER_FW_PATH_AP  := "ap"
+    WIFI_DRIVER_FW_PATH_P2P := "p2p"
+
+    ifeq ($(BOARD_HAS_QCOM_WLAN), true)
+    WIFI_DRIVER_DEF_CONF_FILE := "/persist/WCNSS_qcom_cfg.ini"
+    WIFI_DRIVER_CONF_FILE := "/data/misc/wifi/WCNSS_qcom_cfg.ini"
+    BOARD_WLAN_DEVICE := qcwcn
+    endif
+    endif   # !BUILD_TINY_ANDROID
+
 else
     BOARD_USES_GENERIC_AUDIO := true
     USE_CAMERA_STUB := true
