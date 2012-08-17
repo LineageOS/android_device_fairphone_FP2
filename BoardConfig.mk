@@ -23,10 +23,6 @@ ifeq ($(QC_PROP),true)
     BOARD_HAVE_QCOM_FM := true
     BOARD_HAVE_BLUETOOTH := true
 
-    ifneq ($(BUILD_TINY_ANDROID), true)
-    USE_CAMERA_STUB := true
-    endif   # !BUILD_TINY_ANDROID
-
 else
     BOARD_USES_GENERIC_AUDIO := true
     USE_CAMERA_STUB := true
