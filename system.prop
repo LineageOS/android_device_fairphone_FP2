@@ -61,6 +61,10 @@ persist.timed.enable=true
 ro.opengles.version=131072
 
 #
+# System props for telephony
+# System prop to turn on CdmaLTEPhone always
+telephony.lteOnCdmaDevice=1
+
 #Simulate sdcard on /data/media
 #
 persist.fuse_sdcard=true
