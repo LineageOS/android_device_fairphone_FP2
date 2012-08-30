@@ -3,58 +3,11 @@
 # Product-specific compile-time definitions.
 #
 
-ifeq ($(QC_PROP),true)
-    BOARD_USES_QCOM_HARDWARE := true
-    BOARD_USES_ADRENO := true
-    HAVE_ADRENO_SOURCE := true
-    HAVE_ADRENO_SC_SOURCE := true
-    HAVE_ADRENO_FIRMWARE := true
-    BOARD_USES_GENERIC_AUDIO := true
-    BOARD_USE_QCOM_TESTONLY := true
-    DYNAMIC_SHARED_LIBV8SO := true
-    #BOARD_USE_QCOM_LLVM_CLANG_RS := true
-    TARGET_USES_ION := true
-    BOARD_USES_ALSA_AUDIO := true
-    TARGET_USES_QCOM_MM_AUDIO := true
-    MM_AUDIO_OMX_ADEC_EVRC_DISABLED := true
-    MM_AUDIO_OMX_ADEC_QCELP13_DISABLED := true
-    MM_AUDIO_FTM_DISABLED := true
-    MM_AUDIO_MEASUREMENT_DISABLED := true
-    MM_AUDIO_VOEM_DISABLED := true
-    BOARD_HAVE_QCOM_FM := true
-    BOARD_HAVE_BLUETOOTH := true
-    BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
+BOARD_USES_GENERIC_AUDIO := true
+USE_CAMERA_STUB := true
 
-    ifneq ($(BUILD_TINY_ANDROID), true)
-    BOARD_HAS_QCOM_WLAN := true
-    BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-    BOARD_HOSTAPD_DRIVER := NL80211
-    WPA_SUPPLICANT_VERSION := VER_0_8_X
-    HOSTAPD_VERSION := VER_0_8_X
-    WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
-    WIFI_DRIVER_MODULE_NAME := "wlan"
-    WIFI_DRIVER_MODULE_ARG := ""
-    WIFI_CFG80211_DRIVER_MODULE_PATH := "/system/lib/modules/cfg80211.ko"
-    WIFI_CFG80211_DRIVER_MODULE_NAME := "cfg80211"
-    WIFI_CFG80211_DRIVER_MODULE_ARG  := ""
-    WIFI_DRIVER_FW_PATH_STA := "sta"
-    WIFI_DRIVER_FW_PATH_AP  := "ap"
-    WIFI_DRIVER_FW_PATH_P2P := "p2p"
+-include vendor/qcom/proprietary/common/msm8974/BoardConfigVendor.mk
 
-    ifeq ($(BOARD_HAS_QCOM_WLAN), true)
-    WIFI_DRIVER_DEF_CONF_FILE := "/persist/WCNSS_qcom_cfg.ini"
-    WIFI_DRIVER_CONF_FILE := "/data/misc/wifi/WCNSS_qcom_cfg.ini"
-    BOARD_WLAN_DEVICE := qcwcn
-    endif
-    endif   # !BUILD_TINY_ANDROID
-
-else
-    BOARD_USES_GENERIC_AUDIO := true
-    USE_CAMERA_STUB := true
-
-endif # QC_PROP
-
-TARGET_HAVE_TSLIB := false
 #TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
 # to get rid of compilation error.
 TARGET_HAVE_HDMI_OUT := false
