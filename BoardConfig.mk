@@ -23,7 +23,7 @@ ifeq ($(QC_PROP),true)
     MM_AUDIO_VOEM_DISABLED := true
     BOARD_HAVE_QCOM_FM := true
     BOARD_HAVE_BLUETOOTH := true
-
+    BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 else
     BOARD_USES_GENERIC_AUDIO := true
     USE_CAMERA_STUB := true
