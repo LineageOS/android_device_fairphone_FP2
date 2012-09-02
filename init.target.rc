@@ -45,7 +45,7 @@ on fs
     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persist /persist nosuid nodev barrier=1
 
     wait /dev/block/platform/msm_sdcc.1/by-name/modem
-    mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro shortname=lower dmask=177 fmask=177
+    mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
 
 on post-fs
     insmod /system/lib/modules/adsp-loader.ko
