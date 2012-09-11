@@ -79,7 +79,7 @@ case $linksNeeded in
             for imgfile in modem*; do
                ln -s /firmware/image/$imgfile /system/etc/firmware/$imgfile 2>/dev/null
             done
-            break;;
+            ;;
         *)
             # trying to log here but nothing will be logged since it is
             # early in the boot process. Is there a way to log this message?
@@ -91,7 +91,7 @@ case $linksNeeded in
             for imgfile in adsp*; do
                ln -s /firmware/image/$imgfile /system/etc/firmware/$imgfile 2>/dev/null
             done
-            break;;
+            ;;
          *)
             log -p w -t PIL no adsp image found;;
       esac
@@ -101,7 +101,7 @@ case $linksNeeded in
             for imgfile in wcnss*; do
                ln -s /firmware/image/$imgfile /system/etc/firmware/$imgfile 2>/dev/null
             done
-            break;;
+            ;;
          *)
             log -p w -t PIL no wcnss image found;;
       esac
@@ -111,16 +111,16 @@ case $linksNeeded in
             for imgfile in mba*; do
                ln -s /firmware/image/$imgfile /system/etc/firmware/$imgfile 2>/dev/null
             done
-            break;;
+            ;;
          *)
             log -p w -t PIL no mba image found;;
       esac
 
-      break;;
+      ;;
 
    *)
       # Nothing to do. No links needed
-      break;;
+      ;;
 esac
 
 cd /
