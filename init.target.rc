@@ -83,3 +83,8 @@ service time_daemon /system/bin/time_daemon
    class late_start
    user root
    group root
+
+service audiod /system/bin/audiod
+   class late_start
+   user system
+   group system
