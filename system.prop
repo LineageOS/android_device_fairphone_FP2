@@ -2,10 +2,6 @@
 # system.prop for msm8974
 #
 
-# Skip /sys/power/wait_for_fb_* nodes and
-# force FB to be always on
-debug.sf.fb_always_on=1
-
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
