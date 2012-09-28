@@ -78,3 +78,8 @@ service thermald /system/bin/thermald
    class main
    user root
    group root
+
+service time_daemon /system/bin/time_daemon
+   class late_start
+   user root
+   group root
