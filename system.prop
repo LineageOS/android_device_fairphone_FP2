@@ -6,9 +6,6 @@
 # force FB to be always on
 debug.sf.fb_always_on=1
 
-# Set to CDP/MTP screen dpi
-ro.sf.lcd_density=340
-
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
