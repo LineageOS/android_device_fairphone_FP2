@@ -32,17 +32,28 @@
 PATH=/sbin:/system/sbin:/system/bin:/system/xbin
 export PATH
 
-THERMALD_CONF_SYMLINK=/etc/thermald.conf
+# Set a default value
+setprop qcom.thermal thermal-engine
 
+platformid=`cat /sys/devices/system/soc/soc0/id`
+
+THERMALD_CONF_SYMLINK=/etc/thermald.conf
 # symlink already exists, exit
-if [ -h $THERMALD_CONF_SYMLINK ]; then
-	exit 0
+if [ ! -h $THERMALD_CONF_SYMLINK ]; then
+ case "$platformid" in
+     *) #MSM8974, etc
+     ln -s /etc/thermald-8974.conf $THERMALD_CONF_SYMLINK 2>/dev/null
+     ;;
+ esac
 fi
 
-# create symlink to target-specific config file
-platformid=`cat /sys/devices/system/soc/soc0/id`
-case "$platformid" in
-    *) #MSM8974, etc
-    ln -s /etc/thermald-8974.conf $THERMALD_CONF_SYMLINK 2>/dev/null
-    ;;
-esac
+THERMAL_ENGINE_CONF_SYMLINK=/etc/thermal-engine.conf
+# symlink already exists, exit
+if [ ! -h $THERMAL_ENGINE_CONF_SYMLINK ]; then
+ case "$platformid" in
+     *) #MSM8974, etc
+     ln -s /etc/thermal-engine-8974.conf $THERMAL_ENGINE_CONF_SYMLINK 2>/dev/null
+     ;;
+ esac
+fi
+
