@@ -83,6 +83,19 @@ service thermald /system/bin/thermald
    class main
    user root
    group root
+   disabled
+
+service thermal-engine /system/bin/thermal-engine
+   class main
+   user root
+   group root
+   disabled
+
+on property:qcom.thermal=thermald
+    start thermald
+
+on property:qcom.thermal=thermal-engine
+    start thermal-engine
 
 service time_daemon /system/bin/time_daemon
    class late_start
