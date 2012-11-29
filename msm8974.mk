@@ -32,3 +32,9 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8974/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     device/qcom/msm8974/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/qcom/msm8974/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
+#ANT stack
+PRODUCT_PACKAGES += \
+        AntHalService \
+        libantradio \
+        ANTRadioService \
+        antradio_app
