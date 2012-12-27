@@ -23,7 +23,6 @@ debug.egl.hw=1
 debug.composition.type=gpu
 debug.mdpcomp.maxlayer=3
 debug.mdpcomp.logs=0
-debug.hwc.fakevsync=1
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 
