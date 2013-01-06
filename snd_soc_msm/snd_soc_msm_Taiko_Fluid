@@ -73,6 +73,25 @@ SectionVerb
 EndSection
 
 SectionVerb
+	Name "HiFiHDMI Speaker"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia1':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia1':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+
+EndSection
+
+SectionVerb
 	Name "HiFiHDMI SPDIF"
 
 	EnableSequence
@@ -498,6 +517,25 @@ SectionVerb
 
 	DisableSequence
 		'HDMI Mixer MultiMedia2':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 1
+	PlaybackPCM 1
+
+EndSection
+
+SectionVerb
+	Name "HiFi2HDMI Speaker"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia2':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia2':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
 	EndSequence
 
 	# ALSA PCMs
@@ -1307,14 +1345,32 @@ SectionVerb
 EndSection
 
 SectionVerb
+        Name "HiFi Low PowerHDMI Speaker"
+
+        EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+                'HDMI Mixer MultiMedia3':1:1
+        EndSequence
+
+        DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+                'HDMI Mixer MultiMedia3':1:0
+        EndSequence
+
+        # ALSA PCMs
+        PlaybackPCM 4
+
+EndSection
+
+SectionVerb
 	Name "HiFi Low PowerBT SCO Rx"
 
 	EnableSequence
-		'"INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:1
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:1
 	EndSequence
 
 	DisableSequence
-		'"INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
 
 	# ALSA PCMs
@@ -1326,11 +1382,11 @@ SectionVerb
 	Name "HiFi Low PowerBT SCO WB Rx"
 
 	EnableSequence
-		'"INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:1
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:1
 	EndSequence
 
 	DisableSequence
-		'"INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
 
 	# ALSA PCMs
@@ -2494,6 +2550,25 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
+	PlaybackPCM 9
+
+EndSection
+
+SectionVerb
+	Name "HiFi TunnelHDMI Speaker"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia4':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia4':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 9
 	PlaybackPCM 9
 
 EndSection
@@ -4411,6 +4486,28 @@ SectionDevice
 EndSection
 
 SectionDevice
+	Name "HDMI Speaker"
+	Comment "HDMI + Speaker Rx combo device"
+
+	EnableSequence
+		'SLIM RX1 MUX':0:AIF1_PB
+		'SLIM_0_RX Channels':0:One
+		'RX7 MIX1 INP1':0:RX1
+		'RX7 Digital Volume':1:67
+	EndSequence
+
+	DisableSequence
+		'SLIM RX1 MUX':0:ZERO
+		'RX7 MIX1 INP1':0:ZERO
+		'RX7 Digital Volume':1:0
+	EndSequence
+
+	ACDBID  18:1
+	EffectsMixerCTL "SRS TruMedia HDMI"
+
+EndSection
+
+SectionDevice
 	Name "HDMI SPDIF"
 	Comment "HDMI + SPDIF Rx combo device"
 
@@ -5162,6 +5259,25 @@ SectionModifier
 EndSection
 
 SectionModifier
+	Name "Play MusicHDMI Speaker"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia1':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia1':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+
+EndSection
+
+SectionModifier
 	Name "Play MusicHDMI SPDIF"
 	Comment "Modifier for music playback on HDMI SPDIF"
 
@@ -5316,6 +5432,25 @@ SectionModifier
 
 	DisableSequence
 		'HDMI Mixer MultiMedia2':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 1
+	PlaybackPCM 1
+
+EndSection
+
+SectionModifier
+	Name "Play Music2HDMI Speaker"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia2':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia2':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia2':1:0
 	EndSequence
 
 	# ALSA PCMs
@@ -5541,14 +5676,32 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPABT SCO Rx"
+	Name "Play LPAHDMI Speaker"
 
 	EnableSequence
-		'"INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+		'HDMI Mixer MultiMedia3':1:1
 	EndSequence
 
 	DisableSequence
-		'"INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+		'HDMI Mixer MultiMedia3':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 4
+
+EndSection
+
+SectionModifier
+	Name "Play LPABT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
 
 	# ALSA PCMs
@@ -5560,11 +5713,11 @@ SectionModifier
 	Name "Play LPABT SCO WB Rx"
 
 	EnableSequence
-		'"INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:1
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:1
 	EndSequence
 
 	DisableSequence
-		'"INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
 
 	# ALSA PCMs
@@ -6002,6 +6155,25 @@ SectionModifier
 	EndSequence
 
 	# ALSA PCMs
+	PlaybackPCM 9
+
+EndSection
+
+SectionModifier
+	Name "Play TunnelHDMI Speaker"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia4':1:1
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia4':1:0
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 9
 	PlaybackPCM 9
 
 EndSection
