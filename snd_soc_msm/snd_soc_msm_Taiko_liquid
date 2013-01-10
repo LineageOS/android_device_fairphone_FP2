@@ -3245,13 +3245,16 @@ SectionDevice
 
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
-		'SLIM_0_RX Channels':0:One
+		'SLIM RX2 MUX':0:AIF1_PB
+		'SLIM_0_RX Channels':0:Two
 		'RX3 MIX1 INP1':0:RX1
-		'RX5 MIX1 INP1':0:RX1
+		'RX5 MIX1 INP1':0:RX2
 		'RDAC5 MUX':0:DEM3_INV
 		'RDAC7 MUX':0:DEM5_INV
 		'RX3 Digital Volume':1:67
 		'RX5 Digital Volume':1:67
+		'RX4 Digital Volume':1:67
+		'RX6 Digital Volume':1:67
 		'LINEOUT1 Volume':1:100
 		'LINEOUT3 Volume':1:100
 		'LINEOUT2 Volume':1:100
@@ -3260,12 +3263,15 @@ SectionDevice
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
+		'SLIM RX2 MUX':0:ZERO
 		'RX3 MIX1 INP1':0:ZERO
 		'RX5 MIX1 INP1':0:ZERO
 		'RDAC5 MUX':0:DEM4
 		'RDAC7 MUX':0:DEM6
 		'RX3 Digital Volume':1:0
 		'RX5 Digital Volume':1:0
+		'RX4 Digital Volume':1:0
+		'RX6 Digital Volume':1:0
 		'LINEOUT1 Volume':1:0
 		'LINEOUT3 Volume':1:0
 		'LINEOUT2 Volume':1:0
