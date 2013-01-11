@@ -28,6 +28,7 @@ dev.pm.dyn_samplingrate=1
 
 ro.hdmi.enable=true
 tunnel.decode=true
+tunnel.audiovideo.decode=true
 lpa.decode=false
 lpa.use-stagefright=true
 
