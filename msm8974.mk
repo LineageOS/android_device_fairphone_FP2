@@ -38,3 +38,8 @@ PRODUCT_PACKAGES += \
         libantradio \
         ANTRadioService \
         antradio_app
+
+#OEM Services library
+PRODUCT_PACKAGES += oem-services
+PRODUCT_PACKAGES += libsubsystem_control
+PRODUCT_PACKAGES += libSubSystemShutdown
