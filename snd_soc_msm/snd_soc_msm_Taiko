@@ -3006,8 +3006,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3023,8 +3023,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3040,8 +3040,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3058,8 +3058,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3076,8 +3076,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3094,8 +3094,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3112,8 +3112,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 }
@@ -6346,8 +6346,114 @@ SectionModifier
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEHDMI"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'HDMI_RX_Voice Mixer VoLTE':1:0
+		'VoLTE_Tx Mixer SLIM_0_TX_VoLTE':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	capturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEHDMI Tx"
+
+	EnableSequence
+		'HDMI_RX_Voice Mixer VoLTE':1:1
+		'VoLTE_Tx Mixer SLIM_0_TX_VoLTE':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	capturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO Rx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
+		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	CapturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO Tx"
+
+	EnableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
+		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	CapturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO WB Rx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
+		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	CapturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO WB Tx"
+
+	EnableSequence
+		'Internal BTSCO SampleRate':1:16000
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
+		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	CapturePCM 14
 
 EndSection
 
