@@ -27,8 +27,7 @@ dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 
 ro.hdmi.enable=true
-tunnel.decode=true
-lpa.decode=false
+lpa.decode=true
 lpa.use-stagefright=true
 
 #system props for the MM modules
