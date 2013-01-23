@@ -74,30 +74,6 @@ if [ ! -e $trigger_file ]; then
    rm /system/etc/snd_soc_msm/us_soc_msm
    ln -s $ucm_dir/us_soc_msm_"$type" /system/etc/snd_soc_msm/us_soc_msm
 
-   # Form factor oriented PCM ports definition
-   pcm_list=`cat /proc/asound/pcm`
-   tx_rx_patterns="tx2- rx3-"
-   result=""
-
-   for pattern in $tx_rx_patterns; do
-       echo $pattern
-       ind="${pcm_list##*"$pattern"}"
-
-       case "$pcm_list" in
-           "$ind")
-           ind="0"
-           ;;
-
-           *)
-           ind="${ind/ *}"
-           ;;
-       esac
-       result=$result$ind" "
-   done
-   echo $result>$dir0/pcm_inds.txt
-   # Change permission for pcm_inds so that it could be only read by everyone
-   chmod 0444 $dir0/pcm_inds.txt
-
    # The USF based calculators have system permissions
    chown system $dir0/*
    chown system $dir0/*/*
