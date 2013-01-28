@@ -1657,7 +1657,7 @@ SectionVerb
         EndSequence
 
         DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
                 'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:0
                 'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:0
         EndSequence
@@ -1672,7 +1672,7 @@ SectionVerb
         Name "SGLTE CallBT SCO Tx"
 
         EnableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
                 'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:1
                 'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:1
         EndSequence
@@ -1693,7 +1693,7 @@ SectionVerb
         EndSequence
 
         DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
                 'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:0
                 'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:0
         EndSequence
@@ -1708,7 +1708,7 @@ SectionVerb
         Name "SGLTE CallBT SCO WB Tx"
 
         EnableSequence
-                'Internal BTSCO SampleRate':0:16000
+                'Internal BTSCO SampleRate':1:16000
                 'INTERNAL_BT_SCO_RX_Voice Mixer SGLTE':1:1
                 'SGLTE_Tx Mixer INTERNAL_BT_SCO_TX_SGLTE':1:1
         EndSequence
@@ -1818,7 +1818,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -1833,7 +1833,7 @@ SectionVerb
 	Name "Voice CallBT SCO Tx"
 
 	EnableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
@@ -1854,7 +1854,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -1869,7 +1869,7 @@ SectionVerb
 	Name "Voice CallBT SCO WB Tx"
 
 	EnableSequence
-                'Internal BTSCO SampleRate':0:16000
+                'Internal BTSCO SampleRate':1:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
@@ -1962,7 +1962,7 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
 	EndSequence
@@ -1977,7 +1977,7 @@ SectionVerb
 	Name "Voice Call IPBT SCO Tx"
 
 	EnableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
                 'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
                 'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
 	EndSequence
@@ -1998,7 +1998,7 @@ SectionVerb
         EndSequence
 
         DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
                 'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
                 'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
         EndSequence
@@ -2013,7 +2013,7 @@ SectionVerb
         Name "Voice Call IPBT SCO WB Tx"
 
         EnableSequence
-                'Internal BTSCO SampleRate':0:16000
+                'Internal BTSCO SampleRate':1:16000
                 'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
                 'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
         EndSequence
@@ -3006,8 +3006,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3023,8 +3023,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3040,8 +3040,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3052,14 +3052,14 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3067,7 +3067,7 @@ SectionVerb
 	Name "VoLTE CallBT SCO Tx"
 
 	EnableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
 	EndSequence
@@ -3076,8 +3076,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3088,14 +3088,14 @@ SectionVerb
 	EndSequence
 
 	DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 
@@ -3103,7 +3103,7 @@ SectionVerb
 	Name "VoLTE CallBT SCO WB Tx"
 
 	EnableSequence
-                'Internal BTSCO SampleRate':0:16000
+                'Internal BTSCO SampleRate':1:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
 		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
 	EndSequence
@@ -3112,8 +3112,8 @@ SectionVerb
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
 
 EndSection
 }
@@ -4614,20 +4614,33 @@ SectionDevice
 
 	EnableSequence
 		'SLIM RX1 MUX':0:AIF1_PB
-		'SLIM_0_RX Channels':0:One
-		'RX7 MIX1 INP1':0:RX1
-		'RX7 Digital Volume':1:67
+		'SLIM RX2 MUX':0:AIF1_PB
+		'SLIM_0_RX Channels':0:Two
+		'RX3 MIX1 INP1':0:RX1
+		'RX5 MIX1 INP1':0:RX2
+		'RX4 DSM MUX':0:DSM_INV
+		'RX6 DSM MUX':0:DSM_INV
+		'LINEOUT1 Volume':1:66
+		'LINEOUT2 Volume':1:66
+		'LINEOUT3 Volume':1:66
+		'LINEOUT4 Volume':1:66
 	EndSequence
 
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
-		'RX7 MIX1 INP1':0:ZERO
-		'RX7 Digital Volume':1:0
+		'SLIM RX2 MUX':0:ZERO
+		'RX3 MIX1 INP1':0:ZERO
+		'RX5 MIX1 INP1':0:ZERO
+		'RX4 DSM MUX':0:CIC_OUT
+		'RX6 DSM MUX':0:CIC_OUT
+		'LINEOUT1 Volume':1:0
+		'LINEOUT2 Volume':1:0
+		'LINEOUT3 Volume':1:0
+		'LINEOUT4 Volume':1:0
 	EndSequence
 
 	ACDBID	15:1
 	EffectsMixerCTL "SRS TruMedia"
-	EC_REF_RXMixerCTL "SLIM_RX"
 
 EndSection
 
@@ -5369,7 +5382,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -5384,7 +5397,7 @@ SectionModifier
 	Name "Play VoiceBT SCO Tx"
 
 	EnableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
@@ -5405,7 +5418,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -5420,7 +5433,7 @@ SectionModifier
 	Name "Play VoiceBT SCO WB Tx"
 
 	EnableSequence
-                'Internal BTSCO SampleRate':0:16000
+                'Internal BTSCO SampleRate':1:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
@@ -5492,7 +5505,7 @@ SectionModifier
 	EndSequence
 
 	DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
                 'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
                 'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
 	EndSequence
@@ -5507,7 +5520,7 @@ SectionModifier
 	Name "Play VOIPBT SCO Tx"
 
 	EnableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
                 'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
                 'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
 	EndSequence
@@ -5528,7 +5541,7 @@ SectionModifier
         EndSequence
 
         DisableSequence
-                'Internal BTSCO SampleRate':0:8000
+                'Internal BTSCO SampleRate':1:8000
                 'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
                 'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
         EndSequence
@@ -5543,7 +5556,7 @@ SectionModifier
         Name "Play VOIPBT SCO WB Tx"
 
         EnableSequence
-                'Internal BTSCO SampleRate':0:16000
+                'Internal BTSCO SampleRate':1:16000
                 'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:1
                 'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:1
         EndSequence
@@ -6340,8 +6353,114 @@ SectionModifier
 	EndSequence
 
 	# ALSA PCMs
-	PlaybackPCM 12
-	capturePCM 12
+	PlaybackPCM 14
+	capturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEHDMI"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'HDMI_RX_Voice Mixer VoLTE':1:0
+		'VoLTE_Tx Mixer SLIM_0_TX_VoLTE':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	capturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEHDMI Tx"
+
+	EnableSequence
+		'HDMI_RX_Voice Mixer VoLTE':1:1
+		'VoLTE_Tx Mixer SLIM_0_TX_VoLTE':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	capturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO Rx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
+		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	CapturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO Tx"
+
+	EnableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
+		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	CapturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO WB Rx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
+		'Internal BTSCO SampleRate':1:8000
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:0
+		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	CapturePCM 14
+
+EndSection
+
+SectionModifier
+	Name "Play VoLTEBT SCO WB Tx"
+
+	EnableSequence
+		'Internal BTSCO SampleRate':1:16000
+		'INTERNAL_BT_SCO_RX_Voice Mixer VoLTE':1:1
+		'VoLTE_Tx Mixer INTERNAL_BT_SCO_TX_VoLTE':1:1
+	EndSequence
+
+	DisableSequence
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 14
+	CapturePCM 14
 
 EndSection
 
