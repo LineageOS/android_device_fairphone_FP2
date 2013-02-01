@@ -3788,6 +3788,18 @@ SectionDevice
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
+		'IIR1 Band1':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band2':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band3':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band4':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band5':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Enable Band1':1:1
+		'IIR1 Enable Band2':1:1
+		'IIR1 Enable Band3':1:1
+		'IIR1 Enable Band4':1:1
+		'IIR1 Enable Band5':1:1
+		'IIR1 INP1 Volume':1:50
+		'RX1 MIX2 INP1':0:IIR1
 		'RX1 Digital Volume':1:67
 		'DAC1 Switch':1:1
 	EndSequence
@@ -3795,6 +3807,18 @@ SectionDevice
 	DisableSequence
 		'SLIM RX1 MUX':0:ZERO
 		'RX1 MIX1 INP1':0:ZERO
+		'RX1 MIX2 INP1':0:ZERO
+		'IIR1 Enable Band1':1:0
+		'IIR1 Enable Band2':1:0
+		'IIR1 Enable Band3':1:0
+		'IIR1 Enable Band4':1:0
+		'IIR1 Enable Band5':1:0
+		'IIR1 Band1':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band2':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band3':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band4':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band5':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 INP1 Volume':1:0
 		'RX1 Digital Volume':1:0
 		'DAC1 Switch':1:0
 	EndSequence
@@ -3925,6 +3949,19 @@ SectionDevice
 		'SLIM_0_RX Channels':0:Two
 		'RX1 MIX1 INP1':0:RX1
 		'RX2 MIX1 INP1':0:RX2
+		'IIR1 Band1':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band2':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band3':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band4':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band5':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Enable Band1':1:1
+		'IIR1 Enable Band2':1:1
+		'IIR1 Enable Band3':1:1
+		'IIR1 Enable Band4':1:1
+		'IIR1 Enable Band5':1:1
+		'IIR1 INP1 Volume':1:62
+		'RX1 MIX2 INP1':0:IIR1
+		'RX2 MIX2 INP1':0:IIR1
 		'HPHL DAC Switch':1:1
 		'HPHL Volume':1:80
 		'HPHR Volume':1:80
@@ -3937,6 +3974,19 @@ SectionDevice
 		'SLIM RX2 MUX':0:ZERO
 		'RX1 MIX1 INP1':0:ZERO
 		'RX2 MIX1 INP1':0:ZERO
+		'RX1 MIX2 INP1':0:ZERO
+		'RX2 MIX2 INP1':0:ZERO
+		'IIR1 Enable Band1':1:0
+		'IIR1 Enable Band2':1:0
+		'IIR1 Enable Band3':1:0
+		'IIR1 Enable Band4':1:0
+		'IIR1 Enable Band5':1:0
+		'IIR1 Band1':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band2':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band3':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band4':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band5':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 INP1 Volume':1:0
 		'HPHL DAC Switch':1:0
 		'HPHL Volume':1:0
 		'HPHR Volume':1:0
@@ -4106,6 +4156,19 @@ SectionDevice
 		'SLIM_0_RX Channels':0:Two
 		'RX1 MIX1 INP1':0:RX1
 		'RX2 MIX1 INP1':0:RX2
+		'IIR1 Band1':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band2':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band3':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band4':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Band5':2:0x10000000 0x0 0x0 0x0 0x0
+		'IIR1 Enable Band1':1:1
+		'IIR1 Enable Band2':1:1
+		'IIR1 Enable Band3':1:1
+		'IIR1 Enable Band4':1:1
+		'IIR1 Enable Band5':1:1
+		'IIR1 INP1 Volume':1:62
+		'RX1 MIX2 INP1':0:IIR1
+		'RX2 MIX2 INP1':0:IIR1
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
 		'HPHL Volume':1:70
@@ -4125,6 +4188,19 @@ SectionDevice
 		'SLIM RX2 MUX':0:ZERO
 		'RX1 MIX1 INP1':0:ZERO
 		'RX2 MIX1 INP1':0:ZERO
+		'RX1 MIX2 INP1':0:ZERO
+		'RX2 MIX2 INP1':0:ZERO
+		'IIR1 Enable Band1':1:0
+		'IIR1 Enable Band2':1:0
+		'IIR1 Enable Band3':1:0
+		'IIR1 Enable Band4':1:0
+		'IIR1 Enable Band5':1:0
+		'IIR1 Band1':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band2':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band3':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band4':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 Band5':2:0x0 0x0 0x0 0x0 0x0
+		'IIR1 INP1 Volume':1:0
 		'HPHL DAC Switch':1:0
 		'HPHR DAC Switch':1:0
 		'HPHL Volume':1:0
@@ -4189,6 +4265,7 @@ SectionDevice
 		'DEC5 MUX':0:ADC2
 		'DEC5 Volume':1:67
 		'ADC2 Volume':1:100
+		'IIR1 INP1 MUX':0:DEC5
 	EndSequence
 
 	DisableSequence
@@ -4197,6 +4274,7 @@ SectionDevice
 		'DEC5 MUX':0:ZERO
 		'ADC2 Volume':1:0
 		'DEC5 Volume':1:0
+		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
 	ACDBID	8:2
@@ -4215,6 +4293,7 @@ SectionDevice
 		'DEC6 MUX':0:ADC1
 		'ADC1 Volume':1:100
 		'DEC6 Volume':1:67
+		'IIR1 INP1 MUX':0:DEC6
 	EndSequence
 
 	DisableSequence
@@ -4222,6 +4301,7 @@ SectionDevice
 		'SLIM TX7 MUX':0:ZERO
 		'DEC6 MUX':0:ZERO
 		'ADC1 Volume':1:0
+		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
 	ACDBID	4:2
@@ -4262,12 +4342,14 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC7
 		'DEC7 MUX':0:DMIC1
+		'IIR1 INP1 MUX':0:DEC7
 	EndSequence
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:0
 		'SLIM TX7 MUX':0:ZERO
 		'DEC7 MUX':0:ZERO
+		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
 	ACDBID	4:2
@@ -4306,12 +4388,14 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC7
 		'DEC7 MUX':0:DMIC1
+		'IIR1 INP1 MUX':0:DEC7
 	EndSequence
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:0
 		'SLIM TX7 MUX':0:ZERO
 		'DEC7 MUX':0:ZERO
+		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
 	ACDBID	4:2
@@ -4372,6 +4456,7 @@ SectionDevice
 		'SLIM TX8 MUX':0:DEC8
 		'DEC8 MUX':0:DMIC2
 		'SLIM_0_TX Channels':0:Two
+		'IIR1 INP1 MUX':0:DEC7
 	EndSequence
 
 	DisableSequence
@@ -4381,6 +4466,7 @@ SectionDevice
 		'DEC7 MUX':0:ZERO
 		'SLIM TX8 MUX':0:ZERO
 		'DEC8 MUX':0:ZERO
+		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
 	ACDBID	5:2
@@ -4400,6 +4486,7 @@ SectionDevice
 		'SLIM TX8 MUX':0:DEC10
 		'DEC10 MUX':0:DMIC3
 		'SLIM_0_TX Channels':0:Two
+		'IIR1 INP1 MUX':0:DEC7
 	EndSequence
 
 	DisableSequence
@@ -4409,6 +4496,7 @@ SectionDevice
 		'DEC7 MUX':0:ZERO
 		'SLIM TX8 MUX':0:ZERO
 		'DEC10 MUX':0:ZERO
+		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
 	ACDBID	6:2
@@ -4565,6 +4653,7 @@ SectionDevice
 		'SLIM TX7 MUX':0:DEC8
 		'DEC8 MUX':0:ADC2
 		'ADC2 Volume':1:100
+		'IIR1 INP1 MUX':0:DEC8
 	EndSequence
 
 	DisableSequence
@@ -4573,6 +4662,7 @@ SectionDevice
 		'SLIM TX7 MUX':0:ZERO
 		'DEC8 MUX':0:ZERO
 		'ADC2 Volume':1:0
+		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
 	ACDBID	16:2
@@ -4616,6 +4706,7 @@ SectionDevice
 		'SLIM TX7 MUX':0:DEC8
 		'DEC8 MUX':0:ADC2
 		'ADC2 Volume':1:100
+		'IIR1 INP1 MUX':0:DEC8
 	EndSequence
 
 	DisableSequence
@@ -4623,6 +4714,7 @@ SectionDevice
 		'SLIM TX7 MUX':0:ZERO
 		'DEC8 MUX':0:ZERO
 		'ADC2 Volume':1:0
+		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
 	ACDBID	16:2
