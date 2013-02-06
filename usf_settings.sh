@@ -41,7 +41,7 @@ trigger_file=$dir0/form_factor.cfg
 
 if [ ! -e $trigger_file ]; then
    # Configurations select upon the current platform
-   platform=`cat /sys/devices/system/soc/soc0/hw_platform`
+   platform=`cat /sys/devices/soc0/hw_platform`
    type=""
 
    case $platform in
