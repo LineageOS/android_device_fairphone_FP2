@@ -3543,7 +3543,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTE CallHDMI"
+	Name "VoLTEHDMI"
 
 	EnableSequence
 	EndSequence
@@ -3560,7 +3560,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTE CallHDMI Tx"
+	Name "VoLTEHDMI Tx"
 
 	EnableSequence
 		'HDMI_RX_Voice Mixer VoLTE':1:1
@@ -3577,7 +3577,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTE CallBT SCO Rx"
+	Name "VoLTEBT SCO Rx"
 
 	EnableSequence
 	EndSequence
@@ -3595,7 +3595,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTE CallBT SCO Tx"
+	Name "VoLTEBT SCO Tx"
 
 	EnableSequence
                 'Internal BTSCO SampleRate':1:8000
@@ -3613,7 +3613,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTE CallBT SCO WB Rx"
+	Name "VoLTEBT SCO WB Rx"
 
 	EnableSequence
 	EndSequence
@@ -3631,7 +3631,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "VoLTE CallBT SCO WB Tx"
+	Name "VoLTEBT SCO WB Tx"
 
 	EnableSequence
                 'Internal BTSCO SampleRate':1:16000
