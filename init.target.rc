@@ -34,6 +34,10 @@ on early-init
 on init
     export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/security-bridge.jar:/system/framework/qsb-port.jar
 
+# import cne init file
+on post-fs
+    export LD_PRELOAD /system/lib/libNimsWrap.so
+
 on fs
     mount_all fstab.qcom
 
