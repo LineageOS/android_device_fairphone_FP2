@@ -3577,7 +3577,6 @@ SectionDevice
 		'DAC1 Switch':1:1
                 'ANC Slot':1:1
                 'ANC1 MUX':0:DMIC1
-                'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -3586,7 +3585,6 @@ SectionDevice
 		'DAC1 Switch':1:0
                 'ANC Slot':1:0
                 'ANC1 MUX':0:ZERO
-                'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	30:1
@@ -3752,8 +3750,6 @@ SectionDevice
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -3779,8 +3775,6 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	26:1
@@ -3811,8 +3805,6 @@ SectionDevice
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -3830,8 +3822,6 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	26:1
@@ -3862,8 +3852,6 @@ SectionDevice
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -3881,8 +3869,6 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	26:1
@@ -3987,7 +3973,6 @@ SectionDevice
 		'SLIM TX7 MUX':0:DEC7
 		'DEC7 MUX':0:ADC1
 		'ADC1 Volume':1:100
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -3995,7 +3980,6 @@ SectionDevice
 		'SLIM TX7 MUX':0:ZERO
 		'DEC7 MUX':0:ZERO
 		'ADC1 Volume':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID  36:2
@@ -4012,14 +3996,12 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC7
 		'DEC7 MUX':0:DMIC1
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:0
 		'SLIM TX7 MUX':0:ZERO
 		'DEC7 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	4:2
@@ -4036,14 +4018,12 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC7
 		'DEC7 MUX':0:DMIC1
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:0
 		'SLIM TX7 MUX':0:ZERO
 		'DEC7 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID  36:2
@@ -4060,14 +4040,12 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC7
 		'DEC7 MUX':0:DMIC1
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:0
 		'SLIM TX7 MUX':0:ZERO
 		'DEC7 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	4:2
@@ -4094,8 +4072,6 @@ SectionDevice
                 'DEC10 MUX':0:DMIC3
                 'SLIM TX10 MUX':0:DEC9
                 'DEC9 MUX':0:DMIC4
-                'MICBIAS1 CAPLESS Switch':1:1
-                'MICBIAS3 CAPLESS Switch':1:1
         EndSequence
 
         DisableSequence
@@ -4111,8 +4087,6 @@ SectionDevice
                 'DEC9 MUX':0:ZERO
                 'SLIM TX10 MUX':0:ZERO
                 'DEC10 MUX':0:ZERO
-                'MICBIAS1 CAPLESS Switch':1:0
-                'MICBIAS3 CAPLESS Switch':1:0
         EndSequence
 
         ACDBID  19:2
@@ -4131,7 +4105,6 @@ SectionDevice
 		'DEC7 MUX':0:DMIC1
 		'SLIM TX8 MUX':0:DEC8
 		'DEC8 MUX':0:DMIC2
-		'MICBIAS1 CAPLESS Switch':1:1
 		'SLIM_0_TX Channels':0:Two
 	EndSequence
 
@@ -4142,7 +4115,6 @@ SectionDevice
 		'DEC7 MUX':0:ZERO
 		'SLIM TX8 MUX':0:ZERO
 		'DEC8 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	5:2
@@ -4161,8 +4133,6 @@ SectionDevice
 		'DEC7 MUX':0:DMIC1
 		'SLIM TX8 MUX':0:DEC10
 		'DEC10 MUX':0:DMIC3
-		'MICBIAS1 CAPLESS Switch':1:1
-		'MICBIAS3 CAPLESS Switch':1:1
 		'SLIM_0_TX Channels':0:Two
 	EndSequence
 
@@ -4173,8 +4143,6 @@ SectionDevice
 		'DEC7 MUX':0:ZERO
 		'SLIM TX8 MUX':0:ZERO
 		'DEC10 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	6:2
@@ -4193,7 +4161,6 @@ SectionDevice
 		'DEC7 MUX':0:DMIC1
 		'SLIM TX8 MUX':0:DEC8
 		'DEC8 MUX':0:DMIC2
-		'MICBIAS1 CAPLESS Switch':1:1
 		'SLIM_0_TX Channels':0:Two
 	EndSequence
 
@@ -4204,7 +4171,6 @@ SectionDevice
 		'DEC7 MUX':0:ZERO
 		'SLIM TX8 MUX':0:ZERO
 		'DEC8 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	12:2
@@ -4223,8 +4189,6 @@ SectionDevice
 		'DEC7 MUX':0:DMIC1
 		'SLIM TX8 MUX':0:DEC10
 		'DEC10 MUX':0:DMIC3
-		'MICBIAS1 CAPLESS Switch':1:1
-		'MICBIAS3 CAPLESS Switch':1:1
 		'SLIM_0_TX Channels':0:Two
 	EndSequence
 
@@ -4235,8 +4199,6 @@ SectionDevice
 		'DEC7 MUX':0:ZERO
 		'SLIM TX8 MUX':0:ZERO
 		'DEC10 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	13:2
@@ -4255,8 +4217,6 @@ SectionDevice
 		'DEC7 MUX':0:DMIC1
 		'SLIM TX8 MUX':0:DEC10
 		'DEC10 MUX':0:DMIC3
-		'MICBIAS1 CAPLESS Switch':1:1
-		'MICBIAS3 CAPLESS Switch':1:1
 		'SLIM_0_TX Channels':0:Two
 	EndSequence
 
@@ -4267,8 +4227,6 @@ SectionDevice
 		'DEC7 MUX':0:ZERO
 		'SLIM TX8 MUX':0:ZERO
 		'DEC10 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	34:2
@@ -4287,8 +4245,6 @@ SectionDevice
 		'DEC7 MUX':0:DMIC1
 		'SLIM TX8 MUX':0:DEC10
 		'DEC10 MUX':0:DMIC3
-		'MICBIAS1 CAPLESS Switch':1:1
-		'MICBIAS3 CAPLESS Switch':1:1
 		'SLIM_0_TX Channels':0:Two
 	EndSequence
 
@@ -4299,8 +4255,6 @@ SectionDevice
 		'DEC7 MUX':0:ZERO
 		'SLIM TX8 MUX':0:ZERO
 		'DEC10 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	35:2
@@ -4739,8 +4693,6 @@ SectionDevice
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -4758,8 +4710,6 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	26:1
@@ -4845,8 +4795,6 @@ SectionDevice
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -4872,8 +4820,6 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	26:1
@@ -4899,9 +4845,6 @@ SectionDevice
 		'DEC7 MUX':0:DMIC1
 		'SLIM TX10 MUX':0:DEC6
 		'DEC6 MUX':0:DMIC6
-		'MICBIAS1 CAPLESS Switch':1:1
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS4 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -4917,9 +4860,6 @@ SectionDevice
 		'DEC7 MUX':0:ZERO
 		'SLIM TX10 MUX':0:ZERO
 		'DEC6 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
-		'MICBIAS4 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID  46:2
@@ -5111,8 +5051,6 @@ SectionDevice
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -5138,8 +5076,6 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	26:1
@@ -5169,8 +5105,6 @@ SectionDevice
 		'ANC1 FB MUX':0:EAR_HPH_L
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
-		'MICBIAS3 CAPLESS Switch':1:1
-		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -5188,8 +5122,6 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
-		'MICBIAS3 CAPLESS Switch':1:0
-		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID	26:1
