@@ -3929,12 +3929,23 @@ SectionDevice
 		'SLIM_0_RX Channels':0:Two
 		'RX1 MIX1 INP1':0:RX1
 		'RX2 MIX1 INP1':0:RX2
-		'DAC1 Switch':1:1
 		'HPHL DAC Switch':1:1
 		'HPHL Volume':1:80
 		'HPHR Volume':1:80
 		'RX1 Digital Volume':1:67
 		'RX2 Digital Volume':1:67
+		'RX3 MIX1 INP1':0:RX1
+		'RX5 MIX1 INP1':0:RX2
+		'RDAC5 MUX':0:DEM3_INV
+		'RDAC7 MUX':0:DEM5_INV
+		'RX3 Digital Volume':1:67
+		'RX5 Digital Volume':1:67
+		'RX4 Digital Volume':1:67
+		'RX6 Digital Volume':1:67
+		'LINEOUT1 Volume':1:100
+		'LINEOUT3 Volume':1:100
+		'LINEOUT2 Volume':1:100
+		'LINEOUT4 Volume':1:100
 	EndSequence
 
 	DisableSequence
@@ -3942,12 +3953,23 @@ SectionDevice
 		'SLIM RX2 MUX':0:ZERO
 		'RX1 MIX1 INP1':0:ZERO
 		'RX2 MIX1 INP1':0:ZERO
-		'DAC1 Switch':1:0
 		'HPHL DAC Switch':1:0
 		'HPHL Volume':1:0
 		'HPHR Volume':1:0
 		'RX1 Digital Volume':1:0
 		'RX2 Digital Volume':1:0
+		'RX3 MIX1 INP1':0:ZERO
+		'RX5 MIX1 INP1':0:ZERO
+		'RDAC5 MUX':0:DEM4
+		'RDAC7 MUX':0:DEM6
+		'RX3 Digital Volume':1:0
+		'RX5 Digital Volume':1:0
+		'RX4 Digital Volume':1:0
+		'RX6 Digital Volume':1:0
+		'LINEOUT1 Volume':1:0
+		'LINEOUT3 Volume':1:0
+		'LINEOUT2 Volume':1:0
+		'LINEOUT4 Volume':1:0
 	EndSequence
 
 	ACDBID	10:1
