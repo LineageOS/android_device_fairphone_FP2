@@ -32,6 +32,11 @@ tunnel.audiovideo.decode=true
 lpa.decode=false
 lpa.use-stagefright=true
 
+#
+# system props for the cne module
+#
+persist.cne.feature=1
+
 #system props for the MM modules
 
 media.stagefright.enable-player=true
