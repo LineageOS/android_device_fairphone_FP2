@@ -84,3 +84,4 @@ ro.qualcomm.bt.hci_transport=smd
 ro.qc.sdk.audio.ssr=false
 ##fluencetype can be "fluence" or "fluencepro" or "none"
 ro.qc.sdk.audio.fluencetype=none
+ro.qc.sdk.sensors.gestures=true
