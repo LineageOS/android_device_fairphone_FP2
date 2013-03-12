@@ -32,7 +32,7 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
-    export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/security-bridge.jar:/system/framework/qsb-port.jar
+    export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/security-bridge.jar:/system/framework/qsb-port.jar:/system/framework/oem-services.jar
 
 # import cne init file
 on post-fs
