@@ -31,7 +31,7 @@ tunnel.decode=true
 tunnel.audiovideo.decode=true
 lpa.decode=false
 lpa.use-stagefright=true
-
+persist.speaker.prot.enable=false
 #
 # system props for the cne module
 #
