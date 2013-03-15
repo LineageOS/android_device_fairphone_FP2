@@ -5945,6 +5945,7 @@ SectionDevice
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
+                'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'RX1 Digital Volume':1:67
 		'DAC1 Switch':1:1
 	EndSequence
@@ -5953,6 +5954,7 @@ SectionDevice
 		'SLIM RX1 MUX':0:ZERO
 		'RX1 MIX1 INP1':0:ZERO
 		'RX1 Digital Volume':1:0
+                'CLASS_H_DSM MUX':0:ZERO
 		'DAC1 Switch':1:0
 	EndSequence
 
