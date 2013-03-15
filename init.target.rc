@@ -36,7 +36,7 @@ on init
 
 # import cne init file
 on post-fs
-    export LD_PRELOAD /system/lib/libNimsWrap.so
+    export LD_PRELOAD /vendor/lib/libNimsWrap.so
 
 on fs
     mount_all fstab.qcom
