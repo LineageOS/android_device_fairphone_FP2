@@ -4307,13 +4307,16 @@ SectionDevice
 	Comment "ANC Handset Rx device"
 
 	EnableSequence
+		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'DAC1 Switch':1:1
-                'ANC Slot':1:1
-                'ANC1 MUX':0:DMIC1
+		'RX1 Digital Volume':1:65
+                'ANC Slot':1:4
+                'ANC1 MUX':0:DMIC4
+		'ANC1 FB MUX':0:EAR_HPH_L
 	EndSequence
 
 	DisableSequence
@@ -4323,6 +4326,9 @@ SectionDevice
 		'DAC1 Switch':1:0
                 'ANC Slot':1:0
                 'ANC1 MUX':0:ZERO
+		'ANC1 FB MUX':0:ZERO
+		'RX1 Digital Volume':1:0
+		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	30:1
@@ -4521,6 +4527,7 @@ SectionDevice
 	Comment "Speaker ANC Headset Rx combo device"
 
 	EnableSequence
+		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
@@ -4542,9 +4549,9 @@ SectionDevice
 		'RX1 Digital Volume':1:65
 		'RX2 Digital Volume':1:65
 		'ANC Slot':1:0
-		'ANC1 MUX':0:ADC4
-		'ANC2 MUX':0:ADC3
 		'ANC1 FB MUX':0:EAR_HPH_L
+		'ANC1 MUX':0:ADC3
+		'ANC2 MUX':0:ADC4
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
 	EndSequence
@@ -4573,6 +4580,7 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
+		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	26:1
@@ -4586,6 +4594,7 @@ SectionDevice
 	Comment "ANC Headset Rx device"
 
 	EnableSequence
+		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
@@ -4599,9 +4608,9 @@ SectionDevice
 		'RX1 Digital Volume':1:65
 		'RX2 Digital Volume':1:65
 		'ANC Slot':1:0
-		'ANC1 MUX':0:ADC4
-		'ANC2 MUX':0:ADC3
 		'ANC1 FB MUX':0:EAR_HPH_L
+		'ANC1 MUX':0:ADC3
+		'ANC2 MUX':0:ADC4
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
 	EndSequence
@@ -4622,6 +4631,7 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
+		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	26:1
@@ -4635,6 +4645,7 @@ SectionDevice
 	Comment "ANC Headset Rx device for voice call"
 
 	EnableSequence
+		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
@@ -4661,9 +4672,9 @@ SectionDevice
 		'RX1 Digital Volume':1:65
 		'RX2 Digital Volume':1:65
 		'ANC Slot':1:0
-		'ANC1 MUX':0:ADC4
-		'ANC2 MUX':0:ADC3
 		'ANC1 FB MUX':0:EAR_HPH_L
+		'ANC1 MUX':0:ADC3
+		'ANC2 MUX':0:ADC4
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
 	EndSequence
@@ -4697,6 +4708,7 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
+		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	26:1
@@ -5528,6 +5540,7 @@ SectionDevice
 	Comment "SPDIF + ANC Headset Rx device"
 
 	EnableSequence
+		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
@@ -5541,9 +5554,9 @@ SectionDevice
 		'RX1 Digital Volume':1:65
 		'RX2 Digital Volume':1:65
 		'ANC Slot':1:0
-		'ANC1 MUX':0:ADC4
-		'ANC2 MUX':0:ADC3
 		'ANC1 FB MUX':0:EAR_HPH_L
+		'ANC1 MUX':0:ADC3
+		'ANC2 MUX':0:ADC4
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
 	EndSequence
@@ -5564,6 +5577,7 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
+		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	26:1
@@ -5626,6 +5640,7 @@ SectionDevice
 	Comment "SPDIF + Speaker ANC Headset Rx combo device"
 
 	EnableSequence
+		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
@@ -5647,9 +5662,9 @@ SectionDevice
 		'RX1 Digital Volume':1:65
 		'RX2 Digital Volume':1:65
 		'ANC Slot':1:0
-		'ANC1 MUX':0:ADC4
-		'ANC2 MUX':0:ADC3
 		'ANC1 FB MUX':0:EAR_HPH_L
+		'ANC1 MUX':0:ADC3
+		'ANC2 MUX':0:ADC4
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
 	EndSequence
@@ -5678,6 +5693,7 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
+		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	26:1
@@ -5877,6 +5893,7 @@ SectionDevice
 	Comment "PROXY Rx + Speaker ANC Headset Rx combo device"
 
 	EnableSequence
+		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
@@ -5898,9 +5915,9 @@ SectionDevice
 		'RX1 Digital Volume':1:65
 		'RX2 Digital Volume':1:65
 		'ANC Slot':1:0
-		'ANC1 MUX':0:ADC4
-		'ANC2 MUX':0:ADC3
 		'ANC1 FB MUX':0:EAR_HPH_L
+		'ANC1 MUX':0:ADC3
+		'ANC2 MUX':0:ADC4
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
 	EndSequence
@@ -5929,6 +5946,7 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
+		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	26:1
@@ -5941,6 +5959,7 @@ SectionDevice
 	Comment "PROXY Rx ANC Headset Rx device combo device"
 
 	EnableSequence
+		'ANC Function':0:ON
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM RX2 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:Two
@@ -5954,9 +5973,9 @@ SectionDevice
 		'RX1 Digital Volume':1:65
 		'RX2 Digital Volume':1:65
 		'ANC Slot':1:0
-		'ANC1 MUX':0:ADC4
-		'ANC2 MUX':0:ADC3
 		'ANC1 FB MUX':0:EAR_HPH_L
+		'ANC1 MUX':0:ADC3
+		'ANC2 MUX':0:ADC4
 		'ADC3 Volume':1:85
 		'ADC4 Volume':1:85
 	EndSequence
@@ -5977,6 +5996,7 @@ SectionDevice
 		'ANC2 MUX':0:ZERO
 		'ADC3 Volume':1:0
 		'ADC4 Volume':1:0
+		'ANC Function':0:OFF
 	EndSequence
 
 	ACDBID	26:1
