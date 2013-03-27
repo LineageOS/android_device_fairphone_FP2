@@ -4200,7 +4200,7 @@ SectionDevice
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
-		'EAR PA Gain':0:POS_2_DB
+		'RX1 Digital Volume':1:67
 		'DAC1 Switch':1:1
 	EndSequence
 
@@ -4208,6 +4208,7 @@ SectionDevice
 		'SLIM RX1 MUX':0:ZERO
 		'RX1 MIX1 INP1':0:ZERO
 		'CLASS_H_DSM MUX':0:ZERO
+		'RX1 Digital Volume':1:0
 		'DAC1 Switch':1:0
 	EndSequence
 
@@ -5137,6 +5138,7 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'HPHL DAC Switch':1:1
 		'HPHL Volume':1:80
+		'RX1 Digital Volume':1:67
 	EndSequence
 
 	DisableSequence
@@ -5146,6 +5148,7 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
 		'HPHL Volume':1:0
+		'RX1 Digital Volume':1:0
 	EndSequence
 
 	ACDBID	17:1
@@ -5161,18 +5164,20 @@ SectionDevice
 		'AIF1_CAP Mixer SLIM TX7':1:1
 		'TTY Mode':0:HCO
 		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC8
-		'DEC8 MUX':0:ADC2
+		'SLIM TX7 MUX':0:DEC5
+		'DEC5 MUX':0:ADC2
+		'DEC5 Volume':1:67
 		'ADC2 Volume':1:100
-		'IIR1 INP1 MUX':0:DEC8
+		'IIR1 INP1 MUX':0:DEC5
 	EndSequence
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:0
 		'TTY Mode':0:ZERO
 		'SLIM TX7 MUX':0:ZERO
-		'DEC8 MUX':0:ZERO
+		'DEC5 MUX':0:ZERO
 		'ADC2 Volume':1:0
+		'DEC5 Volume':1:0
 		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
@@ -5193,6 +5198,7 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'HPHL DAC Switch':1:1
 		'HPHL Volume':1:80
+		'RX1 Digital Volume':1:67
 	EndSequence
 
 	DisableSequence
@@ -5202,6 +5208,7 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:ZERO
 		'HPHL DAC Switch':1:0
 		'HPHL Volume':1:0
+		'RX1 Digital Volume':1:0
 	EndSequence
 
 	ACDBID	17:1
@@ -5216,17 +5223,19 @@ SectionDevice
 	EnableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:1
 		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC8
-		'DEC8 MUX':0:ADC2
+		'SLIM TX7 MUX':0:DEC5
+		'DEC5 MUX':0:ADC2
+		'DEC5 Volume':1:67
 		'ADC2 Volume':1:100
-		'IIR1 INP1 MUX':0:DEC8
+		'IIR1 INP1 MUX':0:DEC5
 	EndSequence
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:0
 		'SLIM TX7 MUX':0:ZERO
-		'DEC8 MUX':0:ZERO
+		'DEC5 MUX':0:ZERO
 		'ADC2 Volume':1:0
+		'DEC5 Volume':1:0
 		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
