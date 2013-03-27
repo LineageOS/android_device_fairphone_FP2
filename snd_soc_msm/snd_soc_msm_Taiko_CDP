@@ -4260,7 +4260,7 @@ SectionDevice
 		'ANC Function':0:OFF
 	EndSequence
 
-	ACDBID	30:1
+	ACDBID	103:1
 	EffectsMixerCTL "SRS TruMedia"
 	EC_REF_RXMixerCTL "SLIM_RX"
 
@@ -4741,6 +4741,44 @@ SectionDevice
 EndSection
 
 SectionDevice
+	Name "AANC Line"
+	Comment "Speaker Tx device for AANC"
+
+	EnableSequence
+		'AIF1_CAP Mixer SLIM TX7':1:1
+		'AIF1_CAP Mixer SLIM TX8':1:1
+		'AIF1_CAP Mixer SLIM TX9':1:1
+		'SLIM_0_TX Channels':0:Three
+		'SLIM_0_RX AANC MUX':0:SLIMBUS_0_TX
+		'SLIM TX7 MUX':0:DEC7
+		'DEC7 MUX':0:DMIC1
+		'SLIM TX8 MUX':0:DEC9
+		'DEC9 MUX':0:DMIC4
+		'SLIM TX9 MUX':0:DEC6
+		'DEC6 MUX':0:DMIC6
+		'IIR1 INP1 MUX':0:DEC7
+	EndSequence
+
+	DisableSequence
+		'AIF1_CAP Mixer SLIM TX7':1:0
+		'AIF1_CAP Mixer SLIM TX8':1:0
+		'AIF1_CAP Mixer SLIM TX9':1:0
+		'SLIM_0_RX AANC MUX':0:ZERO
+		'SLIM TX7 MUX':0:ZERO
+		'DEC7 MUX':0:ZERO
+		'SLIM TX8 MUX':0:ZERO
+		'DEC9 MUX':0:ZERO
+		'SLIM TX9 MUX':0:ZERO
+		'DEC6 MUX':0:ZERO
+		'IIR1 INP1 MUX':0:ZERO
+	EndSequence
+
+	ACDBID	104:2
+	EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
 	Name "Line"
 	Comment "Speaker Tx device"
 
@@ -4877,6 +4915,44 @@ SectionDevice
 	EndSequence
 
 	ACDBID	5:2
+	EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
+	Name "AANC DMIC Endfire"
+	Comment "Dual MIC Endfire Tx device for AANC"
+
+	EnableSequence
+		'AIF1_CAP Mixer SLIM TX7':1:1
+		'AIF1_CAP Mixer SLIM TX8':1:1
+		'AIF1_CAP Mixer SLIM TX9':1:1
+		'SLIM_0_RX AANC MUX':0:SLIMBUS_0_TX
+		'SLIM TX7 MUX':0:DEC7
+		'DEC7 MUX':0:DMIC1
+		'SLIM TX8 MUX':0:DEC9
+		'DEC9 MUX':0:DMIC4
+		'SLIM TX9 MUX':0:DEC6
+		'DEC6 MUX':0:DMIC6
+		'SLIM_0_TX Channels':0:Three
+		'IIR1 INP1 MUX':0:DEC7
+	EndSequence
+
+	DisableSequence
+		'AIF1_CAP Mixer SLIM TX7':1:0
+		'AIF1_CAP Mixer SLIM TX8':1:0
+		'AIF1_CAP Mixer SLIM TX9':1:0
+		'SLIM_0_RX AANC MUX':0:ZERO
+		'SLIM TX7 MUX':0:ZERO
+		'DEC7 MUX':0:ZERO
+		'SLIM TX8 MUX':0:ZERO
+		'DEC9 MUX':0:ZERO
+		'SLIM TX9 MUX':0:ZERO
+		'DEC6 MUX':0:ZERO
+		'IIR1 INP1 MUX':0:ZERO
+	EndSequence
+
+	ACDBID	105:2
 	EffectsMixerCTL "SRS TruMedia"
 
 EndSection
