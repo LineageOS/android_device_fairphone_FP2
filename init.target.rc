@@ -61,9 +61,12 @@ on post-fs-data
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
 
-# Allow usb charging to be disabled peristently
+# Allow usb charging to be disabled persistently
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
+
+on property:persist.usb.chgdisabled=0
+    write /sys/class/power_supply/battery/charging_enabled 1
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
