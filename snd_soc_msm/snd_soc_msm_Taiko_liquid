@@ -4230,7 +4230,7 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'DAC1 Switch':1:1
 		'RX1 Digital Volume':1:65
-                'ANC Slot':1:4
+                'ANC Slot':1:6
                 'ANC1 MUX':0:DMIC4
 		'ANC1 FB MUX':0:EAR_HPH_L
 	EndSequence
