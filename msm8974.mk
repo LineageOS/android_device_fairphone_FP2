@@ -1,3 +1,7 @@
+# media_profiles and media_codecs xmls for 8974
+PRODUCT_COPY_FILES += device/qcom/msm8974/media/media_profiles_8974.xml:system/etc/media_profiles.xml \
+                      device/qcom/msm8974/media/media_codecs_8974.xml:system/etc/media_codecs.xml
+
 $(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := msm8974
