@@ -1,5 +1,41 @@
 # Master file for snd_soc_msm taiko sound card
 # Lists all use case verbs
+
+SectionUseCase."VI Capture" {
+Comment "Capture VI for Spk prot"
+SectionVerb
+	Name "VI Capture"
+
+	EnableSequence
+		'SLIM0_RX_VI_FB_LCH_MUX':0:SLIM4_TX
+	EndSequence
+
+	DisableSequence
+		'SLIM0_RX_VI_FB_LCH_MUX':0:ZERO
+	EndSequence
+
+	#ALSA PCMS
+	CapturePCM 35
+EndSection
+}
+
+SectionUseCase."Spk Calibration" {
+Comment "Speaker Calibration use case"
+SectionVerb
+	Name "Spk Calibration"
+
+	EnableSequence
+		'SLIMBUS_DL_HL Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_DL_HL Switch':1:0
+	EndSequence
+
+	#ALSA PCMS
+	PlaybackPCM 5
+EndSection
+}
 SectionUseCase."HiFi" {
 Comment "Music playback use case"
 SectionVerb
@@ -4310,6 +4346,28 @@ SectionDevice
 EndSection
 
 SectionDevice
+	Name "Speaker Protected"
+	Comment "Speaker Rx Protected device"
+
+	EnableSequence
+		'SLIM RX1 MUX':0:AIF1_PB
+		'SLIM_0_RX Channels':0:One
+		'RX7 MIX1 INP1':0:RX1
+		'RX7 Digital Volume':1:67
+	EndSequence
+
+	DisableSequence
+		'SLIM RX1 MUX':0:ZERO
+		'RX7 MIX1 INP1':0:ZERO
+		'RX7 Digital Volume':1:0
+	EndSequence
+
+	ACDBID	101:1
+	EffectsMixerCTL "SRS TruMedia"
+	EC_REF_RXMixerCTL "SLIM_RX"
+EndSection
+
+SectionDevice
 	Name "Headphones"
 	Comment "Headset Rx device"
 
@@ -6038,6 +6096,23 @@ SectionDevice
 	ACDBID	15:1
 	EffectsMixerCTL "SRS TruMedia"
 	EC_REF_RXMixerCTL "SLIM_RX"
+
+EndSection
+
+SectionModifier
+	Name "VI Capture Mod"
+	Comment "Capture VI for Spk prot"
+
+	EnableSequence
+		'SLIM0_RX_VI_FB_LCH_MUX':0:SLIM4_TX
+	EndSequence
+
+	DisableSequence
+		'SLIM0_RX_VI_FB_LCH_MUX':0:ZERO
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 35
 
 EndSection
 

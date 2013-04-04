@@ -1,16 +1,17 @@
 # Master file for snd_soc_msm taiko sound card
 # Lists all use case verbs
 
-SectionUseCase."Vi Capture" {
-Comment "Capture Vi for Spk prot"
+SectionUseCase."VI Capture" {
+Comment "Capture VI for Spk prot"
 SectionVerb
-	Name "Vi Capture"
+	Name "VI Capture"
 
 	EnableSequence
 		'SLIM0_RX_VI_FB_LCH_MUX':0:SLIM4_TX
 	EndSequence
 
 	DisableSequence
+		'SLIM0_RX_VI_FB_LCH_MUX':0:ZERO
 	EndSequence
 
 	#ALSA PCMS
@@ -4398,6 +4399,8 @@ SectionDevice
 	EndSequence
 
 	ACDBID	101:1
+	EffectsMixerCTL "SRS TruMedia"
+	EC_REF_RXMixerCTL "SLIM_RX"
 EndSection
 
 SectionDevice
@@ -6132,14 +6135,15 @@ SectionDevice
 EndSection
 
 SectionModifier
-	Name "Vi Capture Mod"
-	Comment "Capture Vi for Spk prot"
+	Name "VI Capture Mod"
+	Comment "Capture VI for Spk prot"
 
 	EnableSequence
-	'SLIM0_RX_VI_FB_LCH_MUX':0:SLIM4_TX
+		'SLIM0_RX_VI_FB_LCH_MUX':0:SLIM4_TX
 	EndSequence
 
 	DisableSequence
+		'SLIM0_RX_VI_FB_LCH_MUX':0:ZERO
 	EndSequence
 
 	# ALSA PCMs
