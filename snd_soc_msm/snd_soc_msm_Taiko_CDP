@@ -4137,7 +4137,7 @@ SectionDevice
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
-		'RX1 Digital Volume':1:67
+		'RX1 Digital Volume':1:68
 		'DAC1 Switch':1:1
 	EndSequence
 
@@ -4176,7 +4176,7 @@ SectionDevice
 		'IIR1 INP1 Volume':1:50
 		'RX1 MIX2 INP1':0:IIR1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
-		'RX1 Digital Volume':1:67
+		'RX1 Digital Volume':1:68
 		'DAC1 Switch':1:1
 	EndSequence
 
@@ -4214,7 +4214,8 @@ SectionDevice
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
-		'RX1 Digital Volume':1:67
+		'RX1 Digital Volume':1:68
+		'EAR PA Gain':0:POS_6_DB
 		'DAC1 Switch':1:1
 	EndSequence
 
@@ -4302,10 +4303,10 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:80
-		'HPHR Volume':1:80
-		'RX1 Digital Volume':1:67
-		'RX2 Digital Volume':1:67
+		'HPHL Volume':1:100
+		'HPHR Volume':1:100
+		'RX1 Digital Volume':1:68
+		'RX2 Digital Volume':1:68
 	EndSequence
 
 	DisableSequence
@@ -4352,10 +4353,10 @@ SectionDevice
 		'RX2 MIX2 INP1':0:IIR1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:80
-		'HPHR Volume':1:80
-		'RX1 Digital Volume':1:67
-		'RX2 Digital Volume':1:67
+		'HPHL Volume':1:100
+		'HPHR Volume':1:100
+		'RX1 Digital Volume':1:68
+		'RX2 Digital Volume':1:68
 	EndSequence
 
 	DisableSequence
@@ -4401,10 +4402,10 @@ SectionDevice
 		'RX2 MIX1 INP1':0:RX2
 		'HPHL DAC Switch':1:1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
-		'HPHL Volume':1:80
-		'HPHR Volume':1:80
-		'RX1 Digital Volume':1:67
-		'RX2 Digital Volume':1:67
+		'HPHL Volume':1:100
+		'HPHR Volume':1:100
+		'RX1 Digital Volume':1:68
+		'RX2 Digital Volume':1:68
 		'RX7 MIX1 INP1':0:RX1
 		'RX7 MIX1 INP2':0:RX2
 		'RX7 Digital Volume':1:67
@@ -4672,7 +4673,7 @@ SectionDevice
 		'SLIM TX7 MUX':0:DEC5
 		'DEC5 MUX':0:ADC2
 		'DEC5 Volume':1:67
-		'ADC2 Volume':1:100
+		'ADC2 Volume':1:64
 		'IIR1 INP1 MUX':0:DEC5
 	EndSequence
 
@@ -5111,8 +5112,8 @@ SectionDevice
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:80
-		'RX1 Digital Volume':1:67
+		'RX1 Digital Volume':1:68
+		'HPHL Volume':1:100
 	EndSequence
 
 	DisableSequence
@@ -5141,7 +5142,7 @@ SectionDevice
 		'SLIM TX7 MUX':0:DEC5
 		'DEC5 MUX':0:ADC2
 		'DEC5 Volume':1:67
-		'ADC2 Volume':1:100
+		'ADC2 Volume':1:64
 		'IIR1 INP1 MUX':0:DEC5
 	EndSequence
 
@@ -5171,8 +5172,8 @@ SectionDevice
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'HPHL DAC Switch':1:1
-		'HPHL Volume':1:80
-		'RX1 Digital Volume':1:67
+		'HPHL Volume':1:100
+		'RX1 Digital Volume':1:68
 	EndSequence
 
 	DisableSequence
@@ -5200,7 +5201,7 @@ SectionDevice
 		'SLIM TX7 MUX':0:DEC5
 		'DEC5 MUX':0:ADC2
 		'DEC5 Volume':1:67
-		'ADC2 Volume':1:100
+		'ADC2 Volume':1:64
 		'IIR1 INP1 MUX':0:DEC5
 	EndSequence
 
@@ -5443,7 +5444,7 @@ SectionDevice
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
-		'EAR PA Gain':0:POS_2_DB
+		'EAR PA Gain':0:POS_6_DB
 		'DAC1 Switch':1:1
 	EndSequence
 
@@ -5508,8 +5509,8 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
-		'HPHL Volume':1:80
-		'HPHR Volume':1:80
+		'HPHL Volume':1:100
+		'HPHR Volume':1:100
 	EndSequence
 
 	DisableSequence
@@ -5600,8 +5601,8 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
-		'HPHL Volume':1:80
-		'HPHR Volume':1:80
+		'HPHL Volume':1:100
+		'HPHR Volume':1:100
 	EndSequence
 
 	DisableSequence
@@ -5759,7 +5760,7 @@ SectionDevice
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
-		'EAR PA Gain':0:POS_2_DB
+		'EAR PA Gain':0:POS_6_DB
 		'DAC1 Switch':1:1
 	EndSequence
 
@@ -5812,8 +5813,8 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
-		'HPHL Volume':1:80
-		'HPHR Volume':1:80
+		'HPHL Volume':1:100
+		'HPHR Volume':1:100
 	EndSequence
 
 	DisableSequence
@@ -5854,8 +5855,8 @@ SectionDevice
 		'CLASS_H_DSM MUX':0:DSM_HPHL_RX1
 		'HPHL DAC Switch':1:1
 		'HPHR DAC Switch':1:1
-		'HPHL Volume':1:80
-		'HPHR Volume':1:80
+		'HPHL Volume':1:100
+		'HPHR Volume':1:100
 	EndSequence
 
 	DisableSequence
