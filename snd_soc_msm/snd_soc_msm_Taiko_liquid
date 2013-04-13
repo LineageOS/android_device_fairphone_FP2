@@ -4114,6 +4114,24 @@ SectionVerb
 
 EndSection
 }
+SectionUseCase."Listen Voice Wakeup" {
+Comment "Listen Voice Wakeup use case"
+
+SectionVerb
+        Name "Listen Voice Wakeup"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 16
+
+EndSection
+}
+
 SectionDevice
 	Name "Earpiece"
 	Comment "Handset Rx device"
@@ -9747,4 +9765,19 @@ SectionModifier
 	PlaybackPCM 15
 
 EndSection
+
+SectionModifier
+        Name "Listen Voice Wakeup Mod"
+
+        EnableSequence
+        EndSequence
+
+        DisableSequence
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 16
+
+EndSection
+
 # End of master file
