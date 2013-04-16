@@ -86,4 +86,4 @@ TARGET_KRAIT_BIONIC_PLDSIZE := 64
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 
-TARGET_ADDITIONAL_BOOTCLASSPATH := qcmediaplayer:security-bridge:oem-services
+TARGET_ADDITIONAL_BOOTCLASSPATH := qcmediaplayer:WfdCommon:security-bridge:oem-services
