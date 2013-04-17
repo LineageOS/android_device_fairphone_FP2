@@ -4813,15 +4813,17 @@ SectionDevice
 	EnableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:1
 		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC7
-		'DEC7 MUX':0:DMIC1
+		'SLIM TX7 MUX':0:DEC9
+		'DEC9 MUX':0:DMIC4
+		'DEC9 Volume':1:90
 		'IIR1 INP1 MUX':0:DEC7
 	EndSequence
 
 	DisableSequence
 		'AIF1_CAP Mixer SLIM TX7':1:0
 		'SLIM TX7 MUX':0:ZERO
-		'DEC7 MUX':0:ZERO
+		'DEC9 MUX':0:ZERO
+		'DEC9 Volume':1:0
 		'IIR1 INP1 MUX':0:ZERO
 	EndSequence
 
