@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright (c) 2012, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2013, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -31,9 +31,6 @@
 # No path is set up at this point so we have to do it here.
 PATH=/sbin:/system/sbin:/system/bin:/system/xbin
 export PATH
-
-# Set a default value
-setprop qcom.thermal thermal-engine
 
 platformid=`cat /sys/devices/system/soc/soc0/id`
 
