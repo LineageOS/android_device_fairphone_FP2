@@ -14,7 +14,7 @@ SectionVerb
 	EndSequence
 
 	#ALSA PCMS
-	CapturePCM 33
+	CapturePCM 35
 EndSection
 }
 
@@ -6143,7 +6143,7 @@ SectionModifier
 	EndSequence
 
 	# ALSA PCMs
-	CapturePCM 33
+	CapturePCM 35
 
 EndSection
 
