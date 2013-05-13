@@ -30,32 +30,46 @@
 
 dir0=/data/usf
 pcm_ind_file=$dir0/pcm_inds.txt
+pcm_file=/proc/asound/pcm
 
-if [ ! -e $pcm_ind_file ]; then
-   # Form factor oriented PCM ports definition
-   pcm_list=`cat /proc/asound/pcm`
-   tx_rx_patterns="tx2- rx2-"
-   result=""
+tx_rx_patterns=(tx2- rx2-)
+dev_ids=("0" "0")
+cards=("0" "0")
+found_num=0
 
-   for pattern in $tx_rx_patterns; do
-       echo $pattern
-       ind="${pcm_list##*"$pattern"}"
+while read pcm_entry; do
+    for i in 0 1; do
+        echo $pcm_entry
+        id="${pcm_entry##*"${tx_rx_patterns[$i]}"}"
+        case "$pcm_entry" in
+            "$id")
+            ;;
 
-       case "$pcm_list" in
-           "$ind")
-           ind="0"
-           ;;
+            *)
+            cards[$i]=${pcm_entry:0:2}
+            dev_ids[$i]=${pcm_entry:3:2}
+            found_num=$(( $found_num + 1))
+            i=2
+            ;;
+        esac
 
-           *)
-           ind="${ind/ *}"
-           ;;
-       esac
-       result=$result$ind" "
-   done
-   echo $result>$pcm_ind_file
-   # Change permission for pcm_inds so that it could be only read by everyone
-   chmod 0444 $pcm_ind_file
-fi
+        case $i in
+            2)
+            break
+            ;;
+        esac
+    done
+
+    case $found_num in
+        2)
+        break
+        ;;
+    esac
+
+done < $pcm_file
+
+echo ${dev_ids[0]}" "${dev_ids[1]}" "${cards[0]}" "${cards[1]}>$pcm_ind_file
+chmod 0644 $pcm_ind_file
 
 # Post-boot start of selected USF based calculators
 for i in $(cat $dir0/auto_start.txt); do
