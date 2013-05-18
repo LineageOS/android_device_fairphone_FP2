@@ -173,7 +173,7 @@ service imsdatadaemon /system/bin/imsdatadaemon
 service wcnss-service /system/bin/wcnss_service
     class late_start
     user system
-    group system
+    group system wifi
     oneshot
 
 on property:sys.ims.QMI_DAEMON_STATUS=1
