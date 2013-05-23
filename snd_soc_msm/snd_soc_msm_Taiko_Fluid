@@ -5365,7 +5365,7 @@ SectionDevice
 		'SLIM RX1 MUX':0:AIF1_PB
 		'SLIM_0_RX Channels':0:One
 		'RX7 MIX1 INP1':0:RX1
-		'RX7 Digital Volume':1:67
+		'RX7 Digital Volume':1:68
 	EndSequence
 
 	DisableSequence
