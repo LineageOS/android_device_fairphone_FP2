@@ -54,3 +54,4 @@ if [ ! -h $THERMAL_ENGINE_CONF_SYMLINK ]; then
  esac
 fi
 
+start thermal-engine
