@@ -30,6 +30,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml
 
+#battery_monitor
+PRODUCT_PACKAGES += \
+    battery_monitor \
+    battery_shutdown
+
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
 
