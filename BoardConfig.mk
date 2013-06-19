@@ -94,3 +94,10 @@ TARGET_USES_NEW_ION_API :=true
 
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
+
+# Board specific SELinux policy variable definitions
+BOARD_SEPOLICY_DIRS := \
+       device/qcom/common/sepolicy
+
+BOARD_SEPOLICY_UNION := \
+       netd.te
