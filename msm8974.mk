@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += device/qcom/msm8974/snd_soc_msm/snd_soc_msm_Taiko:system/e
                       device/qcom/msm8974/snd_soc_msm/snd_soc_apq_Taiko_DB:system/etc/snd_soc_msm/snd_soc_apq_Taiko_DB \
 
 
+# gps/location secuity configuration file
+PRODUCT_COPY_FILES += \
+device/qcom/msm8974/sec_config:system/etc/sec_config
+
 # Feature definition files for 8974
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
