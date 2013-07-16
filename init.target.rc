@@ -72,6 +72,17 @@ on property:persist.usb.chgdisabled=1
 on property:persist.usb.chgdisabled=0
     write /sys/class/power_supply/battery/charging_enabled 1
 
+# bt_hsic_control
+service bt_hsic_control /system/bin/sh /system/etc/hsic.control.bt.sh
+    user root
+    disabled
+
+on property:bluetooth.hsic_ctrl=load_wlan
+    start bt_hsic_control
+
+on property:bluetooth.hsic_ctrl=unbind_hsic
+    start bt_hsic_control
+
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
