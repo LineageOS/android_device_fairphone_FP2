@@ -57,6 +57,7 @@ mm.enable.qcom_parser=37491
 #
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
+ro.data.large_tcp_window_size=true
 
 #system props for time-services
 persist.timed.enable=true
