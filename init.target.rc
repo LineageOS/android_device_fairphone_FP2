@@ -32,7 +32,7 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
-    export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/oem-services.jar
+    export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/oem-services.jar:/system/framework/WfdCommon.jar
 
 # import cne init file
 on post-fs
