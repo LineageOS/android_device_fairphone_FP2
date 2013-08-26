@@ -191,7 +191,7 @@ service imsqmidaemon /system/bin/imsqmidaemon
 service imsdatadaemon /system/bin/imsdatadaemon
     class main
     user root
-    group radio net_raw log qcom_diag net_admin
+    group system wifi radio net_raw log qcom_diag net_admin
     disabled
 
 service wcnss-service /system/bin/wcnss_service
