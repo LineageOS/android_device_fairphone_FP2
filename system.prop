@@ -92,6 +92,7 @@ ro.qc.sdk.audio.ssr=false
 ##fluencetype can be "fluence" or "fluencepro" or "none"
 ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.sensors.gestures=true
+ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.camera.facialproc=false
 #property to enable user to access Google WFD settings.
 persist.debug.wfd.enable=1
