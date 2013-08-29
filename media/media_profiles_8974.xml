@@ -183,6 +183,19 @@
              channels="2" />
     </EncoderProfile>
 
+    <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="100000000"
+            width="4096"
+            height="2160"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+
     <EncoderProfile quality="4kuhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="100000000"
@@ -714,7 +727,7 @@
     -->
     <VideoEncoderCap name="h264" enabled="true"
         minBitRate="64000" maxBitRate="100000000"
-        minFrameWidth="176" maxFrameWidth="3840"
+        minFrameWidth="176" maxFrameWidth="4096"
         minFrameHeight="144" maxFrameHeight="2160"
         minFrameRate="15" maxFrameRate="30" />
 
