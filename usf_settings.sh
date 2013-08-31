@@ -54,6 +54,9 @@ if [ ! -e $trigger_file ]; then
        "MTP")
            type="mtp"
        ;;
+       "Dragon")
+           type="dragon"
+       ;;
    esac
 
    ln -s $dir0/form_factor_"$type".cfg $dir0/form_factor.cfg
