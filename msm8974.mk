@@ -62,3 +62,13 @@ PRODUCT_PACKAGES += \
         libantradio \
         ANTRadioService \
         antradio_app
+
+# Enable strict operation
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.strict_op_enable=false
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.whitelist=/system/etc/whitelist_appops.xml
+
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8974/whitelist_appops.xml:system/etc/whitelist_appops.xml
