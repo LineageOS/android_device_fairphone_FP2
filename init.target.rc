@@ -90,6 +90,12 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics
 
+#start gesture server as daemon
+service qgesturesvr /system/bin/mm-gesture-daemon
+    class late_start
+    user system
+    group system camera input graphics net_bt_stack
+
 #start GNSS/Sensor interface daemon
 service gsiff_daemon /system/bin/gsiff_daemon
     class late_start
