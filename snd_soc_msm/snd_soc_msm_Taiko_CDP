@@ -15,7 +15,7 @@ SectionVerb
 	EndSequence
 
 	#ALSA PCMS
-	CapturePCM 21
+	CapturePCM 22
 EndSection
 }
 
@@ -7275,7 +7275,7 @@ SectionModifier
 	EndSequence
 
 	# ALSA PCMs
-	CapturePCM 21
+	CapturePCM 22
 
 EndSection
 
