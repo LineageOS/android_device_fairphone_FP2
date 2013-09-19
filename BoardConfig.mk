@@ -8,7 +8,7 @@ TARGET_ARCH := arm
 endif
 
 BOARD_USES_GENERIC_AUDIO := true
-USE_CAMERA_STUB := true
+USE_CAMERA_STUB := false
 
 TARGET_USES_AOSP := false
 # Compile with msm kernel
