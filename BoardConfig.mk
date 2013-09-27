@@ -10,6 +10,9 @@ endif
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := true
 
+# Compile with msm kernel
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+
 -include $(QCPATH)/common/msm8974/BoardConfigVendor.mk
 
 #TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
@@ -87,5 +90,5 @@ TARGET_KRAIT_BIONIC_PLDSIZE := 64
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 
-TARGET_ADDITIONAL_BOOTCLASSPATH := qcmediaplayer:WfdCommon:oem-services:qcom.fmradio
+TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
