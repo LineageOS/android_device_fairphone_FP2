@@ -262,9 +262,13 @@
     </path>
 
     <path name="voice-call bt-sco">
-        <ctl name="Internal BTSCO SampleRate" value="8000" />
         <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer CSVoice" value="1" />
         <ctl name="Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice" value="1" />
+    </path>
+
+    <path name="voice-call bt-sco-wb">
+        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <path name="voice-call bt-sco" />
     </path>
 
     <!-- These are actual sound device specific mixer settings -->
@@ -503,6 +507,12 @@
     <path name="bt-sco-mic">
     </path>
 
+    <path name="bt-sco-headset-wb">
+    </path>
+
+    <path name="bt-sco-mic-wb">
+    </path>
+
     <path name="aanc-handset-mic">
         <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
         <ctl name="AIF1_CAP Mixer SLIM TX8" value="1" />
@@ -584,6 +594,7 @@
         <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
         <ctl name="HPHL DAC Switch" value="1" />
         <ctl name="COMP1 Switch" value="1" />
+        <ctl name="HPHL Volume" value="20" />
     </path>
 
     <path name="voice-tty-full-headphones">
@@ -603,7 +614,7 @@
 
     <path name="voice-tty-full-headset-mic">
         <path name="adc2" />
-        <ctl name="ADC2 Volume" value="13" />
+        <ctl name="ADC2 Volume" value="12" />
     </path>
 
     <path name="voice-tty-hco-headset-mic">
@@ -611,7 +622,7 @@
     </path>
 
     <path name="voice-tty-vco-handset-mic">
-        <path name="adc1" />
+        <path name="dmic1" />
     </path>
 
 </mixer>
