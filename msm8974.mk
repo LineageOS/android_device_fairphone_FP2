@@ -17,7 +17,7 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8974
 PRODUCT_DEVICE := msm8974
 
-PRODUCT_BOOT_JARS += qcmediaplayer:WfdCommon:oem-services:qcom.fmradio
+PRODUCT_BOOT_JARS += qcmediaplayer:WfdCommon:oem-services:qcom.fmradio:org.codeaurora.Performance
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
