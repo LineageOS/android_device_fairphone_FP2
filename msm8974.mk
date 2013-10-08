@@ -57,6 +57,10 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8974/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/qcom/msm8974/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
 
+PRODUCT_PACKAGES += \
+    wpa_supplicant_overlay.conf \
+    p2p_supplicant_overlay.conf
+
 PRODUCT_PACKAGES += wcnss_service
 
 #ANT stack
