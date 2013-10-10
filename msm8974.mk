@@ -22,15 +22,7 @@ PRODUCT_BOOT_JARS += qcmediaplayer:WfdCommon:oem-services:qcom.fmradio
 # Audio configuration file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8974/audio_policy.conf:system/etc/audio_policy.conf \
-
-# audio UCM files
-PRODUCT_COPY_FILES += device/qcom/msm8974/snd_soc_msm/snd_soc_msm_Taiko:system/etc/snd_soc_msm/snd_soc_msm_Taiko \
-                      device/qcom/msm8974/snd_soc_msm/snd_soc_msm_Taiko_CDP:system/etc/snd_soc_msm/snd_soc_msm_Taiko_CDP \
-                      device/qcom/msm8974/snd_soc_msm/snd_soc_msm_Taiko_Fluid:system/etc/snd_soc_msm/snd_soc_msm_Taiko_Fluid \
-                      device/qcom/msm8974/snd_soc_msm/snd_soc_msm_Taiko_liquid:system/etc/snd_soc_msm/snd_soc_msm_Taiko_liquid \
-                      device/qcom/msm8974/snd_soc_msm/snd_soc_msm_Taiko_liquid_auxpcm:system/etc/snd_soc_msm/snd_soc_msm_Taiko_liquid_auxpcm \
-                      device/qcom/msm8974/snd_soc_msm/snd_soc_apq_Taiko_DB:system/etc/snd_soc_msm/snd_soc_apq_Taiko_DB \
-                      device/qcom/msm8974/snd_soc_msm/snd_soc_msm_samarium_Tapan:system/etc/snd_soc_msm/snd_soc_msm_samarium_Tapan \
+    device/qcom/msm8974/mixer_paths.xml:system/etc/mixer_paths.xml
 
 
 # Feature definition files for 8974
