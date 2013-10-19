@@ -199,6 +199,9 @@
     <ctl name="AIF1_CAP Mixer SLIM TX9" value="0" />
     <ctl name="SLIM_0_RX AANC MUX" value="ZERO" />
     <!-- aanc handset mic end -->
+    <!-- ssr qmic -->
+    <ctl name="AIF1_CAP Mixer SLIM TX10" value="0" />
+    <!-- ssr qmic end-->
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="deep-buffer-playback">
@@ -668,6 +671,10 @@
     </path>
 
     <path name="voice-speaker-qmic">
+        <path name="speaker-qmic" />
+    </path>
+
+    <path name="quad-mic">
         <path name="speaker-qmic" />
     </path>
 
