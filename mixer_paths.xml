@@ -454,7 +454,32 @@
         <ctl name="DAC1 Switch" value="1" />
     </path>
 
-   <path name="sidetone-iir">
+    <path name="speaker-fluid">
+        <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
+        <ctl name="RX7 MIX1 INP1" value="RX1" />
+        <ctl name="COMP0 Switch" value="1" />
+    </path>
+
+    <path name="speaker-DB">
+        <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
+        <ctl name="SLIM RX2 MUX" value="AIF1_PB" />
+        <ctl name="SLIM_0_RX Channels" value="Two" />
+        <ctl name="RX3 MIX1 INP1" value="RX1" />
+        <ctl name="RX5 MIX1 INP1" value="RX2" />
+        <ctl name="LINEOUT1 Volume" value="20" />
+        <ctl name="LINEOUT2 Volume" value="20" />
+    </path>
+
+    <path name="speaker-liquid">
+        <path name="speaker-DB" />
+        <ctl name="RDAC5 MUX" value="DEM3_INV" />
+        <ctl name="RDAC7 MUX" value="DEM5_INV" />
+        <ctl name="COMP2 Switch" value="1" />
+        <ctl name="LINEOUT3 Volume" value="20" />
+        <ctl name="LINEOUT4 Volume" value="20" />
+    </path>
+
+    <path name="sidetone-iir">
         <ctl name="IIR1 Enable Band1" value="1" />
         <ctl name="IIR1 Enable Band2" value="1" />
         <ctl name="IIR1 Enable Band3" value="1" />
@@ -477,6 +502,20 @@
 
     <path name="speaker-mic">
         <path name="dmic1" />
+    </path>
+
+    <path name="speaker-mic-liquid">
+        <path name="dmic1" />
+        <ctl name="DEC9 Volume" value="111" />
+    </path>
+
+    <path name="speaker-mic-DB">
+        <ctl name="AIF1_CAP Mixer SLIM TX7" value="1"/>
+        <ctl name="SLIM_0_TX Channels" value="One" />
+        <ctl name="SLIM TX7 MUX" value="DEC6" />
+        <ctl name="DEC6 MUX" value="ADC1" />
+        <ctl name="ADC1 Volume" value="124" />
+        <ctl name="IIR1 INP1 MUX" value="DEC7" />
     </path>
 
     <path name="handset">
@@ -520,6 +559,11 @@
         <ctl name="ADC2 Volume" value="13" />
     </path>
 
+    <path name="headset-mic-liquid">
+        <path name="adc2" />
+        <ctl name="ADC2 Volume" value="20" />
+    </path>
+
     <path name="voice-handset">
         <path name="sidetone-handset" />
         <path name="handset" />
@@ -551,6 +595,29 @@
         <path name="headphones" />
         <ctl name="DAC1 Switch" value="1" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
+    </path>
+
+    <path name="speaker-and-headphones-fluid">
+        <path name="headphones" />
+        <ctl name="RX7 MIX1 INP1" value="RX1" />
+        <ctl name="COMP0 Switch" value="1" />
+    </path>
+
+    <path name="speaker-and-headphones-DB">
+        <path name="headphones" />
+        <ctl name="RX3 MIX1 INP1" value="RX1" />
+        <ctl name="RX5 MIX1 INP1" value="RX2" />
+        <ctl name="LINEOUT1 Volume" value="20" />
+        <ctl name="LINEOUT2 Volume" value="20" />
+    </path>
+
+    <path name="speaker-and-headphones-liquid">
+        <path name="speaker-and-headphones-DB" />
+        <ctl name="RDAC5 MUX" value="DEM3_INV" />
+        <ctl name="RDAC7 MUX" value="DEM5_INV" />
+        <ctl name="COMP2 Switch" value="1" />
+        <ctl name="LINEOUT2 Volume" value="20" />
+        <ctl name="LINEOUT4 Volume" value="20" />
     </path>
 
     <path name="usb-headphones">
@@ -639,6 +706,29 @@
         <ctl name="ANC2 MUX" value="ADC4" />
         <ctl name="ADC3 Volume" value="14" />
         <ctl name="ADC4 Volume" value="14" />
+    </path>
+
+    <path name="speaker-and-anc-headphones-fluid">
+        <path name="anc-headphones" />
+        <ctl name="RX7 MIX1 INP1" value="RX1" />
+        <ctl name="COMP0 Switch" value="1" />
+    </path>
+
+    <path name="speaker-and-anc-headphones-DB">
+        <path name="anc-headphones" />
+        <ctl name="RX3 MIX1 INP1" value="RX1" />
+        <ctl name="RX5 MIX1 INP1" value="RX2" />
+        <ctl name="LINEOUT1 Volume" value="20" />
+        <ctl name="LINEOUT2 Volume" value="20" />
+    </path>
+
+    <path name="speaker-and-anc-headphones-liquid">
+        <path name="speaker-and-anc-headphones-DB" />
+        <ctl name="RDAC5 MUX" value="DEM3_INV" />
+        <ctl name="RDAC7 MUX" value="DEM5_INV" />
+        <ctl name="COMP2 Switch" value="1" />
+        <ctl name="LINEOUT2 Volume" value="20" />
+        <ctl name="LINEOUT4 Volume" value="20" />
     </path>
 
     <path name="hdmi">
