@@ -633,6 +633,14 @@
         <ctl name="IIR1 INP1 MUX" value="DEC6" />
     </path>
 
+    <path name="handset-stereo-dmic-ef">
+        <path name="speaker-dmic-endfire" />
+    </path>
+
+    <path name="speaker-stereo-dmic-ef">
+        <path name="speaker-dmic-endfire" />
+    </path>
+
     <path name="voice-dmic-ef-tmus">
         <path name="dmic-endfire" />
     </path>
