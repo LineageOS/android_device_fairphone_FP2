@@ -242,6 +242,11 @@
     <!-- ssr qmic -->
     <ctl name="AIF1_CAP Mixer SLIM TX10" value="0" />
     <!-- ssr qmic end-->
+    <!-- audio record compress-->
+    <ctl name="MultiMedia8 Mixer SLIM_0_TX" value="0" />
+    <ctl name="MultiMedia8 Mixer INTERNAL_BT_SCO_TX" value="0" />
+    <ctl name="MultiMedia8 Mixer AFE_PCM_TX" value="0" />
+    <!-- audio record compress end-->
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="deep-buffer-playback">
@@ -347,6 +352,18 @@
 
     <path name="audio-record capture-fm">
         <ctl name="MultiMedia1 Mixer INTERNAL_FM_TX" value="1" />
+    </path>
+
+    <path name="audio-record-compress">
+        <ctl name="MultiMedia8 Mixer SLIM_0_TX" value="1" />
+    </path>
+
+    <path name="audio-record-compress bt-sco">
+        <ctl name="MultiMedia8 Mixer INTERNAL_BT_SCO_TX" value="1" />
+    </path>
+
+    <path name="audio-record-compress usb-headset-mic">
+        <ctl name="MultiMedia8 Mixer AFE_PCM_TX" value="1" />
     </path>
 
     <path name="fm-virtual-record capture-fm">
