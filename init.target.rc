@@ -31,6 +31,14 @@ on early-init
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
 
+on init
+    export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/oem-services.jar:/system/framework/WfdCommon.jar
+    # Set the property to indicate type of virtual display to 0
+    # 0 indicates that virtual display is not a Wifi display and that the
+    # session is not exercised through RemoteDisplay in the android framework
+    setprop persist.sys.wfd.virtual 0
+
+
 # import cne init file
 on post-fs
     export LD_PRELOAD /vendor/lib/libNimsWrap.so
