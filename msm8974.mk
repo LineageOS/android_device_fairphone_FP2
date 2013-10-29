@@ -25,7 +25,8 @@ PRODUCT_BOOT_JARS += qcmediaplayer:WfdCommon:oem-services:qcom.fmradio:org.codea
 # Audio configuration file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8974/audio_policy.conf:system/etc/audio_policy.conf \
-    device/qcom/msm8974/mixer_paths.xml:system/etc/mixer_paths.xml
+    device/qcom/msm8974/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/qcom/msm8974/mixer_paths_auxpcm.xml:system/etc/mixer_paths_auxpcm.xml
 
 
 # Feature definition files for 8974
