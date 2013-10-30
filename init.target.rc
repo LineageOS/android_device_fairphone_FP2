@@ -32,7 +32,6 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
-    export BOOTCLASSPATH ${BOOTCLASSPATH}:/system/framework/oem-services.jar:/system/framework/WfdCommon.jar
     # Set the property to indicate type of virtual display to 0
     # 0 indicates that virtual display is not a Wifi display and that the
     # session is not exercised through RemoteDisplay in the android framework
