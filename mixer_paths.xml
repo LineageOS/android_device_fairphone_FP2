@@ -82,6 +82,7 @@
     <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia5" value="0" />
     <ctl name="IIR1 INP1 MUX" value="ZERO" />
+    <ctl name="SLIM0_RX_VI_FB_LCH_MUX" value="ZERO" />
     <ctl name="SLIM TX10 MUX" value="ZERO" />
     <ctl name="SLIM TX9 MUX" value="ZERO" />
     <ctl name="SLIM TX8 MUX" value="ZERO" />
@@ -427,6 +428,14 @@
         <path name="volte-call bt-sco" />
     </path>
 
+   <path name="spkr-rx-calib">
+        <ctl name="SLIMBUS_DL_HL Switch"  value="1" />
+    </path>
+
+    <path name="spkr-vi-record">
+        <ctl name="SLIM0_RX_VI_FB_LCH_MUX"  value="SLIM4_TX" />
+    </path>
+
     <!-- These are actual sound device specific mixer settings -->
     <path name="adc1">
         <ctl name="AIF1_CAP Mixer SLIM TX7" value="1"/>
@@ -521,6 +530,16 @@
         <ctl name="DEC6 MUX" value="ADC1" />
         <ctl name="ADC1 Volume" value="124" />
         <ctl name="IIR1 INP1 MUX" value="DEC7" />
+    </path>
+
+    <path name="speaker-protected">
+        <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
+        <ctl name="SLIM_0_RX Channels" value="One" />
+        <ctl name="RX7 MIX1 INP1" value="RX1" />
+        <ctl name="COMP0 Switch" value="1" />
+    </path>
+
+    <path name="vi-feedback">
     </path>
 
     <path name="handset">
