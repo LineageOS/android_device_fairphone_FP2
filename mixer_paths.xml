@@ -146,6 +146,7 @@
     <ctl name="SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX" value="0" />
     <ctl name="SLIMBUS_DL_HL Switch" value="0" />
     <ctl name="MultiMedia1 Mixer INTERNAL_FM_TX" value="0" />
+    <ctl name="MultiMedia2 Mixer INTERNAL_FM_TX" value="0" />
     <ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia5" value="0" />
     <!-- fm end -->
@@ -331,6 +332,10 @@
 
     <path name="audio-record capture-fm">
         <ctl name="MultiMedia1 Mixer INTERNAL_FM_TX" value="1" />
+    </path>
+
+    <path name="fm-virtual-record capture-fm">
+        <ctl name="MultiMedia2 Mixer INTERNAL_FM_TX" value="1" />
     </path>
 
     <path name="voice-call">
@@ -683,6 +688,7 @@
 
     <path name="capture-fm">
     </path>
+
 
     <path name="aanc-handset-mic">
         <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
