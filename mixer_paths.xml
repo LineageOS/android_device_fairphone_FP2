@@ -465,6 +465,10 @@
         <ctl name="COMP0 Switch" value="1" />
     </path>
 
+    <path name="speaker-cdp">
+        <path name="speaker-fluid" />
+    </path>
+
     <path name="speaker-DB">
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
         <ctl name="SLIM RX2 MUX" value="AIF1_PB" />
@@ -564,6 +568,11 @@
         <ctl name="ADC2 Volume" value="13" />
     </path>
 
+    <path name="headset-mic-DB">
+        <path name="adc2" />
+        <ctl name="ADC2 Volume" value="14" />
+    </path>
+
     <path name="headset-mic-liquid">
         <path name="adc2" />
         <ctl name="ADC2 Volume" value="20" />
@@ -606,6 +615,10 @@
         <path name="headphones" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
         <ctl name="COMP0 Switch" value="1" />
+    </path>
+
+    <path name="speaker-and-headphones-cdp">
+        <path name="speaker-and-headphones-fluid" />
     </path>
 
     <path name="speaker-and-headphones-DB">
@@ -719,6 +732,10 @@
         <ctl name="COMP0 Switch" value="1" />
     </path>
 
+    <path name="speaker-and-anc-headphones-cdp">
+        <path name="speaker-and-anc-headphones-fluid" />
+    </path>
+
     <path name="speaker-and-anc-headphones-DB">
         <path name="anc-headphones" />
         <ctl name="RX3 MIX1 INP1" value="RX1" />
@@ -806,9 +823,24 @@
         <ctl name="SLIM_0_TX Channels" value="Two" />
     </path>
 
+    <path name="speaker-dmic-endfire-liquid">
+        <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
+        <ctl name="AIF1_CAP Mixer SLIM TX8" value="1" />
+        <ctl name="SLIM TX7 MUX" value="DEC7" />
+        <ctl name="DEC7 MUX" value="DMIC1" />
+        <ctl name="SLIM TX8 MUX" value="DEC9" />
+        <ctl name="DEC9 MUX" value="DMIC4" />
+        <ctl name="SLIM_0_TX Channels" value="Two" />
+    </path>
+
     <path name="dmic-endfire">
         <path name="speaker-dmic-endfire" />
         <ctl name="IIR1 INP1 MUX" value="DEC6" />
+    </path>
+
+    <path name="dmic-endfire-liquid">
+        <path name="speaker-dmic-endfire-liquid" />
+        <ctl name="IIR1 INP1 MUX" value="DEC7" />
     </path>
 
     <path name="handset-stereo-dmic-ef">
@@ -839,6 +871,30 @@
         <path name="dmic-endfire" />
     </path>
 
+    <path name="handset-stereo-dmic-ef-liquid">
+        <path name="speaker-dmic-endfire-liquid" />
+    </path>
+
+    <path name="speaker-stereo-dmic-ef-liquid">
+        <path name="speaker-dmic-endfire-liquid" />
+    </path>
+
+    <path name="voice-dmic-ef-liquid-liquid">
+        <path name="dmic-endfire-liquid" />
+    </path>
+
+    <path name="voice-speaker-dmic-ef-liquid">
+        <path name="dmic-endfire-liquid" />
+    </path>
+
+    <path name="voice-rec-dmic-ef-liquid">
+        <path name="dmic-endfire-liquid" />
+    </path>
+
+    <path name="voice-rec-dmic-ef-fluence-liquid">
+        <path name="dmic-endfire-liquid" />
+    </path>
+
     <!-- Quad MIC devices -->
     <path name="speaker-qmic">
         <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
@@ -846,14 +902,30 @@
         <ctl name="AIF1_CAP Mixer SLIM TX9" value="1" />
         <ctl name="AIF1_CAP Mixer SLIM TX10" value="1" />
         <ctl name="SLIM_0_TX Channels" value="Four" />
-        <ctl name="SLIM TX7 MUX" value="DEC7" />
-        <ctl name="DEC7 MUX" value="DMIC1" />
-        <ctl name="SLIM TX8 MUX" value="DEC8" />
-        <ctl name="DEC8 MUX" value="DMIC2" />
-        <ctl name="SLIM TX9 MUX" value="DEC10" />
-        <ctl name="DEC10 MUX" value="DMIC3" />
-        <ctl name="SLIM TX10 MUX" value="DEC9" />
+        <ctl name="SLIM TX7 MUX" value="DEC9" />
         <ctl name="DEC9 MUX" value="DMIC4" />
+        <ctl name="SLIM TX8 MUX" value="DEC10" />
+        <ctl name="DEC10 MUX" value="DMIC3" />
+        <ctl name="SLIM TX9 MUX" value="DEC8" />
+        <ctl name="DEC8 MUX" value="DMIC2" />
+        <ctl name="SLIM TX10 MUX" value="DEC6" />
+        <ctl name="DEC6 MUX" value="DMIC6" />
+    </path>
+
+    <path name="speaker-qmic-cdp">
+        <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
+        <ctl name="AIF1_CAP Mixer SLIM TX8" value="1" />
+        <ctl name="AIF1_CAP Mixer SLIM TX9" value="1" />
+        <ctl name="AIF1_CAP Mixer SLIM TX10" value="1" />
+        <ctl name="SLIM_0_TX Channels" value="Four" />
+        <ctl name="SLIM TX7 MUX" value="DEC9" />
+        <ctl name="DEC9 MUX" value="DMIC4" />
+        <ctl name="SLIM TX8 MUX" value="DEC10" />
+        <ctl name="DEC10 MUX" value="DMIC3" />
+        <ctl name="SLIM TX9 MUX" value="DEC7" />
+        <ctl name="DEC7 MUX" value="DMIC1" />
+        <ctl name="SLIM TX10 MUX" value="DEC6" />
+        <ctl name="DEC6 MUX" value="DMIC6" />
     </path>
 
     <path name="voice-speaker-qmic">
@@ -862,6 +934,30 @@
 
     <path name="quad-mic">
         <path name="speaker-qmic" />
+    </path>
+
+    <path name="voice-speaker-qmic-cdp">
+        <path name="speaker-qmic-cdp" />
+    </path>
+
+    <path name="quad-mic-cdp">
+        <path name="speaker-qmic-cdp" />
+    </path>
+
+    <path name="voice-speaker-qmic-liquid">
+        <path name="speaker-qmic-cdp" />
+    </path>
+
+    <path name="quad-mic-liquid">
+        <path name="speaker-qmic-cdp" />
+    </path>
+
+    <path name="voice-speaker-qmic-DB">
+        <path name="speaker-qmic-cdp" />
+    </path>
+
+    <path name="quad-mic-DB">
+        <path name="speaker-qmic-cdp" />
     </path>
 
     <!-- TTY devices -->
