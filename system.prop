@@ -106,3 +106,6 @@ tunnel.audio.encode = true
 
 #use VERY_HIGH_QUALITY for audio resampler
 af.resampler.quality=4
+
+#disable tunnel mode by default
+audio.offload.disable=1
