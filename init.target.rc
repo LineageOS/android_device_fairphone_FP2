@@ -217,13 +217,9 @@ service imsdatadaemon /system/bin/imsdatadaemon
 
 service wcnss-service /system/bin/wcnss_service
     class late_start
-    user system
+    user root
     group system wifi
-    disabled
     oneshot
-
-on property:wlan.driver.ath=0
-    start wcnss-service
 
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
