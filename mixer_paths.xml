@@ -55,8 +55,8 @@
     <ctl name="SLIMBUS_3_RX Port Mixer MI2S_TX" value="0" />
     <ctl name="HDMI_RX Port Mixer MI2S_TX" value="0" />
     <ctl name="SLIMBUS_0_RX Port Mixer SLIM_0_TX" value="0" />
-    <ctl name="SEC_AUX_PCM_RX Audio Mixer MultiMedia2" value="0" />
-    <ctl name="SEC_AUX_PCM_RX Audio Mixer MultiMedia3" value="0" />
+    <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia2" value="0" />
+    <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3" value="0" />
     <ctl name="AUX_PCM_RX Audio Mixer MultiMedia5" value="0" />
     <ctl name="AUX_PCM_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="SEC_AUX_PCM_RX_Voice Mixer CSVoice" value="0" />
@@ -148,8 +148,10 @@
     <ctl name="AIF1_CAP Mixer SLIM TX8" value="0"/>
     <ctl name="CLASS_H_DSM MUX" value="ZERO" />
     <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia4" value="0" />
+    <ctl name="AFE_PCM_RX Audio Mixer MultiMedia4" value="0" />
+    <ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="HDMI Mixer MultiMedia4" value="0" />
-    <ctl name="SEC_AUX_PCM_RX Audio Mixer MultiMedia4" value="0" />
+    <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4" value="0" />
     <!-- usb headset -->
     <ctl name="AFE_PCM_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="MultiMedia1 Mixer AFE_PCM_TX" value="0" />
@@ -331,6 +333,23 @@
     <path name="compress-offload-playback speaker-and-hdmi">
         <path name="compress-offload-playback hdmi" />
         <path name="compress-offload-playback" />
+    </path>
+
+    <path name="compress-offload-playback afe-proxy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia4" value="1" />
+    </path>
+
+    <path name="compress-offload-playback usb-headphones">
+        <path name="compress-offload-playback afe-proxy" />
+    </path>
+
+    <path name="compress-offload-playback speaker-and-usb-headphones">
+        <path name="compress-offload-playback usb-headphones" />
+        <path name="compress-offload-playback" />
+    </path>
+
+    <path name="compress-offload-playback transmission-fm">
+        <ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia4" value="1" />
     </path>
 
     <path name="audio-record">
