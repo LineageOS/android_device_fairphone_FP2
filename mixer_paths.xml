@@ -10,6 +10,15 @@
     <ctl name="Voice Rx Gain" id="0" value="0" />
     <ctl name="Voice Rx Gain" id="1" value="-1" />
     <ctl name="Voice Rx Gain" id="2" value="20" />
+    <ctl name="Voip Tx Mute" id="0" value="0" />
+    <ctl name="Voip Tx Mute" id="1" value="500" />
+    <ctl name="Voip Rx Gain" id="0" value="0" />
+    <ctl name="Voip Rx Gain" id="1" value="20" />
+    <ctl name="Voip Mode Config" value="12" />
+    <ctl name="Voip Rate Config" value="0" />
+    <ctl name="Voip Evrc Min Max Rate Config" id="0" value="1" />
+    <ctl name="Voip Evrc Min Max Rate Config" id="1" value="4" />
+    <ctl name="Voip Dtx Mode" value="0" />
     <ctl name="TTY Mode" value="Off" />
     <ctl name="LINEOUT1 Volume" value="13" />
     <ctl name="LINEOUT2 Volume" value="13" />
@@ -53,6 +62,8 @@
     <ctl name="SEC_AUX_PCM_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="Voice_Tx Mixer SLIM_0_TX_Voice" value="0" />
     <ctl name="Voice_Tx Mixer SEC_AUX_PCM_TX_Voice" value="0" />
+    <ctl name="SLIM_0_RX_Voice Mixer Voip" value="0" />
+    <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="0" />
     <!-- Audio BTSCO -->
     <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4" value="0" />
@@ -62,6 +73,8 @@
     <ctl name="Internal BTSCO SampleRate" value="8000" />
     <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice" value="0" />
+    <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voip" value="0" />
+    <ctl name="Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip" value="0" />
     <ctl name="HDMI_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="SLIM_0_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="SLIMBUS_4_RX Audio Mixer MultiMedia1" value="0" />
@@ -429,7 +442,22 @@
         <path name="volte-call bt-sco" />
     </path>
 
-   <path name="spkr-rx-calib">
+    <path name="compress-voip-call">
+        <ctl name="SLIM_0_RX_Voice Mixer Voip" value="1" />
+        <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="1" />
+    </path>
+
+    <path name="compress-voip-call bt-sco">
+        <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voip" value="1" />
+        <ctl name="Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip" value="1" />
+    </path>
+
+    <path name="compress-voip-call bt-sco-wb">
+        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <path name="compress-voip-call bt-sco" />
+    </path>
+
+    <path name="spkr-rx-calib">
         <ctl name="SLIMBUS_DL_HL Switch"  value="1" />
     </path>
 
