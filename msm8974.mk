@@ -31,7 +31,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
-    libqcomvoiceprocessing
+    libqcomvoiceprocessing \
+    libqcompostprocbundle
 
 # Feature definition files for 8974
 PRODUCT_COPY_FILES += \
