@@ -193,6 +193,13 @@
     <ctl name="Voice2_Tx Mixer AFE_PCM_TX_Voice2" value="0" />
     <!-- Voice2 End-->
 
+    <!-- QCHAT -->
+    <ctl name="SLIM_0_RX_Voice Mixer QCHAT" value="0" />
+    <ctl name="QCHAT_Tx Mixer SLIM_0_TX_QCHAT" value="0" />
+    <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer QCHAT" value="0" />
+    <ctl name="QCHAT_Tx Mixer INTERNAL_BT_SCO_TX_QCHAT" value="0" />
+    <!-- QCHAT End -->
+
     <!-- anc headset -->
     <!-- speaker anc combo -->
     <ctl name="RX4 DSM MUX" value="CIC_OUT" />
@@ -517,6 +524,21 @@
     <path name="listen-low-power">
         <ctl name="LSM1 MUX" value="SLIMBUS_5_TX" />
         <ctl name="SLIMBUS_5_TX LSM Function" value="AUDIO" />
+    </path>
+
+    <path name="qchat-call">
+        <ctl name="SLIM_0_RX_Voice Mixer QCHAT" value="1" />
+        <ctl name="QCHAT_Tx Mixer SLIM_0_TX_QCHAT" value="1" />
+    </path>
+
+    <path name="qchat-call bt-sco">
+        <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer QCHAT" value="1" />
+        <ctl name="QCHAT_Tx Mixer INTERNAL_BT_SCO_TX_QCHAT" value="1" />
+    </path>
+
+    <path name="qchat-call bt-sco-wb">
+        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <path name="qchat-call bt-sco" />
     </path>
 
     <!-- These are actual sound device specific mixer settings -->
