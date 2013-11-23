@@ -103,8 +103,8 @@ service qgesturesvr /system/bin/mm-gesture-daemon
 #start GNSS/Sensor interface daemon
 service gsiff_daemon /system/bin/gsiff_daemon
     class late_start
-    user system
-    group gps net_raw
+    user gps
+    group gps net_raw misc
 
 service qrngd /system/bin/qrngd -f
     class main
