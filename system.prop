@@ -81,6 +81,12 @@ ro.qualcomm.cabl=1
 # System prop to turn on CdmaLTEPhone always
 telephony.lteOnCdmaDevice=1
 
+#
+# System props for bluetooth
+# System prop to turn on hfp client
+bluetooth.hfp.client=1
+
+
 #Simulate sdcard on /data/media
 #
 persist.fuse_sdcard=true
