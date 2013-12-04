@@ -257,6 +257,8 @@
     <ctl name="MultiMedia8 Mixer SLIM_0_TX" value="0" />
     <ctl name="MultiMedia8 Mixer INTERNAL_BT_SCO_TX" value="0" />
     <ctl name="MultiMedia8 Mixer AFE_PCM_TX" value="0" />
+    <ctl name="MultiMedia8 Mixer VOC_REC_UL" value="0" />
+    <ctl name="MultiMedia8 Mixer VOC_REC_DL" value="0" />
     <!-- audio record compress end-->
     <!-- listen -->
     <ctl name="LSM1 MUX" value="None" />
@@ -482,6 +484,18 @@
         <path name="incall-rec-uplink" />
     </path>
 
+    <path name="incall-rec-uplink-compress">
+        <ctl name="MultiMedia8 Mixer VOC_REC_UL" value="1" />
+    </path>
+
+    <path name="incall-rec-uplink-compress bt-sco">
+        <path name="incall-rec-uplink-compress" />
+    </path>
+
+    <path name="incall-rec-uplink-compress bt-sco-wb">
+        <path name="incall-rec-uplink-compress" />
+    </path>
+
     <path name="incall-rec-downlink">
         <ctl name="MultiMedia1 Mixer VOC_REC_DL" value="1" />
     </path>
@@ -492,6 +506,18 @@
 
     <path name="incall-rec-downlink bt-sco-wb">
         <path name="incall-rec-downlink" />
+    </path>
+
+    <path name="incall-rec-downlink-compress">
+        <ctl name="MultiMedia8 Mixer VOC_REC_DL" value="1" />
+    </path>
+
+    <path name="incall-rec-downlink-compress bt-sco">
+        <path name="incall-rec-downlink-compress" />
+    </path>
+
+    <path name="incall-rec-downlink-compress bt-sco-wb">
+        <path name="incall-rec-downlink-compress" />
     </path>
 
     <path name="incall-rec-uplink-and-downlink">
@@ -505,6 +531,19 @@
 
     <path name="incall-rec-uplink-and-downlink bt-sco-wb">
         <path name="incall-rec-uplink-and-downlink" />
+    </path>
+
+    <path name="incall-rec-uplink-and-downlink-compress">
+        <path name="incall-rec-uplink-compress" />
+        <path name="incall-rec-downlink-compress" />
+    </path>
+
+    <path name="incall-rec-uplink-and-downlink-compress bt-sco">
+        <path name="incall-rec-uplink-and-downlink-compress" />
+    </path>
+
+    <path name="incall-rec-uplink-and-downlink-compress bt-sco-wb">
+        <path name="incall-rec-uplink-and-downlink-compress" />
     </path>
 
     <path name="volte-call">
