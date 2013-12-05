@@ -28,10 +28,6 @@ dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 
 ro.hdmi.enable=true
-tunnel.decode=true
-tunnel.audiovideo.decode=true
-lpa.decode=false
-lpa.use-stagefright=true
 persist.speaker.prot.enable=false
 qcom.hw.aac.encoder=true
 #
@@ -113,7 +109,8 @@ tunnel.audio.encode = true
 #use VERY_HIGH_QUALITY for audio resampler
 af.resampler.quality=4
 
-#disable tunnel mode by default
-audio.offload.disable=1
-#disable offload audio video playback by default
-av.offload.enable=false
+#Buffer size in kbytes for compress offload playback
+audio.offload.buffer.size.kbytes=32
+
+#Enable offload audio video playback by default
+av.offload.enable=true
