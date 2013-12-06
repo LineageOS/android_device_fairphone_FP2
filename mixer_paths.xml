@@ -62,8 +62,6 @@
     <ctl name="SEC_AUX_PCM_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="Voice_Tx Mixer SLIM_0_TX_Voice" value="0" />
     <ctl name="Voice_Tx Mixer SEC_AUX_PCM_TX_Voice" value="0" />
-    <ctl name="SLIM_0_RX_Voice Mixer Voip" value="0" />
-    <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="0" />
     <!-- Audio BTSCO -->
     <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4" value="0" />
@@ -73,8 +71,6 @@
     <ctl name="Internal BTSCO SampleRate" value="8000" />
     <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice" value="0" />
-    <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voip" value="0" />
-    <ctl name="Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip" value="0" />
     <ctl name="HDMI_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="SLIM_0_RX_Voice Mixer CSVoice" value="0" />
     <ctl name="SLIMBUS_4_RX Audio Mixer MultiMedia1" value="0" />
@@ -192,6 +188,15 @@
     <ctl name="AFE_PCM_RX_Voice Mixer Voice2" value="0" />
     <ctl name="Voice2_Tx Mixer AFE_PCM_TX_Voice2" value="0" />
     <!-- Voice2 End-->
+
+    <!-- compress-voip-call -->
+    <ctl name="SLIM_0_RX_Voice Mixer Voip" value="0" />
+    <ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="0" />
+    <ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voip" value="0" />
+    <ctl name="Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip" value="0" />
+    <ctl name="AFE_PCM_RX_Voice Mixer Voip" value="0" />
+    <ctl name="Voip_Tx Mixer AFE_PCM_TX_Voip" value="0" />
+    <!-- compress-voip-call End-->
 
     <!-- QCHAT -->
     <ctl name="SLIM_0_RX_Voice Mixer QCHAT" value="0" />
@@ -484,6 +489,10 @@
         <path name="incall-rec-uplink" />
     </path>
 
+    <path name="incall-rec-uplink usb-headset-mic">
+        <path name="incall-rec-uplink" />
+    </path>
+
     <path name="incall-rec-uplink-compress">
         <ctl name="MultiMedia8 Mixer VOC_REC_UL" value="1" />
     </path>
@@ -493,6 +502,10 @@
     </path>
 
     <path name="incall-rec-uplink-compress bt-sco-wb">
+        <path name="incall-rec-uplink-compress" />
+    </path>
+
+    <path name="incall-rec-uplink-compress usb-headset-mic">
         <path name="incall-rec-uplink-compress" />
     </path>
 
@@ -508,6 +521,10 @@
         <path name="incall-rec-downlink" />
     </path>
 
+    <path name="incall-rec-downlink usb-headset-mic">
+        <path name="incall-rec-downlink" />
+    </path>
+
     <path name="incall-rec-downlink-compress">
         <ctl name="MultiMedia8 Mixer VOC_REC_DL" value="1" />
     </path>
@@ -517,6 +534,10 @@
     </path>
 
     <path name="incall-rec-downlink-compress bt-sco-wb">
+        <path name="incall-rec-downlink-compress" />
+    </path>
+
+    <path name="incall-rec-downlink-compress usb-headset-mic">
         <path name="incall-rec-downlink-compress" />
     </path>
 
@@ -533,6 +554,10 @@
         <path name="incall-rec-uplink-and-downlink" />
     </path>
 
+    <path name="incall-rec-uplink-and-downlink usb-headset-mic">
+        <path name="incall-rec-uplink-and-downlink" />
+    </path>
+
     <path name="incall-rec-uplink-and-downlink-compress">
         <path name="incall-rec-uplink-compress" />
         <path name="incall-rec-downlink-compress" />
@@ -543,6 +568,10 @@
     </path>
 
     <path name="incall-rec-uplink-and-downlink-compress bt-sco-wb">
+        <path name="incall-rec-uplink-and-downlink-compress" />
+    </path>
+
+    <path name="incall-rec-uplink-and-downlink-compress usb-headset-mic">
         <path name="incall-rec-uplink-and-downlink-compress" />
     </path>
 
@@ -584,6 +613,11 @@
     <path name="compress-voip-call bt-sco-wb">
         <ctl name="Internal BTSCO SampleRate" value="16000" />
         <path name="compress-voip-call bt-sco" />
+    </path>
+
+    <path name="compress-voip-call usb-headphones">
+        <ctl name="AFE_PCM_RX_Voice Mixer Voip" value="1" />
+        <ctl name="Voip_Tx Mixer AFE_PCM_TX_Voip" value="1" />
     </path>
 
     <path name="spkr-rx-calib">
