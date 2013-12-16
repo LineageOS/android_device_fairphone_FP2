@@ -37,6 +37,11 @@ dev_ids=("0" "0")
 cards=("0" "0")
 found_num=0
 
+# Run usf_settings script
+if [ -f /system/etc/usf_settings.sh ]; then
+  /system/bin/sh /system/etc/usf_settings.sh
+fi
+
 while read pcm_entry; do
     for i in 0 1; do
         echo $pcm_entry
