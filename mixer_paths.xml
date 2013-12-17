@@ -274,6 +274,9 @@
     <ctl name="MADONOFF Switch" value="0" />
     <ctl name="MAD Input" value="DMIC1" />
     <!-- listen end-->
+    <!-- afe-proxy -->
+    <ctl name="AFE_PCM_RX Audio Mixer MultiMedia2" value="0" />
+    <!-- afe-proxy end-->
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="deep-buffer-playback">
@@ -356,6 +359,10 @@
 
     <path name="multi-channel-playback hdmi">
         <ctl name="HDMI Mixer MultiMedia2" value="1" />
+    </path>
+
+    <path name="multi-channel-playback afe-proxy">
+        <ctl name="AFE_PCM_RX Audio Mixer MultiMedia2" value="1" />
     </path>
 
     <path name="compress-offload-playback">
