@@ -501,6 +501,10 @@
         <ctl name="MultiMedia6 Mixer SLIM_0_TX" value="1" />
         <ctl name="SLIMBUS_DL_HL Switch" value="1" />
    </path>
+   <path name="hfp-sco-wb">
+        <ctl name="Internal BTSCO SampleRate" value="16000" />
+        <path name="hfp-sco" />
+   </path>
 
     <path name="incall-rec-uplink bt-sco-wb">
         <path name="incall-rec-uplink" />
