@@ -1,4 +1,4 @@
-# Copyright (c) 2011-2013, The Linux Foundation. All rights reserved.
+# Copyright (c) 2011-2014, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -204,14 +204,16 @@ on property:init.svc.bootanim=stopped
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
     user system
-    group radio net_raw log qcom_diag
+    socket ims_qmid stream 0660 system radio
+    group ims radio net_raw log qcom_diag
     disabled
 
 # imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
 service imsdatadaemon /system/bin/imsdatadaemon
     class main
     user root
-    group system wifi radio net_raw log qcom_diag net_admin
+    socket ims_datad stream 0660 system radio
+    group ims radio wifi net_raw log qcom_diag net_admin
     disabled
 
 service qca6234-service /system/bin/sh /system/etc/qca6234-service.sh
@@ -231,7 +233,8 @@ on property:sys.ims.QMI_DAEMON_STATUS=1
 service ims_rtp_daemon /system/bin/ims_rtp_daemon
    class main
    user system
-   group radio net_raw diag qcom_diag log
+   socket ims_rtpd stream 0660 system ims
+   group ims net_raw diag qcom_diag log
    disabled
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
