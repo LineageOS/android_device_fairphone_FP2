@@ -1,5 +1,5 @@
 TARGET_USES_QCOM_BSP := true
-BOARD_HAVE_QCA_NFC := true
+TARGET_USES_QCA_NFC := true
 
 ifeq ($(TARGET_USES_QCOM_BSP), true)
 # Add QC Video Enhancements flag
@@ -82,8 +82,21 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     device/qcom/msm8974/whitelist_appops.xml:system/etc/whitelist_appops.xml
 
-ifeq ($(BOARD_HAVE_QCA_NFC),true)
+
 # NFC packages
+ifeq ($(TARGET_USES_QCA_NFC),true)
+NFC_D := true
+
+ifeq ($(NFC_D), true)
+    PRODUCT_PACKAGES += \
+        libnfcD-nci \
+        libnfcD_nci_jni \
+        nfc_nci.msm8974 \
+        NfcDNci \
+        Tag \
+        com.android.nfc_extras \
+        com.android.nfc.helper
+else
 PRODUCT_PACKAGES += \
     libnfc-nci \
     libnfc_nci_jni \
@@ -91,6 +104,7 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     com.android.nfc_extras
+endif
 
 # file that declares the MIFARE NFC constant
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
