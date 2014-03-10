@@ -208,12 +208,11 @@ service imsqmidaemon /system/bin/imsqmidaemon
     group ims radio net_raw log qcom_diag
     disabled
 
-# imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
 service imsdatadaemon /system/bin/imsdatadaemon
     class main
-    user root
+    user system
     socket ims_datad stream 0660 system radio
-    group ims radio wifi net_raw log qcom_diag net_admin
+    group system ims wifi radio inet net_raw log qcom_diag net_admin
     disabled
 
 service qca6234-service /system/bin/sh /system/etc/qca6234-service.sh
