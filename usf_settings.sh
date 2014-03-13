@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright (c) 2012-2013, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2014, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -38,6 +38,7 @@ prox_dir=$dir0/proximity
 pairing_dir=$dir0/pairing
 ucm_dir=$dir0/ucm
 mixer_dir=/persist/usf/mixer
+epos_dir=/persist/usf/epos
 
 trigger_file=$dir0/form_factor.cfg
 
@@ -78,7 +79,12 @@ if [ ! -e $trigger_file ]; then
    ln -s $prox_dir/cfg/usf_proximity_"$type".cfg $prox_dir/usf_proximity.cfg
    ln -s $pairing_dir/cfg/usf_pairing_"$type".cfg $pairing_dir/usf_pairing.cfg
 
+   ln -s $e_dir/cfg/service_settings_"$type".xml $e_dir/service_settings.xml
+
    ln -s $mixer_dir/mixer_paths_"$type".xml $mixer_dir/mixer_paths.xml
+
+   ln -s $epos_dir/product_calib_"$type".dat $epos_dir/product_calib.dat
+   ln -s $epos_dir/unit_calib_"$type".dat $epos_dir/unit_calib.dat
 
    # The USF based calculators have system permissions
    chown system $dir0/*
@@ -87,3 +93,6 @@ if [ ! -e $trigger_file ]; then
 fi
 
 chown system /dev/usf1
+
+# Set enabled properties for daemon
+setprop ro.qc.sdk.us.digitalpen 1
