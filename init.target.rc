@@ -66,7 +66,6 @@ on post-fs-data
     mkdir /tombstones/dsps 0771 system system
 
 on boot
-    start imsqmidaemon
     insmod /system/lib/modules/adsprpc.ko
 
 # Allow usb charging to be disabled persistently
@@ -206,7 +205,6 @@ service imsqmidaemon /system/bin/imsqmidaemon
     user system
     socket ims_qmid stream 0660 system radio
     group ims radio net_raw log qcom_diag
-    disabled
 
 service imsdatadaemon /system/bin/imsdatadaemon
     class main
