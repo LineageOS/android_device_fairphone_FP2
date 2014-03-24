@@ -286,6 +286,11 @@
     <!-- afe-proxy end-->
     <ctl name="AFE_PCM_RX Port Mixer INTERNAL_FM_TX" value="0" />
 
+    <!-- BT SCO WB Sample Rate -->
+    <path name="bt-sco-wb-samplerate">
+        <ctl name="Internal BTSCO SampleRate" value="16000" />
+    </path>
+
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="deep-buffer-playback">
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia1" value="1" />
