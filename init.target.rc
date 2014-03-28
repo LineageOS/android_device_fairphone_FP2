@@ -219,7 +219,7 @@ service qca6234-service /system/bin/sh /system/etc/qca6234-service.sh
     oneshot
 
 service wcnss-service /system/bin/wcnss_service
-    class late_start
+    class main
     user system
     group system wifi
     oneshot
