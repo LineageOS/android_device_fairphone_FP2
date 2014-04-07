@@ -22,7 +22,7 @@ TARGET_HAS_QC_KERNEL_SOURCE := true
 TARGET_HAVE_HDMI_OUT := false
 TARGET_USES_OVERLAY := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-TARGET_NO_BOOTLOADER := false
+TARGET_NO_BOOTLOADER := true
 TARGET_NO_KERNEL := false
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
@@ -97,6 +97,11 @@ TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 
 TARGET_HW_DISK_ENCRYPTION := true
+
+# Workaround framework bluetooth dependency
+BOARD_HAVE_BLUETOOTH := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/generic/common/bluetooth
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm

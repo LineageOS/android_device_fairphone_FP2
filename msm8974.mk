@@ -1,4 +1,4 @@
-TARGET_USES_QCOM_BSP := true
+TARGET_USES_QCOM_BSP := false
 TARGET_USES_QCA_NFC := true
 
 ifeq ($(TARGET_USES_QCOM_BSP), true)
@@ -21,6 +21,7 @@ $(call inherit-product, device/qcom/common/common.mk)
 PRODUCT_NAME := msm8974
 PRODUCT_DEVICE := msm8974
 
+#PRODUCT_BOOT_JARS += qcmediaplayer:WfdCommon:oem-services:org.codeaurora.Performance:qcom.fmradio:security-bridge:qsb-port:vcard
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
@@ -36,7 +37,6 @@ PRODUCT_PACKAGES += \
 
 # Feature definition files for 8974
 PRODUCT_COPY_FILES += \
-    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
@@ -110,7 +110,6 @@ endif
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
 # NFC access control + feature files + configuration
 PRODUCT_COPY_FILES += \
-        packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
         frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
         frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
