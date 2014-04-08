@@ -221,7 +221,7 @@ service qca6234-service /system/bin/sh /system/etc/qca6234-service.sh
 service wcnss-service /system/bin/wcnss_service
     class late_start
     user system
-    group system wifi
+    group system wifi radio
     oneshot
 
 on property:sys.ims.QMI_DAEMON_STATUS=1
