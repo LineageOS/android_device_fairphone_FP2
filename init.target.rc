@@ -213,11 +213,6 @@ service imsdatadaemon /system/bin/imsdatadaemon
     group system ims wifi radio inet net_raw log qcom_diag net_admin
     disabled
 
-service qca6234-service /system/bin/sh /system/etc/qca6234-service.sh
-    class late_start
-    user root
-    oneshot
-
 service wcnss-service /system/bin/wcnss_service
     class main
     user system
