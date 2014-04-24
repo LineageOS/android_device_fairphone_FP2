@@ -957,12 +957,12 @@
     </path>
 
     <path name="voice-headphones">
-        <path name="sidetone-headphones" />
         <path name="headphones" />
     </path>
 
     <path name="voice-headset-mic">
         <path name="headset-mic" />
+        <path name="sidetone-headphones" />
         <ctl name="ADC2 Volume" value="13" />
     </path>
 
