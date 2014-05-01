@@ -67,6 +67,15 @@ on post-fs-data
 
 on boot
     insmod /system/lib/modules/adsprpc.ko
+# access permission for secure touch
+    chmod 0660 /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch_enable
+    chmod 0440 /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch
+    chown system drmrpc /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch_enable
+    chown system drmrpc /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch
+    chmod 0660 /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch_enable
+    chmod 0440 /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
+    chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch_enable
+    chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
 
 # Allow usb charging to be disabled persistently
 on property:persist.usb.chgdisabled=1
