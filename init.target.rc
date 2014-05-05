@@ -246,3 +246,8 @@ service nqs /system/bin/nqs
     socket nqs_qsb_comm stream 660 system system
     user system
     group drmrpc
+
+service ml_daemon /system/bin/ml_daemon
+    class core
+    user root
+    group root
