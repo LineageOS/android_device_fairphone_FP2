@@ -234,12 +234,16 @@ on property:sys.ims.DATA_DAEMON_STATUS=1
 
 service ppd /system/bin/mm-pp-daemon
     class late_start
+    disabled
     user system
     socket pps stream 0660 system system
     group system graphics
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd
+
+on property:init.svc.surfaceflinger=running
+    start ppd
 
 service nqs /system/bin/nqs
     class late_start
