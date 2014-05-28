@@ -260,6 +260,11 @@ service nqs /system/bin/nqs
     user system
     group drmrpc
 
+service pfm /system/bin/pfm
+    class late_start
+    user system
+    group system drmrpc mount
+
 service ml_daemon /system/bin/ml_daemon
     class core
     user root
