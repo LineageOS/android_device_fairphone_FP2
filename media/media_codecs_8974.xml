@@ -48,10 +48,16 @@
             <Quirk name="requires-allocate-on-output-ports" />
             <Quirk name="requires-loaded-to-idle-after-allocation" />
         </MediaCodec>
+        <MediaCodec name="OMX.qcom.video.encoder.vp8" type="video/x-vnd.on2.vp8" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports"/>
+            <Quirk name="requires-loaded-to-idle-after-allocation"/>
+        </MediaCodec>
         <!-- Video Software  -->
         <MediaCodec name="OMX.google.h264.encoder" type="video/avc" />
         <MediaCodec name="OMX.google.mpeg4.encoder" type="video/mp4v-es" />
         <MediaCodec name="OMX.google.h263.encoder" type="video/3gpp" />
+        <MediaCodec name="OMX.google.vp8.encoder" type="video/x-vnd.on2.vp8" />
     </Encoders>
     <Decoders>
         <!-- Audio Hardware  -->
