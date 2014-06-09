@@ -28,6 +28,7 @@
 #
 #
 
+clean_copy_dir=/system/etc/usf
 dir0=/data/usf
 h_dir=$dir0/hovering
 g_dir=$dir0/gesture
@@ -62,6 +63,8 @@ if [ ! -e $trigger_file ]; then
        ;;
    esac
 
+   cp -r $clean_copy_dir $dir0
+
    ln -s $dir0/form_factor_"$type".cfg $dir0/form_factor.cfg
    ln -s $t_dir/cfg_"$type" $t_dir/cfg
    ln -s $e_dir/cfg_"$type" $e_dir/cfg
@@ -87,6 +90,7 @@ if [ ! -e $trigger_file ]; then
    ln -s $epos_dir/unit_calib_"$type".dat $epos_dir/unit_calib.dat
 
    # The USF based calculators have system permissions
+   chown system $dir0
    chown system $dir0/*
    chown system $dir0/*/*
    chown system $dir0/*/*/*
