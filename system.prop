@@ -82,6 +82,10 @@ telephony.lteOnCdmaDevice=1
 # System prop to turn on hfp client
 bluetooth.hfp.client=1
 
+#
+# System props for bluetooth LE Always on feature
+#
+ro.bluetooth.alwaysbleon=true
 
 #Simulate sdcard on /data/media
 #
