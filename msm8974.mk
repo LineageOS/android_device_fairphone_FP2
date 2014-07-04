@@ -116,6 +116,6 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
 # Enable NFC Forum testing by temporarily changing the PRODUCT_BOOT_JARS
 # line has to be in sync with build/target/product/core_base.mk
-PRODUCT_BOOT_JARS := core:conscrypt:okhttp:core-junit:bouncycastle:ext:com.android.nfc.helper:framework:framework2:telephony-common:voip-common:mms-common:android.policy:services:apache-xml:webviewchromium:telephony-msim
+#PRODUCT_BOOT_JARS := core:conscrypt:okhttp:core-junit:bouncycastle:ext:com.android.nfc.helper:framework:framework2:telephony-common:voip-common:mms-common:android.policy:services:apache-xml:webviewchromium:telephony-msim
 endif
-PRODUCT_BOOT_JARS += qcmediaplayer:WfdCommon:oem-services:org.codeaurora.Performance:qcom.fmradio:security-bridge:qsb-port:vcard
+#PRODUCT_BOOT_JARS += qcmediaplayer:WfdCommon:oem-services:org.codeaurora.Performance:qcom.fmradio:security-bridge:qsb-port:vcard

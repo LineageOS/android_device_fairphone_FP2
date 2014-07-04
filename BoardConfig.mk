@@ -6,7 +6,7 @@
 ifeq ($(TARGET_ARCH),)
 TARGET_ARCH := arm
 endif
-
+TARGET_KERNEL_ARCH := arm
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := false
 
@@ -108,4 +108,4 @@ BOARD_SEPOLICY_DIRS := \
 BOARD_SEPOLICY_UNION := \
        netd.te
 
-PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
+#PRODUCT_BOOT_JARS := $(subst $(space),:,$(PRODUCT_BOOT_JARS))
