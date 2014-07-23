@@ -113,4 +113,4 @@ PRODUCT_COPY_FILES += \
 # line has to be in sync with build/target/product/core_base.mk
 #PRODUCT_BOOT_JARS := core:conscrypt:okhttp:core-junit:bouncycastle:ext:com.android.nfc.helper:framework:framework2:telephony-common:voip-common:mms-common:android.policy:services:apache-xml:webviewchromium:telephony-msim
 endif
-#PRODUCT_BOOT_JARS += qcmediaplayer:WfdCommon:oem-services:org.codeaurora.Performance:qcom.fmradio:security-bridge:qsb-port:vcard
+PRODUCT_BOOT_JARS += qcmediaplayer
