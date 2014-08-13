@@ -173,6 +173,7 @@ service usf_tester /system/bin/usf_tester
     disabled
 
 service usf_epos /system/bin/usf_epos
+    class main
     user system
     group system inet
     disabled
