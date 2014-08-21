@@ -51,6 +51,9 @@ media.aac_51_output_enabled=true
 #codecs: AVI AC3 ASF AAC QCP DTS 3G2 MP2TS
 mm.enable.qcom_parser=37491
 
+# Default to AwesomePlayer
+media.stagefright.use-awesome=true
+
 # VIDC: debug_levels
 # 1:ERROR 2:HIGH 4:LOW 0:NOLOGS 7:AllLOGS
 vidc.debug.level=1
