@@ -76,6 +76,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.whitelist=/system/etc/whitelist_appops.xml
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1
+
 PRODUCT_COPY_FILES += \
     device/qcom/msm8974/whitelist_appops.xml:system/etc/whitelist_appops.xml
 
