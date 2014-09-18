@@ -1,5 +1,5 @@
 TARGET_USES_QCOM_BSP := true
-TARGET_USES_QCA_NFC := false
+TARGET_USES_QCA_NFC := other
 
 ifeq ($(TARGET_USES_QCOM_BSP), true)
 # Add QC Video Enhancements flag
