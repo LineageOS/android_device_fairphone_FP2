@@ -32,6 +32,7 @@ clean_copy_dir=/system/etc/usf
 dir0=/data/usf
 h_dir=$dir0/hovering
 g_dir=$dir0/gesture
+sg_dir=$dir0/sync_gesture
 t_dir=$dir0/tester
 e_dir=$dir0/epos
 p2p_dir=$dir0/p2p
@@ -72,6 +73,7 @@ if [ ! -e $trigger_file ]; then
    ln -s $h_dir/cfg_"$type" $h_dir/cfg
    ln -s $p2p_dir/cfg_"$type" $p2p_dir/cfg
    ln -s $g_dir/cfg_"$type" $g_dir/cfg
+   ln -s $sg_dir/cfg_"$type" $sg_dir/cfg
    ln -s $prox_dir/cfg_"$type" $prox_dir/cfg
    ln -s $pairing_dir/cfg_"$type" $pairing_dir/cfg
    ln -s $sw_calib_dir/cfg_"$type" $sw_calib_dir/cfg
@@ -81,6 +83,7 @@ if [ ! -e $trigger_file ]; then
    ln -s $h_dir/cfg/usf_hovering_"$type".cfg $h_dir/usf_hovering.cfg
    ln -s $p2p_dir/cfg/usf_p2p_"$type".cfg $p2p_dir/usf_p2p.cfg
    ln -s $g_dir/cfg/usf_gesture_"$type".cfg $g_dir/usf_gesture.cfg
+   ln -s $sg_dir/cfg/usf_sync_gesture_"$type".cfg $sg_dir/usf_sync_gesture.cfg
    ln -s $prox_dir/cfg/usf_proximity_"$type".cfg $prox_dir/usf_proximity.cfg
    ln -s $pairing_dir/cfg/usf_pairing_"$type".cfg $pairing_dir/usf_pairing.cfg
    ln -s $sw_calib_dir/cfg/usf_sw_calib_"$type".cfg $sw_calib_dir/usf_sw_calib.cfg
