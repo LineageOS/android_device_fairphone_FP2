@@ -97,6 +97,7 @@ if [ ! -e $trigger_file ]; then
    chown system $dir0/*
    chown system $dir0/*/*
    chown system $dir0/*/*/*
+   chown system $epos_dir/*/*
 fi
 
 chown system /dev/usf1
