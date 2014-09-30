@@ -96,8 +96,10 @@ if [ ! -e $trigger_file ]; then
    ln -s $mixer_dir/mixer_paths_"$type".xml $mixer_dir/mixer_paths.xml
 
    ln -s $epos_dir/ref1/product_calib_"$type"_ref1.dat $epos_dir/product_calib_ref1.dat
+   ln -s $epos_dir/ref2/product_calib_"$type"_ref2.dat $epos_dir/product_calib_ref2.dat
    ln -s $epos_dir/ref3/product_calib_"$type"_ref3.dat $epos_dir/product_calib_ref3.dat
    ln -s $epos_dir/ref1/unit_calib_"$type"_ref1.dat $epos_dir/unit_calib_ref1.dat
+   ln -s $epos_dir/ref2/unit_calib_"$type"_ref2.dat $epos_dir/unit_calib_ref2.dat
    ln -s $epos_dir/ref3/unit_calib_"$type"_ref3.dat $epos_dir/unit_calib_ref3.dat
 
    ln -s $sc_dir/sw_calib_"$type".dat $sc_dir/sw_calib.dat
