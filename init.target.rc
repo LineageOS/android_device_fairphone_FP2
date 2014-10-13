@@ -108,12 +108,6 @@ service qgesturesvr /system/bin/mm-gesture-daemon
     user system
     group system camera input graphics net_bt_stack
 
-#start GNSS/Sensor interface daemon
-service gsiff_daemon /system/bin/gsiff_daemon
-    class late_start
-    user gps
-    group gps net_raw misc
-
 service qrngd /system/bin/qrngd -f
     class main
     user root
