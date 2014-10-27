@@ -106,3 +106,4 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
 
+TARGET_LDPRELOAD := libNimsWrap.so
