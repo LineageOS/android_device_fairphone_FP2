@@ -124,4 +124,5 @@ PRODUCT_BOOT_JARS += qcmediaplayer \
                      qcom.fmradio \
                      security-bridge \
                      qsb-port \
-                     vcard
+                     vcard \
+                     tcmiface
