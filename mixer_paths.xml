@@ -973,6 +973,10 @@
         <path name="dmic1" />
     </path>
 
+    <path name="handset-mic-DB">
+        <path name="adc1" />
+    </path>
+
     <path name="anc-handset">
         <ctl name="ANC Function" value="ON" />
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
@@ -1025,8 +1029,16 @@
         <path name="speaker" />
     </path>
 
+    <path name="voice-speaker-DB">
+        <path name="speaker-DB" />
+    </path>
+
     <path name="voice-speaker-mic">
         <path name="speaker-mic" />
+    </path>
+
+    <path name="voice-speaker-mic-DB">
+        <path name="speaker-mic-DB" />
     </path>
 
     <path name="voice-headphones">
