@@ -63,6 +63,7 @@ on post-fs-data
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
     mkdir /tombstones/dsps 0771 system system
+    mkdir /data/usf 0700 system system
 
 on boot
     insmod /system/lib/modules/adsprpc.ko
