@@ -202,6 +202,16 @@ service usf_proximity /system/bin/usf_proximity
     group system inet
     disabled
 
+service usf_pairing /system/bin/usf_pairing
+    user system
+    group system inet
+    disabled
+
+service usf_sw_calib /system/bin/usf_sw_calib
+    user system
+    group system inet
+    disabled
+
 service usf-post-boot /system/bin/sh /system/etc/usf_post_boot.sh
     class late_start
     user root
