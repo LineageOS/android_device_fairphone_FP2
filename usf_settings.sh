@@ -69,6 +69,9 @@ if [ ! -e $trigger_file ]; then
 
    cp -r $clean_copy_dir $dir0
 
+   # The USF based calculators have system permissions
+   chown -R system $dir0
+
    ln -s $dir0/form_factor_"$type".cfg $dir0/form_factor.cfg
    ln -s $t_dir/cfg_"$type" $t_dir/cfg
    ln -s $e_dir/cfg_"$type" $e_dir/cfg
@@ -103,13 +106,6 @@ if [ ! -e $trigger_file ]; then
    ln -s $epos_dir/ref3/unit_calib_"$type"_ref3.dat $epos_dir/unit_calib_ref3.dat
 
    ln -s $sc_dir/sw_calib_"$type".dat $sc_dir/sw_calib.dat
-
-   # The USF based calculators have system permissions
-   chown system $dir0
-   chown system $dir0/*
-   chown system $dir0/*/*
-   chown system $dir0/*/*/*
-   chown system $epos_dir/*/*
 fi
 
 chown system /dev/usf1
