@@ -67,7 +67,7 @@ if [ ! -e $trigger_file ]; then
        ;;
    esac
 
-   cp -r $clean_copy_dir $dir0
+   cp -r $clean_copy_dir/* $dir0
 
    # The USF based calculators have system permissions
    chown -R system $dir0

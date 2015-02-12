@@ -39,7 +39,7 @@ found_num=0
 
 # Run usf_settings script
 if [ -f /system/etc/usf_settings.sh ]; then
-  /system/bin/sh /system/etc/usf_settings.sh
+  source /system/etc/usf_settings.sh
 fi
 
 while read pcm_entry; do
