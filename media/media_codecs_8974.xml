@@ -108,10 +108,10 @@
             <Quirk name="requires-global-flush" />
             <Quirk name="requires-wma-pro-component" />
         </MediaCodec>
-        <MediaCodec name="OMX.qcom.audio.decoder.wmaLossLess" type="audio/x-ms-wma" >
+        <MediaCodec name="OMX.qcom.audio.decoder.wmaLossLess" type="audio/x-ms-wma-lossless" >
             <Quirk name="requires-global-flush" />
         </MediaCodec>
-        <MediaCodec name="OMX.qcom.audio.decoder.wma10Pro" type="audio/x-ms-wma" >
+        <MediaCodec name="OMX.qcom.audio.decoder.wma10Pro" type="audio/x-ms-wma-pro" >
             <Quirk name="requires-global-flush" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.audio.decoder.amrwbplus" type="audio/amr-wb-plus" >
