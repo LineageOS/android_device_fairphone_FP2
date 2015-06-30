@@ -1,4 +1,4 @@
-TARGET_USES_QCOM_BSP := true
+TARGET_USES_QCOM_BSP := false
 TARGET_USES_QCA_NFC := other
 
 ifeq ($(TARGET_USES_QCOM_BSP), true)
@@ -117,14 +117,14 @@ PRODUCT_COPY_FILES += \
 # line has to be in sync with build/target/product/core_base.mk
 endif
 
-PRODUCT_BOOT_JARS += qcmediaplayer \
+#PRODUCT_BOOT_JARS += qcmediaplayer \
                      org.codeaurora.Performance \
                      vcard \
                      tcmiface
-ifneq ($(strip $(QCPATH)),)
-PRODUCT_BOOT_JARS += WfdCommon
-PRODUCT_BOOT_JARS += qcom.fmradio
-PRODUCT_BOOT_JARS += security-bridge
-PRODUCT_BOOT_JARS += qsb-port
-PRODUCT_BOOT_JARS += oem-services
-endif
+#ifneq ($(strip $(QCPATH)),)
+#PRODUCT_BOOT_JARS += WfdCommon
+#PRODUCT_BOOT_JARS += qcom.fmradio
+#PRODUCT_BOOT_JARS += security-bridge
+#PRODUCT_BOOT_JARS += qsb-port
+#PRODUCT_BOOT_JARS += oem-services
+#endif
