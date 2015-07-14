@@ -22,8 +22,8 @@ LOCAL_CFLAGS = -Wall -Wextra -Werror
 
 LOCAL_CFLAGS += -DHAS_MULTIMEDIA_HINTS
 
-#Debug logs are enabled
-#LOCAL_CFLAGS += -DDISABLE_DEBUG_LOG
+# Debug logs are disabled
+LOCAL_CFLAGS += -DDISABLE_DEBUG_LOG
 
 #ifeq ($(TARGET_USES_AOSP),true)
 #LOCAL_CFLAGS += -DVANILLA_HAL
