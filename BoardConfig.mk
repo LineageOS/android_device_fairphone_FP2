@@ -124,3 +124,5 @@ ifneq ($(TARGET_USES_AOSP),true)
     endif
   endif
 endif
+
+FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
