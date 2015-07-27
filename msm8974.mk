@@ -1,18 +1,18 @@
 TARGET_USES_QCOM_BSP := false
 TARGET_USES_QCA_NFC := other
 
-ifeq ($(TARGET_USES_QCOM_BSP), true)
+#ifeq ($(TARGET_USES_QCOM_BSP), true)
 # Add QC Video Enhancements flag
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-endif #TARGET_USES_QCOM_BSP
+#endif #TARGET_USES_QCOM_BSP
 
 #TARGET_DISABLE_DASH := true
 #TARGET_DISABLE_OMX_SECURE_TEST_APP := true
 
 # media_profiles and media_codecs xmls for 8974
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/qcom/msm8974/media/media_profiles_8974.xml:system/etc/media_profiles.xml \
-                      device/qcom/msm8974/media/media_codecs_8974.xml:system/etc/media_codecs.xml
+PRODUCT_COPY_FILES += device/qcom/common/media/media_profiles.xml:system/etc/media_profiles.xml \
+                      device/qcom/common/media/media_codecs.xml:system/etc/media_codecs.xml
 endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
 
 $(call inherit-product, device/qcom/common/common.mk)
