@@ -126,7 +126,7 @@ PRODUCT_BOOT_JARS += com.qti.dpmframework
 
 #ifneq ($(strip $(QCPATH)),)
 #PRODUCT_BOOT_JARS += WfdCommon
-#PRODUCT_BOOT_JARS += qcom.fmradio
+PRODUCT_BOOT_JARS += qcom.fmradio
 #PRODUCT_BOOT_JARS += security-bridge
 #PRODUCT_BOOT_JARS += qsb-port
 #PRODUCT_BOOT_JARS += oem-services
