@@ -459,6 +459,64 @@
             channels="2" />
     </EncoderProfile>
 
+    <!-- HIGH-SPEED profiles for back camera -->
+
+    <EncoderProfile quality="highspeedcif" fileFormat="mp4" duration="30">
+        <Video codec="h264"
+         bitRate="720000"
+               width="352"
+               height="288"
+               frameRate="240" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="amrnb"
+             bitRate="12200"
+             sampleRate="8000"
+             channels="1" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="highspeedvga" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="2000000"
+             width="640"
+             height="480"
+             frameRate="120" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="amrnb"
+             bitRate="12200"
+             sampleRate="8000"
+             channels="1" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="highspeed480p" fileFormat="mp4" duration="30">
+        <Video codec="h264"
+             bitRate="2000000"
+             width="640"
+             height="480"
+             frameRate="120" />
+
+        <!-- audio setting is ignored -->
+        <Audio codec="aac"
+         bitRate="156000"
+         sampleRate="48000"
+         channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="highspeed720p" fileFormat="mp4" duration="30">
+        <Video codec="h264"
+         bitRate="14000000"
+               width="1280"
+               height="720"
+               frameRate="60" />
+
+        <!-- audio setting is ignored -->
+        <Audio codec="aac"
+         bitRate="156000"
+         sampleRate="48000"
+         channels="2" />
+    </EncoderProfile>
+
         <ImageEncoding quality="95" />
         <ImageEncoding quality="80" />
         <ImageEncoding quality="70" />
