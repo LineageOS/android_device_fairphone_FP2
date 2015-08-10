@@ -122,12 +122,13 @@ endif
 
 PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += qcmediaplayer
-PRODUCT_BOOT_JARS += com.qti.dpmframework
 
-#ifneq ($(strip $(QCPATH)),)
+ifneq ($(strip $(QCPATH)),)
 PRODUCT_BOOT_JARS += WfdCommon
 PRODUCT_BOOT_JARS += qcom.fmradio
 #PRODUCT_BOOT_JARS += security-bridge
 #PRODUCT_BOOT_JARS += qsb-port
 #PRODUCT_BOOT_JARS += oem-services
-#endif
+PRODUCT_BOOT_JARS += com.qti.dpmframework
+PRODUCT_BOOT_JARS += dpmapi
+endif
