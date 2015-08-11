@@ -117,11 +117,11 @@ PRODUCT_COPY_FILES += \
 # line has to be in sync with build/target/product/core_base.mk
 endif
 
-#PRODUCT_BOOT_JARS += qcmediaplayer \
-                     org.codeaurora.Performance \
+#PRODUCT_BOOT_JARS += org.codeaurora.Performance \
                      vcard \
 
 PRODUCT_BOOT_JARS += tcmiface
+PRODUCT_BOOT_JARS += qcmediaplayer
 PRODUCT_BOOT_JARS += com.qti.dpmframework
 
 #ifneq ($(strip $(QCPATH)),)
