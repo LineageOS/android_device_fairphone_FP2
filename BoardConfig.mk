@@ -10,7 +10,6 @@ TARGET_KERNEL_ARCH := arm
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := false
 
-TARGET_USES_AOSP := true
 TARGET_KERNEL_APPEND_DTB := true
 
 # Compile with msm kernel
