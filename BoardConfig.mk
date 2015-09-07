@@ -111,18 +111,5 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
 TARGET_LDPRELOAD := libNimsWrap.so
 
 USE_OPENGL_RENDERER := true
-# Enable dex pre-opt to speed up initial boot
-ifneq ($(TARGET_USES_AOSP),true)
-  ifeq ($(HOST_OS),linux)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-      WITH_DEXPREOPT_PIC := true
-      ifneq ($(TARGET_BUILD_VARIANT),user)
-      # Retain classes.dex in APK's for non-user builds
-      DEX_PREOPT_DEFAULT := nostripping
-      endif
-    endif
-  endif
-endif
 
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
