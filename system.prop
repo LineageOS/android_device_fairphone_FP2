@@ -121,7 +121,7 @@ tunnel.audio.encode = false
 audio.offload.buffer.size.kb=32
 
 #Enable offload audio video playback by default
-av.offload.enable=true
+audio.offload.video=true
 
 #enable voice path for PCM VoIP by default
 use.voice.path.for.pcm.voip=true
