@@ -35,6 +35,9 @@ on early-init
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
 
+    # Turn off backlight on blank
+    write /sys/class/leds/lcd-backlight/trigger "backlight"
+
 on early-boot
     write /sys/kernel/boot_adsp/boot 1
 
