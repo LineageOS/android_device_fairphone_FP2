@@ -249,7 +249,7 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
    class main
    user system
    socket ims_rtpd stream 0660 system radio
-   group radio net_raw diag qcom_diag log
+   group radio net_raw diag qcom_diag log inet
    disabled
 
 service imscmservice /system/bin/imscmservice
