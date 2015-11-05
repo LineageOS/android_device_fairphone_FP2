@@ -63,6 +63,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += wcnss_service
 
+# MIDI feature
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
+
 #ANT stack
 PRODUCT_PACKAGES += \
         AntHalService \
