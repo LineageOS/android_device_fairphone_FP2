@@ -37,6 +37,9 @@ on init
     # session is not exercised through RemoteDisplay in the android framework
     setprop persist.sys.wfd.virtual 0
 
+on post-fs
+    export LD_PRELOAD libNimsWrap.so
+
 on fs
     mount_all fstab.qcom
 
