@@ -128,8 +128,6 @@ on post-fs-data
     mkdir /data/misc/camera 0770 camera camera
 
     # Create PERFD deamon related dirs
-    mkdir /data/misc/perfd 0755 root system
-    chmod 2755 /data/misc/perfd
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
 
@@ -306,6 +304,7 @@ service mpdecision /system/bin/mpdecision --avg_comp
    class main
    user root
    group root readproc
+   socket perfd seqpacket 0666 root system
    disabled
 
 service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
