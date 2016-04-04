@@ -1162,7 +1162,9 @@ QCameraVideoMemory::QCameraVideoMemory(camera_request_memory getMemory,
 {
     memset(mMetadata, 0, sizeof(mMetadata));
     memset(mNativeHandle, 0, sizeof(mNativeHandle));
-     mMetaBufCount = 0;
+    mMetaBufCount = 0;
+    //Set Default color conversion format
+    mUsage |= private_handle_t::PRIV_FLAGS_ITU_R_601_FR;
 }
 
 /*===========================================================================
@@ -1244,7 +1246,8 @@ int QCameraVideoMemory::allocate(uint8_t count, size_t size)
         nh->data[0] = mMemInfo[i].fd;
         nh->data[1] = 0;
         nh->data[2] = (int)mMemInfo[i].size;
-        nh->data[3] = 0;//dummy value for usage
+        //value for usage
+        nh->data[3] = mUsage | private_handle_t::PRIV_FLAGS_ITU_R_601_FR;
         nh->data[4] = 0; //dummy value for timestamp in non-batch mode
         nh->data[5] = mFormat;
         nh->data[6] = i;//buffer index
@@ -1308,7 +1311,8 @@ int QCameraVideoMemory::allocateMore(uint8_t count, size_t size)
         nh->data[0] = mMemInfo[i].fd;
         nh->data[1] = 0;
         nh->data[2] = (int)mMemInfo[i].size;
-        nh->data[3] = 0;//dummy value for usage
+        //value for usage
+        nh->data[3] = mUsage | private_handle_t::PRIV_FLAGS_ITU_R_601_FR;
         nh->data[4] = 0; //dummy value for timestamp in non-batch mode
         nh->data[5] = mFormat;
         nh->data[6] = i;//buffer index
