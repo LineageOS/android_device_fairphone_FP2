@@ -195,6 +195,9 @@ public:
     static bool matchSnapshotNotifications(void *data, void *user_data);
     static bool matchPreviewNotifications(void *data, void *user_data);
     virtual int32_t flushPreviewNotifications();
+    static bool matchTimestampNotifications(void *data, void *user_data);
+    virtual int32_t flushVideoNotifications();
+
 private:
 
     camera_notify_callback         mNotifyCb;
