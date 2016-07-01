@@ -5,6 +5,7 @@
 # Audio
 dev.pm.dyn_samplingrate=1
 qcom.hw.aac.encoder=true
+ro.config.vc_call_vol_steps=7
 
 # Bluetooth
 bluetooth.hfp.client=1
