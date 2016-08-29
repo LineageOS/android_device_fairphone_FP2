@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2014, The Linux Foundataion. All rights reserved.
+/* Copyright (c) 2012-2016, The Linux Foundataion. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -32,6 +32,16 @@
 #include <utils/Errors.h>
 #include "QCamera2HWI.h"
 #include "QCameraStream.h"
+
+// Media dependencies
+#ifdef USE_MEDIA_EXTENSIONS
+#include <media/hardware/HardwareAPI.h>
+typedef struct VideoNativeHandleMetadata media_metadata_buffer;
+#else
+#include "QComOMXMetadata.h"
+typedef struct encoder_media_buffer_type media_metadata_buffer;
+#endif
+
 
 #define CAMERA_MIN_ALLOCATED_BUFFERS     3
 
@@ -816,14 +826,50 @@ int32_t QCameraStream::bufDone(uint32_t index)
 int32_t QCameraStream::bufDone(const void *opaque, bool isMetaData)
 {
     int32_t rc = NO_ERROR;
+    int index = -1;
 
-    int index = mStreamBufs->getMatchBufIndex(opaque, isMetaData);
-    if (index == -1 || index >= mNumBufs || mBufDefs == NULL) {
-        ALOGE("%s: Cannot find buf for opaque data = %p", __func__, opaque);
-        return BAD_INDEX;
+    QCameraVideoMemory *lVideoMem = NULL;
+    if (mStreamInfo != NULL &&
+        mStreamInfo->streaming_mode == CAM_STREAMING_MODE_BATCH) {
+            index = mStreamBatchBufs->getMatchBufIndex(opaque, TRUE);
+            lVideoMem = (QCameraVideoMemory *)mStreamBatchBufs;
+            if (index == -1 || index >= mNumBufs || mBufDefs == NULL) {
+                ALOGE("%s: Cannot find buf for opaque data = %p", __func__, opaque);
+                return BAD_INDEX;
+            }
+            camera_memory_t *video_mem = mStreamBatchBufs->getMemory(index, true);
+            if (video_mem != NULL) {
+                media_metadata_buffer * packet =
+                    (media_metadata_buffer *)video_mem->data;
+                native_handle_t *nh = const_cast<native_handle_t *>(packet->pHandle);
+                if (NULL != nh) {
+                    if (native_handle_delete(nh)) {
+                        ALOGE("%s: Unable to delete native handle", __func__);
+                    }
+                } else {
+                    ALOGE("%s : native handle not available", __func__);
+                }
+            }
+        } else {
+            index = mStreamBufs->getMatchBufIndex(opaque, isMetaData);
+            lVideoMem = (QCameraVideoMemory *)mStreamBufs;
+            if (index == -1 || index >= mNumBufs || mBufDefs == NULL) {
+                ALOGE("%s: Cannot find buf for opaque data = %p", __func__, opaque);
+                return BAD_INDEX;
+            }
+            CDBG("%s: Buffer Index = %d, Frame Idx = %d", __func__, index,
+                    mBufDefs[index].frame_idx);
+        }
+    //Close and delete duplicated native handle and FD's.
+    if (lVideoMem != NULL) {
+        rc = lVideoMem->closeNativeHandle(opaque, isMetaData);
+        if (rc != NO_ERROR) {
+            CDBG_HIGH("Invalid video metadata");
+            return rc;
+        }
+    } else {
+        CDBG_HIGH("Possible FD leak. Release recording called after stop");
     }
-    CDBG_HIGH("%s: Buffer Index = %d, Frame Idx = %d", __func__, index,
-            mBufDefs[index].frame_idx);
     rc = bufDone((uint32_t)index);
     return rc;
 }
