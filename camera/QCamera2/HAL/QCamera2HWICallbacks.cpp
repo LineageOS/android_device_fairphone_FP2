@@ -934,7 +934,7 @@ void QCamera2HardwareInterface::video_stream_cb_routine(mm_camera_super_buf_t *s
     camera_memory_t *video_mem = NULL;
     if (NULL != videoMemObj) {
         video_mem = videoMemObj->getMemory(frame->buf_idx, (pme->mStoreMetaDataInFrame > 0)? true : false);
-        videoMemObj->updateNativeHandle(frame->buf_idx);
+        videoMemObj->getNativeHandle(frame->buf_idx);
     }
     if (NULL != videoMemObj && NULL != video_mem) {
         pme->dumpFrameToFile(stream, frame, QCAMERA_DUMP_FRM_VIDEO);
