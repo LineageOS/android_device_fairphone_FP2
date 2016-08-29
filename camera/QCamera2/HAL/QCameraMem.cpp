@@ -43,7 +43,6 @@
 
 // Media dependencies
 #ifdef USE_MEDIA_EXTENSIONS
-#define VIDEO_METADATA_NUM_COMMON_INTS   1
 #include <media/hardware/HardwareAPI.h>
 typedef struct VideoNativeHandleMetadata media_metadata_buffer;
 #else

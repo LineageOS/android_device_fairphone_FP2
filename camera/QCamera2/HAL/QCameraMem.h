@@ -43,6 +43,10 @@ extern "C" {
 //OFFSET, SIZE, USAGE, TIMESTAMP, FORMAT, BUFFER INDEX
 #define VIDEO_METADATA_NUM_INTS 6
 
+#ifndef VIDEO_METADATA_NUM_COMMON_INTS
+#define VIDEO_METADATA_NUM_COMMON_INTS 1
+#endif
+
 namespace qcamera {
 
 class QCameraMemoryPool;
