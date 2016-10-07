@@ -1414,6 +1414,7 @@ int QCameraVideoMemory::getMatchBufIndex(const void *opaque,
 {
     int index = -1;
     if (metadata) {
+#ifdef USE_MEDIA_EXTENSIONS
         const media_metadata_buffer *packet =
             (const media_metadata_buffer *)opaque;
         native_handle_t *nh = NULL;
@@ -1430,12 +1431,14 @@ int QCameraVideoMemory::getMatchBufIndex(const void *opaque,
                 }
             }
         }
+#else
         for (int i = 0; i < mMetaBufCount; i++) {
             if (mMetadata[i]->data == opaque) {
                 index = i;
                 break;
             }
         }
+#endif
     } else {
         for (int i = 0; i < mBufferCount; i++) {
             if (mCameraMemory[i]->data == opaque) {
