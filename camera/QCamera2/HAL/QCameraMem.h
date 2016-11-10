@@ -43,8 +43,10 @@ extern "C" {
 //OFFSET, SIZE, USAGE, TIMESTAMP, FORMAT, BUFFER INDEX
 #define VIDEO_METADATA_NUM_INTS 6
 
+#ifdef USE_MEDIA_EXTENSIONS
 #ifndef VIDEO_METADATA_NUM_COMMON_INTS
 #define VIDEO_METADATA_NUM_COMMON_INTS 1
+#endif
 #endif
 
 namespace qcamera {
@@ -199,8 +201,10 @@ public:
     virtual void deallocate();
     virtual camera_memory_t *getMemory(uint32_t index, bool metadata) const;
     virtual int getMatchBufIndex(const void *opaque, bool metadata) const;
+#ifdef USE_MEDIA_EXTENSIONS
     native_handle_t *getNativeHandle(uint32_t index, bool metadata = true);
     int closeNativeHandle(const void *data, bool metadata = true);
+#endif
     int getUsage(){return mUsage;};
     int getFormat(){return mFormat;};
     void setVideoInfo(int usage, cam_format_t format);
@@ -208,7 +212,9 @@ public:
 private:
     camera_memory_t *mMetadata[MM_CAMERA_MAX_NUM_FRAMES];
     uint8_t mMetaBufCount;
+#ifdef USE_MEDIA_EXTENSIONS
     native_handle_t *mNativeHandle[MM_CAMERA_MAX_NUM_FRAMES];
+#endif
     int mUsage, mFormat;
 };
 
