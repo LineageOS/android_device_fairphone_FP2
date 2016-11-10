@@ -1037,6 +1037,7 @@ camera_memory_t *QCameraStreamMemory::getMemory(uint32_t index,
     return mCameraMemory[index];
 }
 
+#ifdef USE_MEDIA_EXTENSIONS
 /*===========================================================================
 * FUNCTION   : getNativeHandle
 
@@ -1091,11 +1092,11 @@ int QCameraVideoMemory::closeNativeHandle(const void *data, bool metadata)
             return BAD_VALUE;
         }
     } else {
-        ALOGE("Warning: Not of type video meta buffer");
-        return BAD_VALUE;
+        ALOGW("Warning: Not of type video meta buffer");
     }
     return rc;
 }
+#endif
 
 /*===========================================================================
  * FUNCTION   : getMatchBufIndex
@@ -1381,7 +1382,8 @@ camera_memory_t *QCameraVideoMemory::getMemory(uint32_t index,
     if (index >= mBufferCount || (!metadata && index >= mBufferCount))
         return NULL;
     if (metadata) {
-        int i;
+#ifdef USE_MEDIA_EXTENSIONS
+      int i;
         media_metadata_buffer *packet = NULL;
         for (i = 0; i < mMetaBufCount; i++) {
             packet = (media_metadata_buffer *)mMetadata[i]->data;
@@ -1396,6 +1398,9 @@ camera_memory_t *QCameraVideoMemory::getMemory(uint32_t index,
             CDBG_HIGH("No free video meta memory");
             return NULL;
         }
+#else
+        return mMetadata[index];
+#endif
     } else {
         return mCameraMemory[index];
     }
