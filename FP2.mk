@@ -175,6 +175,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     wpa_supplicant_overlay.conf
 
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+
 # ANT stack
 PRODUCT_PACKAGES += \
     AntHalService \
