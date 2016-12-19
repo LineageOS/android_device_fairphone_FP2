@@ -203,7 +203,8 @@ public:
     virtual int getMatchBufIndex(const void *opaque, bool metadata) const;
 #ifdef USE_MEDIA_EXTENSIONS
     native_handle_t *getNativeHandle(uint32_t index, bool metadata = true);
-    int closeNativeHandle(const void *data, bool metadata = true);
+    int closeNativeHandle(const void *data, bool metadata);
+    static int closeNativeHandle(const void *data);
 #endif
     int getUsage(){return mUsage;};
     int getFormat(){return mFormat;};
