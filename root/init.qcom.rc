@@ -413,17 +413,6 @@ service charger /charger
     critical
     seclabel u:r:charger:s0
 
-service qbcharger /charger -m 1
-    disabled
-    oneshot
-    seclabel u:r:healthd:s0
-
-on property:sys.qbcharger.enable=true
-    start qbcharger
-
-on property:sys.qbcharger.enable=false
-    stop qbcharger
-
 service TCMDServer /system/bin/TCMDServer
     class main
     group root
