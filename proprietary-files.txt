@@ -1,10 +1,6 @@
 # Camera
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
-lib/hw/camera.msm8974.so:vendor/lib/hw/camera.msm8974.so
 lib/libchromatix_imx135_liveshot.so:vendor/lib/libchromatix_imx135_liveshot.so
-lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
-lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
-lib/libqomx_core.so:vendor/lib/libqomx_core.so
 vendor/lib/libactuator_dw9714.so
 vendor/lib/libactuator_dw9714_camcorder.so
 vendor/lib/libactuator_dw9714_camera.so
