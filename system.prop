@@ -104,9 +104,6 @@ ro.telephony.default_network=9,9
 telephony.lteOnGsmDevice=1
 persist.radio.flexmap_type=none
 
-# sdcardfs
-ro.sys.sdcardfs=true
-
 # Time services
 persist.timed.enable=true
 
