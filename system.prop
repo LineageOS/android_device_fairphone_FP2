@@ -103,9 +103,6 @@ rild.libpath=/vendor/lib/libril-wrapper.so
 ro.telephony.default_network=9,9
 telephony.lteOnGsmDevice=1
 
-# sdcardfs
-ro.sys.sdcardfs=true
-
 # Time services
 persist.timed.enable=true
 
