@@ -34,4 +34,4 @@ sbl3.mbn				/dev/block/platform/msm_sdcc.1/by-name/sbl3
 tz.mbn					/dev/block/platform/msm_sdcc.1/by-name/tz
 rpm.mbn					/dev/block/platform/msm_sdcc.1/by-name/rpm
 emmc_appsboot.mbn		/dev/block/platform/msm_sdcc.1/by-name/aboot
-
+sdi.mbn				/dev/block/platform/msm_sdcc.1/by-name/sdi

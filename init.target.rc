@@ -27,6 +27,9 @@
 #
 #
 
+# Superuser
+import /init.superuser.rc
+
 on early-init
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
@@ -36,9 +39,6 @@ on init
     # 0 indicates that virtual display is not a Wifi display and that the
     # session is not exercised through RemoteDisplay in the android framework
     setprop persist.sys.wfd.virtual 0
-
-on post-fs
-    export LD_PRELOAD libNimsWrap.so
 
 on fs
     mount_all fstab.qcom
@@ -79,6 +79,10 @@ on boot
     chmod 0440 /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
     chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch_enable
     chown system drmrpc /sys/devices/f9924000.i2c/i2c-2/2-004a/secure_touch
+    chmod 0775 /persist
+    chmod 0444 /persist/board_date.bin
+    chown system root /persist/sns.reg
+    chmod 770  /persist/sns.reg
 
 # Allow usb charging to be disabled persistently
 on property:persist.usb.chgdisabled=1
@@ -105,22 +109,23 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     group camera system inet input graphics
 
 #start gesture server as daemon
-service qgesturesvr /system/bin/mm-gesture-daemon
-    class late_start
-    user system
-    group system camera input graphics net_bt_stack
-
-service qrngd /system/bin/qrngd -f
-    class main
-    user root
-    group root
-
-service qrngp /system/bin/qrngp
-    class main
-    user root
-    group root
-    oneshot
-    disabled
+#there are not mm-gesture-dameno,qrngp and qrngp in FP2, so remove them.
+#service qgesturesvr /system/bin/mm-gesture-daemon
+#    class late_start
+#    user system
+#    group system camera input graphics net_bt_stack
+#
+#service qrngd /system/bin/qrngd -f
+#    class main
+#    user root
+#    group root
+#
+#service qrngp /system/bin/qrngp
+#    class main
+#    user root
+#    group root
+#    oneshot
+#    disabled
 
 on property:sys.boot_completed=1
     start qrngp
@@ -140,7 +145,7 @@ service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
    group system
    disabled
 
-service thermal-engine /system/vendor/bin/thermal-engine
+service thermal-engine /system/bin/thermal-engine
    class main
    user root
    socket thermal-send-client stream 0666 system system
@@ -252,7 +257,7 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
    class main
    user system
    socket ims_rtpd stream 0660 system radio
-   group radio net_raw diag qcom_diag log inet
+   group radio net_raw diag qcom_diag log
    disabled
 
 service imscmservice /system/bin/imscmservice
@@ -278,18 +283,24 @@ on property:init.svc.surfaceflinger=stopped
 on property:init.svc.surfaceflinger=running
     start ppd
 
-service nqs /system/bin/nqs
-    class late_start
-    socket nqs_qsb_comm stream 660 system system
-    user system
-    group drmrpc
+#there are not nqs, pfm, ml_daemon in FP2, so remove them
+#service nqs /system/bin/nqs
+#    class late_start
+#    socket nqs_qsb_comm stream 660 system system
+#    user system
+#    group drmrpc
+#
+#service pfm /system/bin/pfm
+#    class late_start
+#    user system
+#    group system drmrpc mount
+#
+#service ml_daemon /system/bin/ml_daemon
+#    class core
+#    user root
+#    group root
 
-service pfm /system/bin/pfm
-    class late_start
-    user system
-    group system drmrpc mount
-
-service ml_daemon /system/bin/ml_daemon
-    class core
-    user root
+service TCMDServer /system/bin/TCMDServer
+    class main
     group root
+    user root

@@ -13,22 +13,23 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-ril.subscription.types=NV,RUIM
+# ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 # Start in global mode
-ro.telephony.default_network=10
+ro.telephony.default_network=9
 
 debug.sf.hw=1
 debug.egl.hw=1
 debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
+debug.mdpcomp.idletime=9000
 debug.mdpcomp.4k2kSplit=1
 debug.mdpcomp.logs=0
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 
-ro.hdmi.enable=true
+ro.hdmi.enable=false
 persist.speaker.prot.enable=false
 qcom.hw.aac.encoder=true
 #
@@ -120,10 +121,10 @@ tunnel.audio.encode = false
 audio.offload.buffer.size.kb=32
 
 #Enable offload audio video playback by default
-audio.offload.video=true
+av.offload.enable=true
 
 #enable voice path for PCM VoIP by default
-use.voice.path.for.pcm.voip=true
+use.voice.path.for.pcm.voip=false
 
 #hwui properties
 ro.hwui.texture_cache_size=72
@@ -140,3 +141,10 @@ ro.hwui.text_large_cache_height=1024
 
 #disable dsp gapless mode by default
 audio.offload.gapless.enabled=false
+
+#enable dsds
+persist.radio.multisim.config=dsds
+ro.adb.secure=1
+
+#enable OTG support
+persist.sys.isUsbOtgEnabled=true

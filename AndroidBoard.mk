@@ -5,6 +5,8 @@ LOCAL_PATH := $(call my-dir)
 #----------------------------------------------------------------------
 ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
 
+TARGET_BOOTLOADER_PLATFORM_OVERRIDE := $(TARGET_PRODUCT)
+
 # Compile
 include bootable/bootloader/lk/AndroidBoot.mk
 
@@ -18,8 +20,14 @@ endif
 #----------------------------------------------------------------------
 # Compile Linux Kernel
 #----------------------------------------------------------------------
+ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
 ifeq ($(KERNEL_DEFCONFIG),)
-    KERNEL_DEFCONFIG := msm8974_defconfig
+    KERNEL_DEFCONFIG := fairphone_defconfig
+endif
+else
+ifeq ($(KERNEL_DEFCONFIG),)
+    KERNEL_DEFCONFIG := fairphone-perf_defconfig
+endif
 endif
 
 include kernel/AndroidKernel.mk
