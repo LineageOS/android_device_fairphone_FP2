@@ -26,7 +26,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs_8974.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/media/media_profiles_8974.xml:system/etc/media_profiles.xml
+    $(LOCAL_PATH)/media/media_profiles_8974.xml:system/etc/media_profiles_V1_0.xml
 
 # IPC router
 PRODUCT_COPY_FILES += \
