@@ -1517,13 +1517,11 @@ int QCameraVideoMemory::convCamtoOMXFormat(cam_format_t format)
     int omxFormat = OMX_COLOR_FormatYUV420SemiPlanar;
     switch (format) {
         case CAM_FORMAT_YUV_420_NV21:
-        case CAM_FORMAT_YUV_420_NV21_VENUS:
         case CAM_FORMAT_YUV_420_NV21_ADRENO:
             omxFormat = OMX_COLOR_FormatYUV420SemiPlanar;
             break;
         case CAM_FORMAT_YUV_420_NV12:
         case CAM_FORMAT_YUV_420_NV12_VENUS:
-        case CAM_FORMAT_YUV_420_NV12_UBWC:
             omxFormat = OMX_COLOR_FormatYUV420SemiPlanar;
             break;
         default:
