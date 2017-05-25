@@ -221,11 +221,6 @@ typedef enum {
     CAM_FORMAT_META_RAW_8BIT,
     CAM_FORMAT_META_RAW_10BIT,
 
-    /* UBWC format */
-    CAM_FORMAT_YUV_420_NV12_UBWC,
-
-    CAM_FORMAT_YUV_420_NV21_VENUS,
-
     CAM_FORMAT_MAX
 } cam_format_t;
 
