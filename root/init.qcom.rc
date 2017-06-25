@@ -30,6 +30,7 @@
 import /init.qcom.usb.rc
 
 on early-init
+    mount debugfs debugfs /sys/kernel/debug
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
 
