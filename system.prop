@@ -18,6 +18,11 @@ ro.qualcomm.bluetooth.nap=true
 ro.qualcomm.bluetooth.opp=true
 ro.qualcomm.bluetooth.pbap=true
 
+# Camera
+ro.qc.sdk.camera.facialproc=false
+ro.qc.sdk.gestures.camera=false
+ro.qc.sdk.sensors.gestures=true
+
 # Media
 audio.offload.buffer.size.kb=32
 av.offload.enable=true
@@ -115,9 +120,6 @@ bluetooth.hfp.client=1
 #
 ro.bluetooth.alwaysbleon=true
 
-ro.qc.sdk.sensors.gestures=true
-ro.qc.sdk.gestures.camera=false
-ro.qc.sdk.camera.facialproc=false
 # system prop for NFC DT
 ro.nfc.port=I2C
 #property to enable user to access Google WFD settings.

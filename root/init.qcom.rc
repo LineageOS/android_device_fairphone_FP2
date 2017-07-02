@@ -88,6 +88,12 @@ on post-fs-data
 
     mkdir /data/audio/ 0770 media audio
 
+    # Create folder for mm-qcamera-daemon
+    mkdir /data/camera 0770 media camera
+
+    # camera sockets
+    mkdir /data/misc/camera 0770 camera camera
+
 on boot
     # bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -141,6 +147,11 @@ on boot
     # Bluetooth
     mkdir /persist/bluetooth 0770 bluetooth bluetooth
 
+    # Camera Recording
+    mkdir /dev/video
+    symlink /dev/video32 /dev/video/venus_dec
+    symlink /dev/video33 /dev/video/venus_enc
+    
 # Allow usb charging to be disabled persistently
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
