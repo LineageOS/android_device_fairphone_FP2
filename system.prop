@@ -137,3 +137,10 @@ ro.hwui.text_large_cache_height=1024
 audio.offload.gapless.enabled=false
 
 ro.adb.secure=1
+
+# Wifi
+wifi.interface=wlan0
+
+# WiFi Display
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
