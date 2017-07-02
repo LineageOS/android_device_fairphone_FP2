@@ -36,6 +36,9 @@ on early-init
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
 
+on early-boot
+    write /sys/kernel/boot_adsp/boot 1
+
 on init
     # Set the property to indicate type of virtual display to 0
     # 0 indicates that virtual display is not a Wifi display and that the
@@ -88,6 +91,16 @@ on boot
     chown system root /persist/sns.reg
     chmod 770  /persist/sns.reg
 
+    # Create QMUX deamon socket area
+    mkdir /dev/socket/qmux_radio 0770 radio radio
+    chmod 2770 /dev/socket/qmux_radio
+    mkdir /dev/socket/qmux_audio 0770 media audio
+    chmod 2770 /dev/socket/qmux_audio
+    mkdir /dev/socket/qmux_bluetooth 0770 bluetooth bluetooth
+    chmod 2770 /dev/socket/qmux_bluetooth
+    mkdir /dev/socket/qmux_gps 0770 gps gps
+    chmod 2770 /dev/socket/qmux_gps
+
 # Allow usb charging to be disabled persistently
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
@@ -133,6 +146,22 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 
 on property:sys.boot_completed=1
     start qrngp
+
+service rmt_storage /system/bin/rmt_storage
+    class core
+    user root
+    group system
+
+service rfs_access /system/bin/rfs_access
+    class core
+    user system
+    group system net_raw
+
+# QMUX must be in multiple groups to support external process connections
+service qmuxd /system/bin/qmuxd
+    class main
+    user radio
+    group radio audio bluetooth gps diag qcom_diag
 
 service qseecomd /system/bin/qseecomd
    class core
@@ -269,6 +298,13 @@ service imscmservice /system/bin/imscmservice
    user system
    group radio net_raw diag qcom_diag log
    disabled
+
+service ril-daemon1 /system/bin/rild -c 2
+    class main
+    socket rild2 stream 660 root radio
+    socket rild-debug2 stream 660 radio system
+    user root
+    group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
    start ims_rtp_daemon
