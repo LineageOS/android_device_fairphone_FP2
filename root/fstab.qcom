@@ -5,8 +5,16 @@
 #TODO: Add 'check' as fs_mgr_flags with data partition.
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
-#<src>                                                <mnt_point>  <type>  <mnt_flags and options>                     <fs_mgr_flags>
-/dev/block/platform/msm_sdcc.1/by-name/system         /system      ext4    ro,barrier=1,discard                                wait
-/dev/block/platform/msm_sdcc.1/by-name/userdata       /data        ext4    nosuid,nodev,barrier=1,noauto_da_alloc,discard      wait,check,encryptable=footer
+#<src>                                                <mnt_point>        <type>  <mnt_flags and options>                                                       <fs_mgr_flags>
+/dev/block/platform/msm_sdcc.1/by-name/system         /system            ext4    ro,barrier=1                                                                  wait
+/dev/block/platform/msm_sdcc.1/by-name/userdata       /data              ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,errors=panic      wait,check,formattable,encryptable=footer
+/dev/block/platform/msm_sdcc.1/by-name/cache          /cache             ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,errors=panic      wait,check,formattable
+/dev/block/platform/msm_sdcc.1/by-name/persist        /persist           ext4    nosuid,nodev,barrier=1,data=ordered,nodelalloc,nomblk_io_submit,errors=panic  wait,check
+/dev/block/platform/msm_sdcc.1/by-name/boot           /boot              emmc    defaults                                                                      defaults
+/dev/block/platform/msm_sdcc.1/by-name/recovery       /recovery          emmc    defaults                                                                      defaults
+/dev/block/platform/msm_sdcc.1/by-name/misc            /misc              emmc    defaults                                                                      defaults
+#/dev/block/platform/msm_sdcc.1/by-name/modem          /firmware          vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0        wait
+/dev/block/platform/msm_sdcc.1/by-name/modem          /firmware          vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337                      wait
+
 /devices/msm_sdcc.2/mmc_host                          /storage/sdcard1   vfat    nosuid,nodev         wait,voldmanaged=sdcard1:auto,noemulatedsd
 /devices/platform/xhci-hcd/usb*                       /storage/usbotg    vfat    nosuid,nodev  wait,voldmanaged=usbotg:auto 

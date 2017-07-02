@@ -92,10 +92,6 @@ bluetooth.hfp.client=1
 #
 ro.bluetooth.alwaysbleon=true
 
-#Simulate sdcard on /data/media
-#
-persist.fuse_sdcard=true
-
 #
 #snapdragon value add features
 #
