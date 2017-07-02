@@ -69,7 +69,7 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.target.rc
+    init.qcom.rc
 
 #battery_monitor
 PRODUCT_PACKAGES += \
