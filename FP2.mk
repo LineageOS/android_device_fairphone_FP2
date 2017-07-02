@@ -18,19 +18,16 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 TARGET_USES_QCA_NFC := other
 
-ifeq ($(TARGET_USES_QCOM_BSP), true)
-# Add QC Video Enhancements flag
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-endif #TARGET_USES_QCOM_BSP
+# Media
+PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
-#TARGET_DISABLE_DASH := true
-#TARGET_DISABLE_OMX_SECURE_TEST_APP := true
-
-# media_profiles and media_codecs xmls for 8974
-ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/fairphone_devices/FP2/media/media_profiles_8974.xml:system/etc/media_profiles.xml \
-                      device/fairphone_devices/FP2/media/media_codecs_8974.xml:system/etc/media_codecs.xml
-endif  #TARGET_ENABLE_QC_AV_ENHANCEMENTS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/media/media_codecs_8974.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    $(LOCAL_PATH)/media/media_profiles_8974.xml:system/etc/media_profiles.xml
 
 ifeq ($(PROPRIETARY_BLOBS_EXIST),true)
 PRODUCT_COPY_FILES += \
@@ -68,6 +65,19 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
     tinymix
+
+# Media
+PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
+    libc2dcolorconvert \
+    libdivxdrmdecrypt \
+    libstagefrighthw
 
 # Display logo image file
 PRODUCT_COPY_FILES += \

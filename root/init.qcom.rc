@@ -89,8 +89,6 @@ on post-fs-data
     mkdir /data/audio/ 0770 media audio
 
 on boot
-    insmod /system/lib/modules/adsprpc.ko
-
     # bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
