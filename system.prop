@@ -18,6 +18,7 @@ rild.libargs=-d /dev/smd0
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 # Start in global mode
 ro.telephony.default_network=9,9
+telephony.lteOnGsmDevice=1
 
 debug.sf.hw=1
 debug.egl.hw=1
