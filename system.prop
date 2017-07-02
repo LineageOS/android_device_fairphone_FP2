@@ -37,6 +37,20 @@ rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 ro.telephony.default_network=9,9
 telephony.lteOnGsmDevice=1
 
+# Audio
+audio.offload.gapless.enabled=false
+dev.pm.dyn_samplingrate=1
+persist.audio.fluence.speaker=true
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.speaker.prot.enable=false
+qcom.hw.aac.encoder=true
+ro.qc.sdk.audio.fluencetype=none
+ro.qc.sdk.audio.ssr=false
+tunnel.audio.encode = false
+use.voice.path.for.pcm.voip=false
+
+
 debug.sf.hw=1
 debug.egl.hw=1
 debug.composition.type=c2d
@@ -45,12 +59,9 @@ debug.mdpcomp.idletime=9000
 debug.mdpcomp.4k2kSplit=1
 debug.mdpcomp.logs=0
 dalvik.vm.heapsize=36m
-dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 
 ro.hdmi.enable=false
-persist.speaker.prot.enable=false
-qcom.hw.aac.encoder=true
 #
 # system props for the cne module
 #
@@ -106,16 +117,6 @@ bluetooth.hfp.client=1
 #
 ro.bluetooth.alwaysbleon=true
 
-#
-#snapdragon value add features
-#
-ro.qc.sdk.audio.ssr=false
-##fluencetype can be "fluence" or "fluencepro" or "none"
-ro.qc.sdk.audio.fluencetype=none
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
-
 ro.qc.sdk.sensors.gestures=true
 ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.camera.facialproc=false
@@ -148,9 +149,6 @@ ro.hwui.text_small_cache_width=1024
 ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=1024
-
-#disable dsp gapless mode by default
-audio.offload.gapless.enabled=false
 
 ro.adb.secure=1
 
