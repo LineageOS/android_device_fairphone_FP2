@@ -50,18 +50,20 @@ ro.qc.sdk.audio.ssr=false
 tunnel.audio.encode = false
 use.voice.path.for.pcm.voip=false
 
-
-debug.sf.hw=1
-debug.egl.hw=1
+# Graphics
 debug.composition.type=c2d
+debug.egl.hw=1
+debug.sf.hw=1
+persist.demo.hdmirotationlock=false
 persist.hwc.mdpcomp.enable=true
+ro.hdmi.enable=false
+ro.opengles.version=196608
+
 debug.mdpcomp.idletime=9000
 debug.mdpcomp.4k2kSplit=1
 debug.mdpcomp.logs=0
 dalvik.vm.heapsize=36m
-persist.demo.hdmirotationlock=false
 
-ro.hdmi.enable=false
 #
 # system props for the cne module
 #
@@ -97,12 +99,6 @@ ro.data.large_tcp_window_size=true
 
 #system props for time-services
 persist.timed.enable=true
-
-#
-# system prop for opengles version
-#
-# 196608 is decimal for 0x30000 to report version 3
-ro.opengles.version=196608
 
 # System property for cabl
 ro.qualcomm.cabl=1

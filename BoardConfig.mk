@@ -78,6 +78,15 @@ AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
+# Graphics
+MAX_EGL_CACHE_KEY_SIZE := 12*1024
+MAX_EGL_CACHE_SIZE := 2048*1024
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+TARGET_USES_ION := true
+TARGET_USES_NEW_ION_API := true
+USE_OPENGL_RENDERER := true
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
@@ -107,7 +116,6 @@ USE_CAMERA_STUB := false
 # to get rid of compilation error.
 TARGET_HAVE_HDMI_OUT := false
 TARGET_USES_OVERLAY := true
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_NO_BOOTLOADER := false
 TARGET_NO_KERNEL := false
 TARGET_NO_RPC := true
@@ -115,19 +123,6 @@ TARGET_NO_RPC := true
 TARGET_HARDWARE_3D := false
 TARGET_BOARD_PLATFORM := msm8974
 TARGET_BOOTLOADER_BOARD_NAME := FP2 
-
-# Enables Adreno RS driver
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
-
-# Shader cache config options
-# Maximum size of the  GLES Shaders that can be cached for reuse.
-# Increase the size if shaders of size greater than 12KB are used.
-MAX_EGL_CACHE_KEY_SIZE := 12*1024
-
-# Maximum GLES shader cache size for each app to store the compiled shader
-# binaries. Decrease the size if RAM or Flash Storage size is a limitation
-# of the device.
-MAX_EGL_CACHE_SIZE := 2048*1024
 
 # Use signed boot and recovery image
 TARGET_BOOTIMG_SIGNED := true
@@ -141,20 +136,12 @@ BOARD_EGL_CFG := device/fairphone_devices/FP2/egl.cfg
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
-TARGET_USES_ION := true
-TARGET_USES_NEW_ION_API :=true
-
 TARGET_HW_DISK_ENCRYPTION := false
-
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
 
 TARGET_LDPRELOAD := libNimsWrap.so
-
-USE_OPENGL_RENDERER := true
-
 
 TW_THEME := portrait_hdpi
 TW_NO_USB_STORAGE := false

@@ -73,6 +73,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/fairphone_devices/FP2/splash.img:$(PRODUCT_OUT)/splash.img
 
+# Graphics
+PRODUCT_PACKAGES += \
+    copybit.msm8974 \
+    gralloc.msm8974 \
+    hwcomposer.msm8974 \
+    liboverlay \
+    memtrack.msm8974
+
 # Features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
