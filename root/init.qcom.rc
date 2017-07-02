@@ -39,6 +39,7 @@ on init
     # 0 indicates that virtual display is not a Wifi display and that the
     # session is not exercised through RemoteDisplay in the android framework
     setprop persist.sys.wfd.virtual 0
+    symlink /sdcard /storage/sdcard0
 
 on fs
     mount_all fstab.qcom
