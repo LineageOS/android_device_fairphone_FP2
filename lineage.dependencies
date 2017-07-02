@@ -1,0 +1,16 @@
+[
+  {
+    "repository": "android_device_qcom_common",
+    "target_path": "device/qcom/common"
+  },
+
+  {
+    "repository": "android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings"
+  }
+
+  {
+    "repository": "android_fairphone_lineage_msm8974",
+    "target_path": "kernel/fairphone/msm8974"
+  }
+]

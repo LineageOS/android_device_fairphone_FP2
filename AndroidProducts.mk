@@ -1,2 +1,0 @@
-PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/FP2.mk

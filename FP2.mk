@@ -1,7 +1,21 @@
-# Inherit from variables defined elsewhere first (they could tune this file)
-$(call inherit-product-if-exists, vendor/fairphone-extra/fairphone-extra.mk)
+#
+# Copyright (C) 2017 The LineageOS Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
 
-TARGET_USES_QCOM_BSP := true
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 TARGET_USES_QCA_NFC := other
 
 ifeq ($(TARGET_USES_QCOM_BSP), true)
@@ -23,12 +37,6 @@ PRODUCT_COPY_FILES += \
     device/fairphone_devices/FP2/apns-conf.xml:system/etc/apns-conf.xml
 endif
 
-$(call inherit-product, device/qcom/common/common.mk)
-
-PRODUCT_NAME := FP2
-PRODUCT_DEVICE := FP2
-PRODUCT_BRAND := Fairphone
-PRODUCT_MANUFACTURER := Fairphone
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-fairphone
 
@@ -173,8 +181,6 @@ PRODUCT_COPY_FILES += device/fairphone_devices/FP2/Fiesta.mp3:system/media/audio
 
 PRODUCT_COPY_FILES += device/fairphone_devices/FP2/twrp.fstab:recovery/root/etc/twrp.fstab
 
-PRODUCT_MODEL := FP2
-
 # include an expanded selection of fonts for the SDK.
 EXTENDED_FONT_FOOTPRINT := true
 
@@ -187,12 +193,6 @@ ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_COPY_FILES += device/qcom/common/rootdir/etc/init.qcom.diag.rc.user:root/init.qcom.diag.rc
 endif
 
-ifeq ($(strip $(FP2_SKIP_BOOT_JARS_CHECK)),)
-SKIP_BOOT_JARS_CHECK := true
-endif
-
-DEVICE_PACKAGE_OVERLAYS += device/fairphone_devices/FP2/overlay
-
 # SuperUser
 FP2_USE_APPOPS_SU := true
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -200,3 +200,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # we don't have the calibration data so don't generate persist.img
 FP2_SKIP_PERSIST_IMG := true
+
+# Call the proprietary setup
+$(call inherit-product, vendor/fairphone/FP2/FP2-vendor.mk)
