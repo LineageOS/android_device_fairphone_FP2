@@ -70,6 +70,10 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessingdescriptors \
     tinymix
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+
 # Media
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
@@ -235,9 +239,6 @@ PRODUCT_PACKAGES += iFixit
 
 # Amaze File Manager
 PRODUCT_PACKAGES += Amaze
-
-# Add boot animation
-PRODUCT_COPY_FILES += device/fairphone_devices/FP2/bootanimation.zip:system/media/bootanimation.zip
 
 # Set default ringtone to Fairphone's
 PRODUCT_COPY_FILES += device/fairphone_devices/FP2/Sunbeam.mp3:system/media/audio/ringtones/Fairphone.mp3
