@@ -247,11 +247,6 @@ ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_COPY_FILES += device/qcom/common/rootdir/etc/init.qcom.diag.rc.user:root/init.qcom.diag.rc
 endif
 
-# SuperUser
-FP2_USE_APPOPS_SU := true
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=0
-
 # we don't have the calibration data so don't generate persist.img
 FP2_SKIP_PERSIST_IMG := true
 

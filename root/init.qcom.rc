@@ -29,9 +29,6 @@
 
 import /init.qcom.usb.rc
 
-# Superuser
-import /init.superuser.rc
-
 on early-init
     mkdir /firmware 0771 system system
     symlink /data/tombstones /tombstones
