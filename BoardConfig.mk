@@ -151,3 +151,4 @@ TW_NO_EXFAT_FUSE := true
 
 
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
+-include vendor/fairphone/FP2/BoardConfigVendor.mk
