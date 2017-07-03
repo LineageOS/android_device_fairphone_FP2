@@ -189,3 +189,5 @@ vendor/lib/libril-qc-radioconfig.so
 # CNE
 vendor/lib/libcneapiclient.so
 
+# wifi
+vendor/lib/libwcnss_qmi.so|02fa5e70e0e225bb5346fd8e85b1c17bf21d8caa

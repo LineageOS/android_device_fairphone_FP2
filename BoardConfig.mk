@@ -121,6 +121,8 @@ WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
+TARGET_USES_QCOM_WCNSS_QMI := true
+
 # Radio
 TARGET_RIL_VARIANT := caf
 
