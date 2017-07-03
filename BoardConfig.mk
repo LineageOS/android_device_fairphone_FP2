@@ -98,6 +98,9 @@ TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API := true
 USE_OPENGL_RENDERER := true
 
+# Encryption
+TARGET_HW_DISK_ENCRYPTION := false
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
@@ -141,8 +144,6 @@ BOARD_EGL_CFG := device/fairphone_devices/FP2/egl.cfg
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
-
-TARGET_HW_DISK_ENCRYPTION := false
 
 TARGET_INIT_VENDOR_LIB := libinit_msm
 

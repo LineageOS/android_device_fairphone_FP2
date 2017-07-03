@@ -91,6 +91,8 @@ on post-fs-data
     # camera sockets
     mkdir /data/misc/camera 0770 camera camera
 
+    setprop vold.post_fs_data_done 1
+
 on boot
     # bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
