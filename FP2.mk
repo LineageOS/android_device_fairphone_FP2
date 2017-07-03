@@ -29,6 +29,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/media/media_profiles_8974.xml:system/etc/media_profiles.xml
 
+# IPC router
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+
 ifeq ($(PROPRIETARY_BLOBS_EXIST),true)
 PRODUCT_COPY_FILES += \
     device/fairphone_devices/FP2/apns-conf.xml:system/etc/apns-conf.xml
