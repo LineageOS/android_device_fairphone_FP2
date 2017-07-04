@@ -73,6 +73,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/root/fstab.qcom
 
+# Added to indicate that protobuf-c is supported in this build
+PROTOBUF_SUPPORTED := true
+
 # Audio
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := false
 AUDIO_FEATURE_ENABLED_HWDEP_CAL := true
@@ -143,9 +146,6 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 
 BOARD_EGL_CFG := device/fairphone_devices/FP2/egl.cfg
-
-# Added to indicate that protobuf-c is supported in this build
-PROTOBUF_SUPPORTED := true
 
 TARGET_INIT_VENDOR_LIB := libinit_msm
 
