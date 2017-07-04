@@ -157,25 +157,4 @@ AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAVE_QCOM_FM := true
 TARGET_FM_LEGACY_PATCHLOADER := true
 
-#TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
-# to get rid of compilation error.
-TARGET_HAVE_HDMI_OUT := false
-TARGET_USES_OVERLAY := true
-TARGET_NO_BOOTLOADER := false
-TARGET_NO_KERNEL := false
-
-TARGET_HARDWARE_3D := false
-TARGET_BOARD_PLATFORM := msm8974
-TARGET_BOOTLOADER_BOARD_NAME := FP2 
-
-TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
-
-BOARD_EGL_CFG := device/fairphone_devices/FP2/egl.cfg
-
-TARGET_INIT_VENDOR_LIB := libinit_msm
-
-TARGET_LDPRELOAD := libNimsWrap.so
-
 -include vendor/fairphone/FP2/BoardConfigVendor.mk
