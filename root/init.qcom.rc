@@ -91,6 +91,10 @@ on post-fs-data
     mkdir /data/misc/location/quipc 0770 gps gps
     mkdir /data/misc/location/gsiff 0770 gps gps
 
+    # Create FM dir for patchdownloader
+    mkdir /data/misc/fm 0770 system system
+    chmod 0770 /data/misc/fm
+
     mkdir /data/audio/ 0770 media audio
 
     # Create folder for mm-qcamera-daemon
@@ -462,3 +466,9 @@ service loc_launcher /system/bin/loc_launcher
     class late_start
     group gps inet net_raw diag qcom_diag net_admin wifi
 
+service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+    class late_start
+    user root
+    group system
+    disabled
+    oneshot

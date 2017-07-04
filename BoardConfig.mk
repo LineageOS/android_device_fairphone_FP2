@@ -152,6 +152,11 @@ BACKLIGHT_PATH=/sys/class/leds/lcd-backlight/brightness
 # QCOM Power
 TARGET_POWERHAL_VARIANT := qcom
 
+# FM
+AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
+BOARD_HAVE_QCOM_FM := true
+TARGET_FM_LEGACY_PATCHLOADER := true
+
 #TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
 # to get rid of compilation error.
 TARGET_HAVE_HDMI_OUT := false

@@ -275,6 +275,12 @@ endif
 # we don't have the calibration data so don't generate persist.img
 FP2_SKIP_PERSIST_IMG := true
 
+# FM radio
+PRODUCT_PACKAGES += \
+    FM2 \
+    qcom.fmradio \
+    init.qcom.fm.sh
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
