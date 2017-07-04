@@ -31,11 +31,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
-ifeq ($(PROPRIETARY_BLOBS_EXIST),true)
-PRODUCT_COPY_FILES += \
-    device/fairphone_devices/FP2/apns-conf.xml:system/etc/apns-conf.xml
-endif
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-fairphone
 
