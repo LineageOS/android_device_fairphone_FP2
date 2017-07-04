@@ -2,6 +2,22 @@
 # system.prop for msm8974
 #
 
+# Bluetooth
+bluetooth.hfp.client=1
+ro.bluetooth.alwaysbleon=true
+qcom.bluetooth.soc=smd
+ro.bluetooth.hfp.ver=1.7
+ro.qualcomm.bt.hci_transport=smd
+ro.bluetooth.dun=false
+ro.bluetooth.sap=false
+ro.qualcomm.bluetooth.ftp=true
+ro.qualcomm.bluetooth.hfp=true
+ro.qualcomm.bluetooth.hsp=true
+ro.qualcomm.bluetooth.map=true
+ro.qualcomm.bluetooth.nap=true
+ro.qualcomm.bluetooth.opp=true
+ro.qualcomm.bluetooth.pbap=true
+
 # Radio
 DEVICE_PROVISIONED=1
 persist.radio.apm_sim_not_pwdn=1
