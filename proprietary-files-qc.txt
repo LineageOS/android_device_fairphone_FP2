@@ -29,12 +29,12 @@ vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS
 bin/loc_launcher
-lib/libloc_api_v02.so
+lib/libloc_api_v02.so|36b872293fc76f15e005ec55b0724c9583629e2a
 vendor/lib/hw/flp.default.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
-vendor/lib/liblbs_core.so
+vendor/lib/liblbs_core.so|a06d4fb42ed38851f9eaf005090f80f665434b3f
 
 # Graphics
 vendor/lib/egl/eglsubAndroid.so

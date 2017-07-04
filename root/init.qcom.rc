@@ -83,6 +83,14 @@ on post-fs-data
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
 
+    # Create directories for Location services
+    mkdir /data/misc/location 0770 gps gps
+    mkdir /data/misc/location/mq 0770 gps gps
+    mkdir /data/misc/location/xtwifi 0770 gps gps
+    mkdir /data/misc/location/gpsone_d 0770 system gps
+    mkdir /data/misc/location/quipc 0770 gps gps
+    mkdir /data/misc/location/gsiff 0770 gps gps
+
     mkdir /data/audio/ 0770 media audio
 
     # Create folder for mm-qcamera-daemon
@@ -448,3 +456,9 @@ service TCMDServer /system/bin/TCMDServer
     class main
     group root
     user root
+
+service loc_launcher /system/bin/loc_launcher
+    #loc_launcher will start as root and set its uid to gps
+    class late_start
+    group gps inet net_raw diag qcom_diag net_admin wifi
+

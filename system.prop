@@ -152,3 +152,7 @@ wifi.interface=wlan0
 # WiFi Display
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# GPS
+persist.gps.qc_nlp_in_use=0
+ro.gps.agps_provider=1
