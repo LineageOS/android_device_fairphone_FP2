@@ -76,6 +76,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/root/fstab.qcom
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
+
 # Audio
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := false
 AUDIO_FEATURE_ENABLED_HWDEP_CAL := true
