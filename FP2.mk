@@ -31,9 +31,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-fairphone
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/acdbdata/MTP/MTP_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
@@ -79,10 +76,6 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libdivxdrmdecrypt \
     libstagefrighthw
-
-# Display logo image file
-PRODUCT_COPY_FILES += \
-    device/fairphone_devices/FP2/splash.img:$(PRODUCT_OUT)/splash.img
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -160,31 +153,6 @@ PRODUCT_PACKAGES += \
         libantradio \
         ANTRadioService \
         antradio_app
-TARGET_RELEASETOOLS_EXTENSIONS := device/fairphone_devices/FP2
-ADD_RADIO_FILES := true
-
-# Enable strict operation
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.strict_op_enable=false \
-    persist.sys.usb.config=mtp
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.whitelist=/system/etc/whitelist_appops.xml
-
-PRODUCT_COPY_FILES += \
-    device/fairphone_devices/FP2/whitelist_appops.xml:system/etc/whitelist_appops.xml
-
-PRODUCT_BOOT_JARS += qcmediaplayer \
-                     org.codeaurora.Performance \
-                     vcard \
-                     tcmiface
-ifneq ($(strip $(QCPATH)),)
-PRODUCT_BOOT_JARS += WfdCommon
-PRODUCT_BOOT_JARS += qcom.fmradio
-PRODUCT_BOOT_JARS += security-bridge
-PRODUCT_BOOT_JARS += qsb-port
-PRODUCT_BOOT_JARS += oem-services
-endif
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -196,42 +164,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/gps/quipc.conf:system/etc/quipc.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
-
-PRODUCT_PACKAGES += \
-                    FairphoneUpdater \
-                    FairphoneLauncher3 \
-                    AppOps \
-                    MyContactsWidget \
-                    ClockWidget \
-                    FairphonePrivacyImpact \
-                    FairphoneSetupWizard \
-                    ProgrammableButton \
-                    ProximitySensorTools \
-		    Checkup
-
-PRODUCT_PACKAGES += iFixit
-
-# Amaze File Manager
-PRODUCT_PACKAGES += Amaze
-
-# Set default ringtone to Fairphone's
-PRODUCT_COPY_FILES += device/fairphone_devices/FP2/Sunbeam.mp3:system/media/audio/ringtones/Fairphone.mp3
-PRODUCT_COPY_FILES += device/fairphone_devices/FP2/Fiesta.mp3:system/media/audio/ringtones/Fiesta.mp3
-
-# include an expanded selection of fonts for the SDK.
-EXTENDED_FONT_FOOTPRINT := true
-
-# Preferred Applications for Fairphone
-PRODUCT_COPY_FILES += \
-    device/fairphone_devices/FP2/preferred.xml:system/etc/preferred-apps/fp.xml
-
-# remove /dev/diag in user version for CTS
-ifeq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_COPY_FILES += device/qcom/common/rootdir/etc/init.qcom.diag.rc.user:root/init.qcom.diag.rc
-endif
-
-# we don't have the calibration data so don't generate persist.img
-FP2_SKIP_PERSIST_IMG := true
 
 # FM radio
 PRODUCT_PACKAGES += \
