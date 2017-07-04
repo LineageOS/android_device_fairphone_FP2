@@ -77,6 +77,19 @@ PRODUCT_PACKAGES += \
     libdivxdrmdecrypt \
     libstagefrighthw
 
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes \
+    libbson \
+    libcnefeatureconfig \
+    libnl_2 \
+    libtinyxml \
+    libxml2
+
+# Data
+PRODUCT_PACKAGES += \
+    librmnetctl
+
 # Graphics
 PRODUCT_PACKAGES += \
     copybit.msm8974 \
