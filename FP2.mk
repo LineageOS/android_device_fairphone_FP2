@@ -129,6 +129,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh
 
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8974
+
 #battery_monitor
 PRODUCT_PACKAGES += \
     battery_monitor \

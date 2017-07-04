@@ -149,6 +149,9 @@ BOARD_HARDWARE_CLASS += \
     hardware/cyanogen/cmhw
 BACKLIGHT_PATH=/sys/class/leds/lcd-backlight/brightness
 
+# QCOM Power
+TARGET_POWERHAL_VARIANT := qcom
+
 #TODO: Fix-me: Setting TARGET_HAVE_HDMI_OUT to false
 # to get rid of compilation error.
 TARGET_HAVE_HDMI_OUT := false
