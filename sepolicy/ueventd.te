@@ -1,0 +1,3 @@
+allow ueventd device:chr_file {relabelfrom relabelto};
+allow ueventd vfat:dir search;
+allow ueventd vfat:file {read open getattr};
