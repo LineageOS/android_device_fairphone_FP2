@@ -107,6 +107,14 @@ on post-fs-data
     mkdir /data/misc/fm 0770 system system
     chmod 0770 /data/misc/fm
 
+    # Create the directories used by CnE subsystem
+    mkdir /data/connectivity 0771 system system
+    chown system system /data/connectivity
+
+    # Create directory from IMS services
+    mkdir /data/shared 0755
+    chown system system /data/shared
+
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
 

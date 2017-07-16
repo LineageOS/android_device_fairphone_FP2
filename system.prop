@@ -94,19 +94,11 @@ ro.opengles.version=196608
 
 dalvik.vm.heapsize=36m
 
-#
-# system props for the cne module
-#
+# Network
 persist.cne.feature=1
-
-#system props for the MM modules
-
-#
-# system props for the data modules
-#
-ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 ro.data.large_tcp_window_size=true
+ro.use_data_netmgrd=true
 
 # System property for cabl
 ro.qualcomm.cabl=1
