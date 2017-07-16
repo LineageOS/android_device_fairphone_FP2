@@ -2,6 +2,10 @@
 # system.prop for msm8974
 #
 
+# Time services
+persist.timed.enable=true
+
+
 # Bluetooth
 bluetooth.hfp.client=1
 ro.bluetooth.alwaysbleon=true
@@ -103,9 +107,6 @@ persist.cne.feature=1
 ro.use_data_netmgrd=true
 persist.data.netmgrd.qos.enable=true
 ro.data.large_tcp_window_size=true
-
-#system props for time-services
-persist.timed.enable=true
 
 # System property for cabl
 ro.qualcomm.cabl=1
