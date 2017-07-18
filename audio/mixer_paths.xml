@@ -1328,4 +1328,13 @@
         <ctl name="MAD Input" value="DMIC1" />
     </path>
 
+    <!-- low latency recording -->
+    <path name="low-latency-record">
+        <ctl name="MultiMedia5 Mixer SLIM_0_TX" value="1" />
+    </path>
+
+    <path name="low-latency-record usb-headset-mic">
+        <ctl name="MultiMedia5 Mixer AFE_PCM_TX" value="1" />
+    </path>
+
 </mixer>
