@@ -147,6 +147,13 @@
          rather than the uevent framework. -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
 
+    <!-- Indicate whether to allow the device to suspend when the screen is off
+         due to the proximity sensor.  This resource should only be set to true
+         if the sensor HAL correctly handles the proximity sensor as a wake-up source.
+         Otherwise, the device may fail to wake out of suspend reliably.
+         The default is false. -->
+    <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
+    
     <string-array name="config_mobile_tcp_buffers">
         <item>"lte:2097152,4194304,8388608,262144,524288,1048576"</item>
         <item>"lte_ca:2097152,4194304,8388608,262144,524288,1048576"</item>
