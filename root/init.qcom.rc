@@ -248,6 +248,12 @@ service netmgrd /system/bin/netmgrd
     user root
     group radio
 
+# QCOM sensor
+service sensors /system/bin/sensors.qcom
+    class late_start
+    user root
+    group root
+
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class main
     user root
