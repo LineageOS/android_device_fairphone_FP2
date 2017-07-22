@@ -200,6 +200,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/quipc.conf:system/etc/quipc.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8974
+
 # FM radio
 PRODUCT_PACKAGES += \
     FM2 \
