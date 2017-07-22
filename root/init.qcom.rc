@@ -342,7 +342,7 @@ service imsdatadaemon /system/bin/imsdatadaemon
 service wcnss-service /system/bin/wcnss_service
     class main
     user system
-    group system wifi radio
+    group system wifi qcom_diag diag radio
     oneshot
 
 on property:sys.ims.QMI_DAEMON_STATUS=1
