@@ -155,7 +155,7 @@ on boot
     chmod 0660 /dev/ttyHS2
     chown bluetooth bluetooth /dev/ttyHS2
 
-# access permission for secure touch
+    # access permission for secure touch
     chmod 0660 /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch_enable
     chmod 0440 /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch
     chown system drmrpc /sys/devices/f9923000.i2c/i2c-1/1-004a/secure_touch_enable
@@ -199,7 +199,7 @@ on boot
     mkdir /dev/video
     symlink /dev/video32 /dev/video/venus_dec
     symlink /dev/video33 /dev/video/venus_enc
-    
+
 # Allow usb charging to be disabled persistently
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
@@ -218,7 +218,7 @@ on property:bluetooth.hsic_ctrl=load_wlan
 on property:bluetooth.hsic_ctrl=unbind_hsic
     start bt_hsic_control
 
-#start camera server as daemon
+# start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera

@@ -55,4 +55,3 @@ printf '%s\n' "endif" >> "$ANDROIDMK"
 
 # We are done!
 write_footers
-

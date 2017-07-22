@@ -141,7 +141,7 @@ on property:sys.usb.config=diag,diag_mdm,serial_hsic,serial_tty,rmnet_hsic,mass_
     start adbd
     setprop sys.usb.state ${sys.usb.config}
 
-#added some configs for support ptp and cdrom by Xinhua.Song 2014-05-10    
+#added some configs for support ptp and cdrom by Xinhua.Song 2014-05-10
 on property:sys.usb.config=ptp
     stop adbd
     write /sys/class/android_usb/android0/enable 0
@@ -180,7 +180,7 @@ on property:sys.usb.config=mtp,mass_storage,adb
     start adbd
     setprop sys.usb.state ${sys.usb.config}
 
-#add a config for support rndis, diag and adb, added by Xinhua.Song 2014-05-10 
+#add a config for support rndis, diag and adb, added by Xinhua.Song 2014-05-10
 on property:sys.usb.config=rndis,diag,adb
     stop adbd
     write /sys/class/android_usb/android0/enable 0
