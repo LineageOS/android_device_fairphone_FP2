@@ -185,6 +185,16 @@ on boot
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
+    # Charger
+    chown root system /sys/module/qpnp_charger/parameters/charger_monitor
+    chown root system /sys/class/power_supply/battery/input_current_max
+    chown root system /sys/class/power_supply/battery/input_current_trim
+    chown root system /sys/class/power_supply/battery/voltage_min
+    chmod 0644 /sys/module/qpnp_charger/parameters/charger_monitor
+    chmod 0644 /sys/class/power_supply/battery/input_current_max
+    chmod 0644 /sys/class/power_supply/battery/input_current_trim
+    chmod 0644 /sys/class/power_supply/battery/voltage_min
+
     # Camera Recording
     mkdir /dev/video
     symlink /dev/video32 /dev/video/venus_dec
@@ -434,6 +444,10 @@ service ril-daemon1 /system/bin/rild -c 2
     user root
     group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log
 
+on property:vold.decrypt=trigger_restart_framework
+    start config_bt_addr
+    start wcnss-service
+
 service config_bt_addr /system/bin/btnvtool -O
     class core
     user bluetooth
@@ -470,6 +484,11 @@ on property:init.svc.surfaceflinger=stopped
 
 on property:init.svc.surfaceflinger=running
     start ppd
+
+service qbcharger /charger -m 1
+    disabled
+    oneshot
+    seclabel u:r:healthd:s0
 
 #there are not nqs, pfm, ml_daemon in FP2, so remove them
 #service nqs /system/bin/nqs
