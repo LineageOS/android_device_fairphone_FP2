@@ -27,6 +27,8 @@
 #
 #
 
+import /init.qcom.usb.rc
+
 # Superuser
 import /init.superuser.rc
 
