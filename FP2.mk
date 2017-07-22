@@ -147,11 +147,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8974
 
-#battery_monitor
-PRODUCT_PACKAGES += \
-    battery_monitor \
-    battery_shutdown
-
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
