@@ -10,7 +10,7 @@
   }
 
   {
-    "repository": "android_fairphone_lineage_msm8974",
+    "repository": "android_kernel_fairphone_msm8974",
     "target_path": "kernel/fairphone/msm8974"
   }
 ]
