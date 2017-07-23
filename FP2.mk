@@ -181,9 +181,6 @@ PRODUCT_PACKAGES += \
    antradio_app \
    libantradio
 
-# include an expanded selection of fonts for the SDK.
-EXTENDED_FONT_FOOTPRINT := true
-
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8974
