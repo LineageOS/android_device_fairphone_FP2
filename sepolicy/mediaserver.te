@@ -1,1 +1,1 @@
-allow mediaserver audio_device:chr_file {open read write ioctl};
+allow mediaserver audio_device:chr_file rw_file_perms;
