@@ -1,1 +1,1 @@
-allow sensors persist_file:file {getattr read write open};
+allow sensors persist_file:file rw_file_perms;
