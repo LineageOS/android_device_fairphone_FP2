@@ -44,6 +44,7 @@ ro.gps.agps_provider=1
 # Graphics
 debug.composition.type=c2d
 debug.egl.hw=1
+debug.hwui.use_buffer_age=false
 debug.sf.hw=1
 persist.demo.hdmirotationlock=false
 persist.hwc.mdpcomp.enable=true
