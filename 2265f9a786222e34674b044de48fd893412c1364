@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9650799d_a47a54e7",
+        "filename": "sepolicy/rmt_storage.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2017-07-31T18:52:53Z",
+      "side": 1,
+      "message": "You could remove this https://review.lineageos.org/#/c/179878/",
+      "revId": "2265f9a786222e34674b044de48fd893412c1364",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
