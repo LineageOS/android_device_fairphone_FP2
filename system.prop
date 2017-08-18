@@ -31,6 +31,8 @@ ro.qualcomm.cabl=1
 ro.qc.sdk.camera.facialproc=false
 ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.sensors.gestures=true
+#enable tintless rolloff for camera
+persist.camera.tintless=enable
 
 # Display
 ro.sf.lcd_density=440
