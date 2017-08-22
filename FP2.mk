@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessingdescriptors \
     tinymix
 
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
