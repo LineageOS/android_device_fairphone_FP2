@@ -363,12 +363,11 @@ service imscmservice /system/bin/imscmservice
    group radio net_raw diag qcom_diag log
    disabled
 
-service ril-daemon1 /system/bin/rild -c 2
+service ril-daemon1 /vendor/bin/hw/rild -c 2
     class main
-    socket rild2 stream 660 root radio
-    socket rild-debug2 stream 660 radio system
-    user root
-    group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log
+    user radio
+    group radio cache inet misc audio log readproc wakelock qcom_diag
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 on property:vold.decrypt=trigger_restart_framework
     start config_bt_addr
