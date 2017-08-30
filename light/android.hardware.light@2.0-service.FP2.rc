@@ -18,7 +18,7 @@ on boot
     chown system system /sys/class/leds/blue/pause_high
     chown system system /sys/class/leds/blue/ramp_step_ms
 
-service light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.FP2
+service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.FP2
     class hal
     user system
     group system
