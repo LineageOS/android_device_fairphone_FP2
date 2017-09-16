@@ -37,6 +37,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=FP2 PRODUCT_NAME=FP2
 ## Use the latest approved GMS identifiers unless running a signed build
 ifneq ($(SIGN_BUILD),true)
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=Fairphone/FP2/FP2:6.0.1/FP2-gms-17.04.8/FP2-gms-17.04.8:user/release-keys
+    BUILD_FINGERPRINT=Fairphone/FP2/FP2:6.0.1/FP2-gms-17.09.3/FP2-gms-17.09.3:user/release-keys
     PRIVATE_BUILD_DESC="FP2-user no clue what to put here"
 endif
