@@ -84,6 +84,7 @@ media.stagefright.use-awesome=true
 mm.enable.qcom_parser=37491
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
+ro.media.maxmem=1451891712
 # 1:ERROR 2:HIGH 4:LOW 0:NOLOGS 7:AllLOGS
 vidc.debug.level=1
 
