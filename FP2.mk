@@ -190,9 +190,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant
 
 PRODUCT_PACKAGES += \
-    hostapd.accept \
-    hostapd.deny \
-    hostapd_default.conf \
     p2p_supplicant_overlay.conf \
     wpa_supplicant.conf \
     wpa_supplicant_overlay.conf
