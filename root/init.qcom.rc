@@ -377,7 +377,7 @@ service config_bt_addr /vendor/bin/btnvtool -O
     group bluetooth radio
     oneshot
 
-service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
+service hciattach /vendor/bin/init.qcom.bt.sh
     class late_start
     user bluetooth
     group bluetooth net_bt_admin oem_2950 diag radio
@@ -434,7 +434,7 @@ service loc_launcher /vendor/bin/loc_launcher
     class late_start
     group gps inet net_raw diag oem_2950 net_admin wifi
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+service fm_dl /vendor/bin/init.qcom.fm.sh
     class late_start
     user root
     group system
