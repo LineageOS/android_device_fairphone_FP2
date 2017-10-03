@@ -86,7 +86,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libc2dcolorconvert \
-    libdivxdrmdecrypt \
     libstagefrighthw
 
 PRODUCT_PACKAGES += \
