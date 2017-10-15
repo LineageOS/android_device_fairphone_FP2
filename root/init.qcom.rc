@@ -182,6 +182,9 @@ on boot
     # Bluetooth
     mkdir /persist/bluetooth 0770 bluetooth bluetooth
 
+    # Alarms
+    mkdir /persist/alarm 0770 system system
+
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
