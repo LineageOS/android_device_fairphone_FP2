@@ -65,6 +65,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/root/fstab.qcom
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
