@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingLeft="@dimen/main_padding"
+    android:paddingRight="@dimen/main_padding">
+
+    <ImageView
+        android:id="@+id/instruction_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/top_image_psensor"
+        android:contentDescription="@string/instruction_image_desc" />
+
+    <TextView
+        android:id="@+id/current_step"
+        style="@style/TextBold16BlueDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instruction_image"
+        android:text="@string/step_1" />
+
+    <TextView
+        android:id="@+id/instructions"
+        style="@style/TextRegular14BlueDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/current_step"
+        android:layout_marginTop="@dimen/main_small_text_below_heading_margin"
+        android:text="@string/msg_block" />
+
+    <TextView
+        android:id="@+id/error_notice"
+        style="@style/TextRegular14PinkDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructions"
+        android:layout_marginTop="@dimen/main_small_text_below_heading_margin"
+        android:text="@string/msg_fail_block" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/main_margin"
+        android:indeterminate="true" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/ButtonWhiteBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/main_margin"
+        android:text="@string/next" />
+
+</RelativeLayout>

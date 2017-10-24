@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Palette colors referenced by top-level themes.-->
+
+    <color name="theme_primary">#2aa8e0</color>
+    <color name="theme_primary_dark">#000000</color>
+    <color name="theme_accent">#f286b6</color>
+
+    <!-- BACKGROUND -->
+    <color name="background_header">#F7F7F7</color>
+    <color name="background">#F0F0F0</color>
+
+    <!-- MAIN COLORS -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparent">#55FFFFFF</color>
+    <color name="grey">#5B5B5B</color>
+    <color name="grey_light">#999999</color>
+    <color name="grey_dark">#333333</color>
+    <color name="grey_transparent">#66999999</color>
+    <color name="blue">#2AA9E0</color>
+    <color name="blue_dark">#123C59</color>
+    <color name="blue_light">#AADCF2</color>
+    <color name="blue_light_transparent">#DBEAF0</color>
+    <color name="green">#6BC1A3</color>
+    <color name="green_dark">#17717A</color>
+    <color name="green_light">#A0D7C4</color>
+    <color name="green_light_transparent">#D8E8E2</color>
+    <color name="pink">#C1454A</color>
+    <color name="pink_dark">#823A3D</color>
+    <color name="pink_light">#F286B6</color>
+    <color name="pink_light_transparent">#F0DBE4</color>
+    <color name="red">#C3474C</color>
+
+</resources>

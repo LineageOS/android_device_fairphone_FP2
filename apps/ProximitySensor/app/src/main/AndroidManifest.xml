@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fairphone.psensor"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="20202"
+    android:versionName="2.2.2">
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="23" />
+
+     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+     <uses-permission android:name="android.permission.DEVICE_POWER"
+         tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.STOP_APP_SWITCHES" />
+    <uses-permission android:name="android.permission.REBOOT" tools:ignore="ProtectedPermissions"/>
+
+    <permission
+        android:name="com.fairphone.psensor.permission.CALIBRATE_PROXIMITY_SENSOR"
+        android:protectionLevel="signature" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_full_name"
+        android:theme="@style/AppTheme"
+        android:icon="@mipmap/ic_launcher_psensor"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name="com.fairphone.psensor.UpdateFinalizerActivity"
+            android:enabled="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <intent-filter android:priority="1">
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.DEVICE_INITIALIZATION_WIZARD"/>
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.fairphone.psensor.UpdateFinalizerActivityFromNotification"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DiagnosticsActivity"
+            android:label="@string/activity_diagnostics"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".CalibrationActivity"
+            android:label="@string/activity_calibration"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ReceiverModuleChangedActivity"
+            android:label="@string/receiver_module_changed_title"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.fairphone.psensor.BootUpReceiver"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.QUICKBOOT_POWEROFF" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.fairphone.psensor.UpdateFinalizerService"
+            android:enabled="false"
+            android:exported="false" />
+
+        <service
+            android:name=".CalibrationService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.fairphone.psensor.permission.CALIBRATE_PROXIMITY_SENSOR" />
+    </application>
+
+</manifest>

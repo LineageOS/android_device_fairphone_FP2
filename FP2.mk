@@ -210,5 +210,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Proximity Calibration
+PRODUCT_PACKAGES += \
+    ProximitySensorTools
+
 # Call the proprietary setup
 $(call inherit-product, vendor/fairphone/FP2/FP2-vendor.mk)

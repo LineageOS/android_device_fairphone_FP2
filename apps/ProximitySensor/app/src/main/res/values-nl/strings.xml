@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <string name="app_name">Afstandssensor gereedschap</string>
+    <string name="Exit">Sluit</string>
+    <string name="Heading">Een laatste stap…</string>
+    <string name="NotificationText">Kalibreer de afstandssensor van je toestel.</string>
+    <string name="OK">OK</string>
+    <string name="activity_calibration">Kalibrering</string>
+    <string name="activity_diagnostics">Diagnostiek</string>
+    <string name="ask_really_dont_show_title">Weet je het zeker?</string>
+    <string name="block_value">"Blokkeer waarde: "</string>
+    <string name="cancel">Annuleer</string>
+    <string name="dontshowagain">Dit scherm niet meer tonen.</string>
+    <string name="greating">Afstandssensor kalibratie</string>
+    <string name="msg_block">Bedek de sensor volledig met je vinger (het sensor gebied is weergegeven in de afbeelding hierboven) en druk vervolgens op de Volgende knop.</string>
+    <string name="msg_cal">Kalibreren…</string>
+    <string name="msg_calibration_success"><![CDATA[Kalibratie succesvol! Druk op de OK & Herstart knop om de kalibratie af te ronden en je Fairphone te herstarten.]]></string>
+    <string name="Text"> <p>Fairphone OS geeft je nu de mogelijkheid om de afstandssensor te kalibreren - dit verbetert het gedrag van de sensor tijdens een telefoongesprek (scherm uit/aan).</p> <p>We raden je aan de afstandssensor te kalibreren - dit is eenvoudig en zo gepiept!</p></string>
+    <string name="msg_fail_block">Er is iets misgegaan, probeer het opnieuw. Zorg ervoor dat je de sensor volledig bedekt.</string>
+    <string name="msg_fail_unlock">Er is iets misgegaan, probeer het opnieuw. Zorg ervoor dat je vinger is verwijderd van de sensor en dat het scherm schoon is.</string>
+    <string name="msg_fail_write_sns">Er is iets misgegaan, controleer of je toestel up-to-date is en probeer het opnieuw.</string>
+    <string name="msg_reading">Informatie ophalen van de afstandssensor…</string>
+    <string name="msg_step_success">Succesvol</string>
+    <string name="msg_unblock">Verwijder je vinger van de sensor en druk op de Volgende knop.</string>
+    <string name="next">Volgende</string>
+    <string name="not_triggered">Niet geactiveerd</string>
+    <string name="reboot"><![CDATA[OK & Herstart]]></string>
+    <string name="unblock_value">"Ontgrendel waarde: "</string>
+    <string name="step_3">Stap 3/3</string>
+    <string name="step_2">Stap 2/3</string>
+    <string name="step_1">Stap 1/3</string>
+    <string name="state">"Status "</string>
+    <string name="sensor_value">"Sensor waarde: "</string>
+    <string name="ask_really_dont_show_text">Het kalibreren van de afstandssensor is eenvoudig en verbetert het scherm gedrag tijdens een telefoongesprek (scherm uit/aan). <it>Je kunt de afstandssensor op een later tijdstip kalibreren onder Instellingen → Onderhoud → Afstandssensor → Kalibrering.</it>.</string>
+    <string name="NotificationTitle">Afstandssensor kalibratie</string>
+    <string name="incompatible_device">Onverenigbaar toestel</string>
+    <string name="go_to_updater">Controleren op updates</string>
+    <string name="device_cannot_run_calibration_tool">De kalibratie tool kan niet starten op je Fairphone 2. Zorg ervoor dat je toestel de laatste software update draait.</string>
+    <string name="receiver_module_changed_title">Bovenste module</string>
+    <string name="receiver_module_changed_summary">Kalibreer de nabijheidssensor.</string>
+    <string name="receiver_module_changed_extended_summary">De bovenste module is vervangen. De nabijheidssensor moet gekalibreerd worden.</string>
+    <string name="receiver_module_successfully_changed_title">Bovenste module\nsuccesvol vervangen</string>
+    <string name="your_receiver_module_has_been_replaced">Je bovenste module is vervangen.</string>
+    <string name="you_need_to_calibrate_the_proximity_sensor">Je moet de nabijheidssensor kalibreren om ervoor te zorgen dat hij goed werkt.</string>
+    <string name="we_will_guide_you">We zullen je begeleiden door drie eenvoudige stappen.</string>
+    <string name="later">Later</string>
+</resources>

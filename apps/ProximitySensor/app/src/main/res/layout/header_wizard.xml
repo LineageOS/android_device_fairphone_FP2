@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_header">
+
+    <TextView
+        style="@style/TitleLightPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_big_height"
+        android:ellipsize="end"
+        android:gravity="center_vertical|center_horizontal"
+        android:lines="2"
+        android:text="@string/Heading" />
+
+</RelativeLayout>

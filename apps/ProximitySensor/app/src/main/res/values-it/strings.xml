@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <string name="next">Continua</string>
+    <string name="receiver_module_changed_title">Modulo superiore</string>
+    <string name="receiver_module_changed_summary">Calibra il sensore di prossimità.</string>
+    <string name="receiver_module_changed_extended_summary">Il modulo superiore è stato sostituito. Il sensore di prossimità deve essere calibrato.</string>
+    <string name="receiver_module_successfully_changed_title">Modulo superiore\nsostituito\ncon successo</string>
+    <string name="your_receiver_module_has_been_replaced">Il tuo modulo superiore è stato sotituito.</string>
+    <string name="you_need_to_calibrate_the_proximity_sensor">Devi calibrare il sensore di prossimità per assicurarti che funzioni a dovere.</string>
+    <string name="we_will_guide_you">Ti guideremo lungo i tre passi necessari.</string>
+    <string name="later">Più tardi</string>
+</resources>

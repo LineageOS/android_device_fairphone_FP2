@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Proximity Sensor Tool</string>
+    <string name="app_full_name" translatable="false">Fairphone Proximity Sensor Tool</string>
+
+    <string name="activity_diagnostics">Diagnostics</string>
+    <string name="activity_calibration">Calibration</string>
+
+    <string name="incompatible_device">Incompatible device</string>
+    <string name="device_cannot_run_calibration_tool">The calibration tool cannot be run on your Fairphone 2. Make sure your device is running the latest software update.</string>
+
+    <string name="msg_block">Cover the sensor area completely with your finger (the sensor area is shown in the image above), then press the Next button.</string>
+    <string name="msg_reading">Retrieving information from the proximity sensor…</string>
+    <string name="msg_unblock">Remove your finger from the sensor area and press the Next button.</string>
+    <string name="msg_cal">Calibrating…</string>
+    <string name="msg_calibration_success"><![CDATA[Calibration successful! Press the OK & Reboot button to finalize the calibration process and to reboot your Fairphone.]]></string>
+    <string name="msg_step_success">Successful</string>
+    <string name="msg_fail_block">Something went wrong, please try again. Make sure you cover the sensor area completely.</string>
+    <string name="msg_fail_unlock">Something went wrong, please try again. Make sure to remove your finger from the sensor area and that the screen is clean.</string>
+    <string name="msg_fail_write_sns">Something went wrong, please check that your device is up-to-date and try again.</string>
+    <string name="instruction_image_desc">The proximity sensor is located between the notification LED and the ear speaker.</string>
+
+    <string name='not_triggered'>Not triggered</string>
+    <string name='state'>State: </string>
+    <string name='sensor_value'>Sensor value: </string>
+    <string name='block_value'>Block value: </string>
+    <string name='unblock_value'>Unlock value: </string>
+
+    <string name="step_1">Step 1/3</string>
+    <string name="step_2">Step 2/3</string>
+    <string name="step_3">Step 3/3</string>
+
+    <string name="Heading">One more thing…</string>
+    <string name="greating">Proximity sensor calibration</string>
+    <string name="Text"><![CDATA[ <p>Fairphone OS now gives you the option to calibrate the proximity sensor - this improves the sensor behavior while making a call (screen going off/on).</p> <p>We recommend to calibrate the proximity sensor now to get the best experience - it\'s easy and done in a second!</p>]]></string>
+    <string name="next">Next</string>
+    <string name="logtag" translatable="false">UpdateFinalizer</string>
+    <string name="NotificationText">Please calibrate the proximity sensor of your device.</string>
+    <string name="dontshowagain">Don\'t show this screen again.</string>
+    <string name="preference_file_key" translatable="false">com.fairphone.psensor.preferences</string>
+    <string name="preference_already_shown" translatable="false">preference_already_shown</string>
+    <string name="preference_do_not_show_again" translatable="false">preference_do_not_show_again</string>
+    <string name="reboot"><![CDATA[OK & Reboot]]></string>
+    <string name="Exit">Exit</string>
+    <string name="OK">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="go_to_updater">Check for updates</string>
+    <string name="ask_really_dont_show_title">Are you sure?</string>
+    <string name="ask_really_dont_show_text"><![CDATA[Calibrating the proximity sensor is easy and will improve the call experience. <it>You can calibrate the proximity sensor at a later time in Settings → Maintenance → Proximity Sensor Tool</it>.]]></string>
+    <string name="preference_successfully_calibrated" translatable="false">preference_successfully_calibrated</string>
+    <string name="NotificationTitle">Finalizing Update</string>
+
+    <string name="receiver_module_changed_title">Top module replaced</string>
+    <string name="receiver_module_changed_summary">Calibrate the proximity sensor.</string>
+    <string name="receiver_module_changed_extended_summary">The top module has been replaced. The proximity sensor needs to be calibrated.</string>
+    <string name="receiver_module_successfully_changed_title">Top module\nsuccessfully replaced</string>
+    <string name="your_receiver_module_has_been_replaced">Your top module has been replaced.</string>
+    <string name="you_need_to_calibrate_the_proximity_sensor">You need to calibrate the proximity sensor to ensure it works properly.</string>
+    <string name="we_will_guide_you">"We'll guide you through three simple steps."</string>
+    <string name="later">Later</string>
+
+    <!-- FRAGMENT TAGS -->
+    <string name="fragment_tag_incompatible_device_dialog" translatable="false">incompatible_device</string>
+
+    <!-- SHARED PREFERENCES -->
+    <string name="preference_pending_calibration" translatable="false">preference_pending_calibration</string>
+    <string name="preference_calibration_needed_after_receiver_module_changed" translatable="false">preference_calibration_needed_after_receiver_module_changed</string>
+
+    <!-- EXTERNAL PACKAGES AND ACTIVITIES -->
+    <string name="package_fairphone_updater" translatable="false">com.fairphone.updater</string>
+    <string name="activity_fairphone_updater_check_for_updates" translatable="false">com.fairphone.updater.FairphoneUpdater</string>
+
+</resources>
