@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.fairphone.psensor.ReceiverModuleChangedActivity">
+
+    <include layout="@layout/header_receiver_module_changed" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:padding="@dimen/main_padding">
+
+        <Button
+            android:id="@+id/button_later"
+            style="@style/ButtonWhiteGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button_next"
+            android:layout_marginBottom="@dimen/main_margin_small"
+            android:text="@string/later" />
+
+        <Button
+            android:id="@+id/button_next"
+            style="@style/ButtonWhiteBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/next" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button_later"
+            android:paddingStart="@dimen/main_small_text_margin_start"
+            android:paddingEnd="@dimen/main_small_text_margin_end"
+            android:layout_marginBottom="@dimen/main_small_text_below_heading_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    style="@style/TextBold16BlueDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_receiver_module_has_been_replaced"
+                    android:lineSpacingExtra="4sp"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:id="@+id/desc_1"
+                    style="@style/TextRegular14BlueDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_small_text_below_heading_margin"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/you_need_to_calibrate_the_proximity_sensor" />
+
+                <TextView
+                    android:id="@+id/desc_2"
+                    style="@style/TextRegular14BlueDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_small_text_below_heading_margin"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/we_will_guide_you" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>

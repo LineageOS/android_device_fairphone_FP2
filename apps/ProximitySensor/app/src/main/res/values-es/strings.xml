@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <string name="app_name">Herramienta Sensor de proximidad</string>
+    <string name="Exit">Salir</string>
+    <string name="OK">OK</string>
+    <string name="Text"><![CDATA[ <p>Fairphone OS te da la opción de calibrar el sensor de proximidad - esto mejorará el funcionamiento del sensor mientras haces una llamada (la pantalla se encenderá cuando terminas la llamada).</p> <p>Te recomendamos calibrar el sensor de proximidad ahora para tener el mejor funcionamiento - es fácil y rápido!</p>]]></string>
+    <string name="activity_calibration">Calibración</string>
+    <string name="activity_diagnostics">Diagnóstico</string>
+    <string name="msg_block">Cubre el área del sensor de proximidad con el dedo (el área a cubrir esta indicada en la imagen superior), luego pulsa Próximo.</string>
+    <string name="msg_cal">Calibrando…</string>
+    <string name="msg_calibration_success">¡Calibración lista! Pulsa Aceptar y Reiniciar para finalizar el proceso y reiniciar tu Fairphone.</string>
+    <string name="msg_step_success">Exitoso</string>
+    <string name="msg_fail_block">Ha ocurrido un error; por favor inténtalo de nuevo. Asegúrate de cubrir el área del sensor completamente.</string>
+    <string name="msg_fail_unlock">Ha ocurrido un error. Por favor inténtalo de nuevo. Asegúrate de que el sensor de proximidad no está cubierto y la pantalla esta limpia.</string>
+    <string name="msg_fail_write_sns">Ha ocurrido un error, comprueba que tu dispositivo está actualizado e intenta de nuevo.</string>
+    <string name="msg_reading">Obteniendo información del sensor de proximidad…</string>
+    <string name="msg_unblock">Retira el dedo del sensor y pulsa Próximo.</string>
+    <string name="next">Siguiente</string>
+    <string name="dontshowagain">No mostrar esta pantalla de nuevo.</string>
+    <string name="unblock_value">Valor sensor libre:</string>
+    <string name="step_1">Paso 1/3</string>
+    <string name="step_2">Paso 2/3</string>
+    <string name="step_3">Paso 3/3</string>
+    <string name="state">Estado:</string>
+    <string name="sensor_value">Valor sensor:</string>
+    <string name="reboot"><![CDATA[Aceptar y Reiniciar]]></string>
+    <string name="greating">Calibración del sensor de proximidad</string>
+    <string name="cancel">Anular</string>
+    <string name="NotificationTitle">Calibración del sensor de proximidad</string>
+    <string name="not_triggered">Sin activar</string>
+    <string name="NotificationText">Por favor, calibra el sensor de proximidad de tu Fairphone.</string>
+    <string name="ask_really_dont_show_title">¿Estás seguro?</string>
+    <string name="ask_really_dont_show_text"><![CDATA[Calibrar el sensor de proximidad es fácil y mejorará tu experiencia cuando llames. <it>Puedes calibrar el sensor de proximidad en otro momento en Ajustes → Mantenimiento  → Herramienta Sensor de Proximidad</it>.]]></string>
+    <string name="block_value">Valor de bloqueo:</string>
+    <string name="Heading">Una cosa más…</string>
+    <string name="incompatible_device">Dispositivo no compatible</string>
+    <string name="device_cannot_run_calibration_tool">La herramienta de calibración no es compatible con tu Fairphone 2. Asegúrate que tu dispositivo está corriendo la última actualización de software.</string>
+    <string name="go_to_updater">Comprobar si hay actualizaciones</string>
+    <string name="receiver_module_changed_title">Módulo superior</string>
+    <string name="receiver_module_changed_summary">Calibra el sensor de proximidad.</string>
+    <string name="receiver_module_changed_extended_summary">El módulo superior ha sido reemplazado. El sensor de proximidad necesita ser calibrado.</string>
+    <string name="receiver_module_successfully_changed_title">Módulo superior\nreemplazado con éxito.</string>
+    <string name="your_receiver_module_has_been_replaced">Tu módulo superior ha sido reemplazado.</string>
+    <string name="you_need_to_calibrate_the_proximity_sensor">Necesitas calibrar el sensor de proximidad para asegurar que funciona correctamente.</string>
+    <string name="we_will_guide_you">Te guiaremos a través de tres simples pasos.</string>
+    <string name="later">Luego</string>
+</resources>

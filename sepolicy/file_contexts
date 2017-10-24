@@ -1,1 +1,3 @@
 /dev/block/platform/msm_sdcc\.1/by-name/persist         u:object_r:persist_block_device:s0
+
+/persist/sns.reg u:object_r:sensor_calibration_file:s0

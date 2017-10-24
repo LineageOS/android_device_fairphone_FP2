@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_header"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+    <TextView
+        style="@style/TitleLightPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_bigger_height"
+        android:ellipsize="end"
+        android:gravity="center_vertical|center_horizontal"
+        android:lineSpacingExtra="10sp"
+        android:lines="3"
+        android:text="@string/receiver_module_successfully_changed_title"
+        android:background="@color/background_header"
+        android:textSize="30sp"/>
+
+</RelativeLayout>

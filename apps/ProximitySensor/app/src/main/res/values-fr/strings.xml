@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <string name="app_name">Capteur de proximité</string>
+    <string name="Exit">Quitter</string>
+    <string name="Heading">Une dernière chose…</string>
+    <string name="NotificationText">Veuillez calibrer le capteur de proximité de votre Fairphone.</string>
+    <string name="OK">OK</string>
+    <string name="Text"><![CDATA[ <p>Vous avez désormais la possibilité de calibrer le capteur de proximité depuis Fairphone OS - ceci améliore le comportement du capteur lors d’un appel (l’écran s’éteint/s’allume).</p> <p>Nous recommandons de calibrer le capteur de proximité maintenant pour une meilleure expérience - cela ne vous prendra qu’une minute!</p>]]></string>
+    <string name="activity_calibration">Calibration</string>
+    <string name="activity_diagnostics">Diagnostique</string>
+    <string name="ask_really_dont_show_title">Êtes-vous sûr ?</string>
+    <string name="block_value">Valeur à l\'état «bloqué» :</string>
+    <string name="dontshowagain">Ne plus afficher cet écran.</string>
+    <string name="greating">Calibration du capteur de proximité</string>
+    <string name="msg_block">Recouvrez la zone du capteur entièrement avec votre doigt (la zone à couvrir est illustrée par l\'image ci-dessus), puis utilisez le bouton Suivant.</string>
+    <string name="msg_cal">Calibration en cours…</string>
+    <string name="msg_calibration_success"><![CDATA[Calibration terminée ! Utilisez le bouton OK & Redémarrer pour finaliser la procédure et redémarrer votre Fairphone.]]></string>
+    <string name="msg_fail_block">Une erreur est survenue, merci de recommencer. Assurez vous de couvrir complètement la zone du capteur.</string>
+    <string name="msg_fail_unlock">Une erreur est survenue, merci de recommencer. Assurez vous d\'emlever votre doigt de la zone du capteur et de vérifier que votre écran est propre.</string>
+    <string name="msg_fail_write_sns">Une erreur est survenue, assurez vous que votre téléphone soit à jour avant de réessayer.</string>
+    <string name="msg_reading">Lecture du capteur de proximité en cours…</string>
+    <string name="msg_step_success">Succès</string>
+    <string name="msg_unblock">Enlevez votre doigt de la zone du capteur puis utilisez le bouton Suivant.</string>
+    <string name="next">Suivant</string>
+    <string name="reboot"><![CDATA[OK & Redémarrer]]></string>
+    <string name="sensor_value">Valeur du capteur:</string>
+    <string name="state">État:</string>
+    <string name="step_1">Étape 1/3</string>
+    <string name="step_2">Étape 2/3</string>
+    <string name="step_3">Étape 3/3</string>
+    <string name="unblock_value">Valeur à l\'état «libre»:</string>
+    <string name="cancel">Annuler</string>
+    <string name="NotificationTitle">Calibration du capteur de proximité</string>
+    <string name="ask_really_dont_show_text"><![CDATA[La calibration du capteur de proximité est simple à réaliser and améliorera votre confort d\'appel. <it>Vous pouvez (re-)calibrer le capteur de proximité à n\'importe quel moment via Paramètres → Maintenance → Capteur de proximité</it>.]]></string>
+    <string name="not_triggered">Non activé</string>
+    <string name="incompatible_device">Équipement incompatible</string>
+    <string name="device_cannot_run_calibration_tool">L\'outil de calibration ne peut pas être exécuté sur votre Fairphone 2. Assurez vous que le système de votre téléphone soit à jour.</string>
+    <string name="go_to_updater">Vérifier les mises à jour</string>
+    <string name="receiver_module_changed_title">Module supérieur</string>
+    <string name="receiver_module_changed_summary">Calibrez le capteur de proximité.</string>
+    <string name="receiver_module_changed_extended_summary">Le module supérieur a été remplacé. Le capteur de proximité doit être calibré.</string>
+    <string name="receiver_module_successfully_changed_title">Module supérieur\nremplacé\navec succès</string>
+    <string name="your_receiver_module_has_been_replaced">Votre module supérieur a été remplacé.</string>
+    <string name="you_need_to_calibrate_the_proximity_sensor">Vous devez calibrer le capteur de proximité pour en assurer le bon fonctionnement.</string>
+    <string name="we_will_guide_you">Laissez vous guider en trois étapes.</string>
+    <string name="later">Plus tard</string>
+</resources>

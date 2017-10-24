@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <string name="app_name">Näherungssensor-Tool</string>
+    <string name="Exit">Schließen</string>
+    <string name="Heading">Noch ein letzter Schritt…</string>
+    <string name="NotificationText">Kalibriere den Näherungssensor deines Fairphones.</string>
+    <string name="OK">OK</string>
+    <string name="Text"><![CDATA[ <p>Fairphone OS enthält jetzt die Möglichkeit den Näherungssensor zu kalibrieren. Die Kalibrierung verbessert das Verhalten des Näherungssensors während Telefonaten (der Bildschirm wird aus- und eingeschaltet wenn das Fairphone während dem Telefonat ans Ohr gehalten und wieder weggenommen wird).</p> <p>Wir empfehlen den Näherungssensor jetzt zu kalibrieren um das beste Ergebnis zu erhalten - das ist einfach und in wenigen Sekunden erledigt!</p>]]></string>
+    <string name="activity_calibration">Kalibrierung</string>
+    <string name="activity_diagnostics">Diagnostik</string>
+    <string name="ask_really_dont_show_title">Bist du sicher?</string>
+    <string name="ask_really_dont_show_text">Die Kalibrierung des Näherungssensors ist einfach und verbessert Bildschirmverhalten während Telefonaten. <it>Du kannst die Kalibrierung jederzeit in Einstellungen → Wartung → Näherungssensor-Tool</it>.</string>
+    <string name="block_value">Wert wenn abgedeckt:</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="dontshowagain">Diese Meldung künftig nicht mehr zeigen.</string>
+    <string name="greating">Näherungssensorkalibrierung</string>
+    <string name="msg_block">Decke den Sensorbereich komplett mit deinem Finger ab (der Sensorbereich ist im obigen Bild hervorgehoben) und drücke gleichzeitig auf Weiter.</string>
+    <string name="msg_cal">Kalibrieren…</string>
+    <string name="msg_calibration_success"><![CDATA[Kalibrierung erfolgreich. Drücke auf "OK & Neustart" um die Kalibrierung abzuschließen und dein Fairphone neu zu starten.]]></string>
+    <string name="reboot"><![CDATA[OK & Neustart]]></string>
+    <string name="msg_fail_block">Hier ging was schief. Bitte probier es noch einmal. Achte darauf den Sensorbereich komplett abzudecken.</string>
+    <string name="msg_fail_unlock">Hier ging was schief. Bitte probier es noch einmal. Stelle sicher, dass der Sensorbereich frei und der Bildschirm sauber sind.</string>
+    <string name="msg_fail_write_sns">Ein unerwartetes Problem mit Rechten ist aufgetreten…</string>
+    <string name="msg_reading">Informationen werden vom Näherungssensor abgerufen…</string>
+    <string name="msg_step_success">Fertig</string>
+    <string name="msg_unblock">Entferne deinen Finger vom Sensorbereich und drücke danach auf Weiter.</string>
+    <string name="next">Weiter</string>
+    <string name="not_triggered">Nicht aktiviert</string>
+    <string name="sensor_value">Sensorwert:</string>
+    <string name="state">Status:</string>
+    <string name="step_1">Schritt 1/3</string>
+    <string name="step_2">Schritt 2/3</string>
+    <string name="step_3">Schritt 3/3</string>
+    <string name="unblock_value">Wert wenn frei:</string>
+    <string name="NotificationTitle">Näherungssensorkalibrierung</string>
+    <string name="incompatible_device">Inkompatibles Gerät</string>
+    <string name="device_cannot_run_calibration_tool">Das Kalibrierungs-Tool kann nicht auf deinem Fairphone 2 gestartet werden. Bitte stell sicher, dass die aktuellste Softwareversion installiert ist.</string>
+    <string name="go_to_updater">Suche nach Updates</string>
+    <string name="receiver_module_changed_title">Top-Modul</string>
+    <string name="receiver_module_changed_summary">Kalibriere den Abstandssensor.</string>
+    <string name="receiver_module_changed_extended_summary">Dein Top-Modul wurde ausgewechselt. Der Abstandssensor muss kalibriert werden.</string>
+    <string name="receiver_module_successfully_changed_title">Top-Modul\nerfolgreich ausgewechselt.</string>
+    <string name="your_receiver_module_has_been_replaced">Dein Top-Modul wurde ausgewechselt.</string>
+    <string name="you_need_to_calibrate_the_proximity_sensor">Du musst den Abstandssensor neu kalibrieren um sicherzustellen, dass er korrekt funktioniert.</string>
+    <string name="we_will_guide_you">Wir werden dich durch drei einfache Schritte führen.</string>
+    <string name="later">Später</string>
+</resources>

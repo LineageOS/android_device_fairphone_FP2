@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_update_finalizer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fairphone.psensor.UpdateFinalizerActivity">
+
+    <include layout="@layout/header_wizard" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/main_padding">
+
+        <TextView
+            android:id="@+id/heading"
+            style="@style/TextBold16BlueDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/greating"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:id="@+id/instructions"
+            style="@style/TextRegular14BlueDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading"
+            android:layout_marginTop="@dimen/main_small_text_below_heading_margin"
+            android:text="@string/Text" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSuppress"
+            style="@style/TextRegular14BlueDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button_next"
+            android:text="@string/dontshowagain"
+            android:layout_marginBottom="@dimen/main_margin_small"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/button_next"
+            style="@style/ButtonWhiteBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/next" />
+
+    </RelativeLayout>
+
+</LinearLayout>
