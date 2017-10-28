@@ -109,6 +109,9 @@ ro.sys.sdcardfs=true
 # Time services
 persist.timed.enable=true
 
+# Perfd
+ro.vendor.extension_library=libqti-perfd-client.so
+
 # Wifi
 wifi.interface=wlan0
 
