@@ -107,7 +107,7 @@ vendor/lib/libsystem_health_mon.so
 # Radio
 -app/shutdownlistener/shutdownlistener.apk
 -lib/libmdmdetect.so
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|61ddb707d25a574a19315eb573e3cda5416b342e
 bin/netmgrd
 bin/qmuxd
 bin/radish
