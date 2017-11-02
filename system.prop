@@ -102,6 +102,8 @@ rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 # Start in global mode
 ro.telephony.default_network=9,9
 telephony.lteOnGsmDevice=1
+persist.radio.flexmap_type=none
+ro.telephony.ril_class=FP2RIL
 
 # sdcardfs
 ro.sys.sdcardfs=true
