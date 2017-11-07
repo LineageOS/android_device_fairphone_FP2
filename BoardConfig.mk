@@ -16,6 +16,9 @@
 
 DEVICE_PATH := device/fairphone/FP2
 
+# Binder API version
+TARGET_USES_64_BIT_BINDER := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := FP2
 TARGET_NO_BOOTLOADER := false
