@@ -25,7 +25,6 @@ vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
-vendor/lib/mediadrm/libwvdrmengine.so
 
 # GPS
 bin/loc_launcher
