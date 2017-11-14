@@ -69,7 +69,3 @@ LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
-
-ifeq ($(TARGET_USES_AOSP),false)
-include $(LOCAL_PATH)/test/Android.mk
-endif
