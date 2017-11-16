@@ -176,10 +176,9 @@ PRODUCT_PACKAGES += \
 
 # ANT stack
 PRODUCT_PACKAGES += \
-   ANTRadioService \
-   AntHalService \
-   antradio_app \
-   libantradio
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    libantradio
 
 # GPS
 PRODUCT_PACKAGES += \
