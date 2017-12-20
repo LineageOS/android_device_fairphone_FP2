@@ -1,10 +1,10 @@
 # Bluetooth
-bin/btnvtool
-bin/hci_qcomm_init
+bin/btnvtool:vendor/bin/btnvtool
+bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
 # ADSP
-bin/adsprpcd
+bin/adsprpcd:vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
@@ -19,7 +19,7 @@ vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
 # DRM
-bin/qseecomd
+bin/qseecomd:vendor/bin/qseecomd
 vendor/lib/libQSEEComAPI.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -27,8 +27,8 @@ vendor/lib/librpmb.so
 vendor/lib/libssd.so
 
 # GPS
-bin/loc_launcher
-lib/libloc_api_v02.so|36b872293fc76f15e005ec55b0724c9583629e2a
+bin/loc_launcher:vendor/bin/loc_launcher
+vendor/lib/libloc_api_v02.so|36b872293fc76f15e005ec55b0724c9583629e2a
 vendor/lib/hw/flp.default.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
@@ -56,8 +56,8 @@ vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
 # Graphics firmware
-etc/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw
+etc/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw
 
 # Listen service
 vendor/lib/liblistenhardware.so
@@ -78,20 +78,20 @@ vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal.so
 
 # Perf
-bin/mpdecision
+bin/mpdecision:vendor/bin/mpdecision
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqc-opt.so
 
 # Postprocessing
-bin/mm-pp-daemon
+bin/mm-pp-daemon:/vendor/bin/mm-pp-daemon
 vendor/lib/libdisp-aba.so
 vendor/lib/libmm-abl.so
 vendor/lib/libmm-abl-oem.so
 
 # Qualcomm framework
-bin/irsc_util
+bin/irsc_util:vendor/bin/irsc_util
 -vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsi_netctrl.so|69c1012cccb6e36e58dc4fa99e4767c6a9b59af9
 -vendor/lib/libdsutils.so
 -vendor/lib/libidl.so
 -vendor/lib/libqcci_legacy.so
@@ -109,20 +109,20 @@ vendor/lib/libsmemlog.so
 vendor/lib/libsystem_health_mon.so
 
 # Radio
--app/shutdownlistener/shutdownlistener.apk
--lib/libmdmdetect.so
+-app/shutdownlistener/shutdownlistener.apk:vendor/app/shutdownlistener/shutdownlistener.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|61ddb707d25a574a19315eb573e3cda5416b342e
-bin/netmgrd
-bin/qmuxd
-bin/radish
-bin/rfs_access
-bin/rmt_storage
-etc/data/dsi_config.xml
-etc/data/netmgr_config.xml
-etc/permissions/qcnvitems.xml
-etc/permissions/qcrilhook.xml
-framework/qcnvitems.jar
-framework/qcrilhook.jar
+lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
+bin/netmgrd:vendor/bin/netmgrd|690415e9dba475b062d3090c131b0f9d71ab0e02
+bin/qmuxd:vendor/bin/qmuxd
+bin/radish:vendor/bin/radish
+bin/rfs_access:vendor/bin/rfs_access
+bin/rmt_storage:vendor/bin/rmt_storage
+etc/data/dsi_config.xml:vendor/etc/data/dsi_config.xml
+etc/data/netmgr_config.xml:vendor/etc/data/netmgr_config.xml
+etc/permissions/qcnvitems.xml:vendor/etc/permissions/qcnvitems.xml|dd47edbccc24a5c254dca18250c0136ecab4f0d6
+etc/permissions/qcrilhook.xml:vendor/etc/permissions/qcrilhook.xml|5a65b197fbc65e3e89e829d07da11904eae3e938
+framework/qcnvitems.jar:vendor/framework/qcnvitems.jar
+framework/qcrilhook.jar:vendor/framework/qcrilhook.jar
 framework/qti-telephony-common.jar
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
@@ -133,7 +133,7 @@ vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libxml.so
 
 # Sensors
-bin/sensors.qcom
+bin/sensors.qcom:vendor/bin/sensors.qcom
 vendor/lib/hw/activity_recognition.msm8974.so
 vendor/lib/hw/sensors.msm8974.so
 vendor/lib/libsensor1.so
@@ -145,19 +145,19 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services
-bin/time_daemon
+bin/time_daemon:vendor/bin/time_daemon
 -vendor/lib/libtime_genoff.so
 -vendor/lib/libTimeService.so
--app/TimeService/TimeService.apk
+-app/TimeService/TimeService.apk:vendor/app/TimeService/TimeService.apk
 
 # Venus (media) firmware
-etc/firmware/venus.b00
-etc/firmware/venus.b01
-etc/firmware/venus.b02
-etc/firmware/venus.b03
-etc/firmware/venus.b04
-etc/firmware/venus.mbn
-etc/firmware/venus.mdt
+etc/firmware/venus.b00:vendor/firmware/venus.b00
+etc/firmware/venus.b01:vendor/firmware/venus.b01
+etc/firmware/venus.b02:vendor/firmware/venus.b02
+etc/firmware/venus.b03:vendor/firmware/venus.b03
+etc/firmware/venus.b04:vendor/firmware/venus.b04
+etc/firmware/venus.mbn:vendor/firmware/venus.mbn
+etc/firmware/venus.mdt:vendor/firmware/venus.mdt
 
 # FM radio
-bin/fm_qsoc_patches
+bin/fm_qsoc_patches:vendor/bin/fm_qsoc_patches
