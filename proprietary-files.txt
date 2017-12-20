@@ -1,10 +1,10 @@
 # Camera
-bin/mm-qcamera-daemon
-lib/hw/camera.msm8974.so
-lib/libchromatix_imx135_liveshot.so
-lib/libmmcamera_interface.so
-lib/libmmjpeg_interface.so
-lib/libqomx_core.so
+bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
+lib/hw/camera.msm8974.so:vendor/lib/hw/camera.msm8974.so
+lib/libchromatix_imx135_liveshot.so:vendor/lib/libchromatix_imx135_liveshot.so
+lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
+lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
+lib/libqomx_core.so:vendor/lib/libqomx_core.so
 vendor/lib/libactuator_dw9714.so
 vendor/lib/libactuator_dw9714_camcorder.so
 vendor/lib/libactuator_dw9714_camera.so
@@ -195,9 +195,9 @@ vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 
 # Camera firmware
-etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw
+etc/firmware/cpp_firmware_v1_1_1.fw:vendor/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw:vendor/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw:vendor/firmware/cpp_firmware_v1_2_0.fw
 
 # Radio
 vendor/lib/libril-qc-radioconfig.so
@@ -214,5 +214,5 @@ vendor/lib/libwvdrm_L3.so|7e77482481197997294a834bfbc817a01b6075cd
 vendor/lib/mediadrm/libwvdrmengine.so|416e44ba482f1f97258ff8793b0a810219ac632d
 
 # Sensor calibration tool
-bin/senread|b15b0c1bdf772fa5bd0dedf27602f538ffa62577
+vendor/bin/senread|b15b0c1bdf772fa5bd0dedf27602f538ffa62577
 vendor/lib/libsensor_test.so|fa43832539b5cfd88012e8f7405234dbff6c43ff
