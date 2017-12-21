@@ -123,7 +123,6 @@ etc/permissions/qcnvitems.xml:vendor/etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml:vendor/etc/permissions/qcrilhook.xml
 framework/qcnvitems.jar:vendor/framework/qcnvitems.jar
 framework/qcrilhook.jar:vendor/framework/qcrilhook.jar
-framework/qti-telephony-common.jar:vendor/framework/qti-telephony-common.jar
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
 vendor/lib/libnetmgr.so
