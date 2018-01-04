@@ -296,13 +296,6 @@ service qseecomd /vendor/bin/qseecomd
    user root
    group root
 
-service mpdecision /vendor/bin/mpdecision --avg_comp
-   class main
-   user root
-   group root readproc
-   socket perfd seqpacket 0666 root system
-   disabled
-
 service qosmgrd /system/bin/qosmgr /system/etc/qosmgr_rules.xml
    user system
    group system
