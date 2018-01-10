@@ -124,8 +124,8 @@ on post-fs-data
     mkdir /data/shared 0755
     chown system system /data/shared
 
-    # Create /data/time folder for time-services
-    mkdir /data/time/ 0700 system system
+    # Create /data/vendor/time folder for time-services
+    mkdir /data/vendor/time/ 0700 system system
 
     mkdir /data/audio/ 0770 media audio
 
@@ -311,8 +311,9 @@ service thermal-engine /vendor/bin/thermal-engine
 
 service time_daemon /vendor/bin/time_daemon
    class late_start
-   user root
-   group root
+   user system
+   group net_raw
+   capabilities SYS_TIME
 
 service adsprpcd /vendor/bin/adsprpcd
    class main

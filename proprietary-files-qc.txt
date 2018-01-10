@@ -138,7 +138,7 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services
-bin/time_daemon:vendor/bin/time_daemon
+vendor/bin/time_daemon|14803d2c34c80eb02c549ca40f7d68f996fd1649
 -vendor/lib/libtime_genoff.so
 -vendor/lib/libTimeService.so
 -app/TimeService/TimeService.apk:vendor/app/TimeService/TimeService.apk
