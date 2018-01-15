@@ -129,7 +129,6 @@ TARGET_RIL_VARIANT := caf
 BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 USE_DEVICE_SPECIFIC_GPS := true
 USE_DEVICE_SPECIFIC_LOC_API := true
-TARGET_NO_RPC := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
