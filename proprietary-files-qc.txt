@@ -139,7 +139,7 @@ vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 
 # Thermal
-vendor/bin/thermal-engine
+vendor/bin/thermal-engine|9beaf8a4d9848ab092e4e22efd86e3f43e9b5e3a
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
