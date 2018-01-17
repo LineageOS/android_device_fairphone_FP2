@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
 
 # IPC router
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+    $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Audio
 PRODUCT_COPY_FILES += \
