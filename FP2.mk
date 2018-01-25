@@ -57,7 +57,6 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     audio_policy.msm8974 \
-    audiod \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
