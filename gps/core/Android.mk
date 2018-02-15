@@ -49,4 +49,6 @@ LOCAL_COPY_HEADERS:= \
 
 LOCAL_PRELINK_MODULE := false
 
+LOCAL_LDLIBS += -L$(SYSROOT)/usr/lib -llog
+
 include $(BUILD_SHARED_LIBRARY)
