@@ -30,6 +30,8 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
+
+    <add-resource type="integer" name="config_deviceHardwareKeys"></add-resource>
     <integer name="config_deviceHardwareKeys">96</integer>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
@@ -190,6 +192,7 @@
     <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <add-resource type="bool" name="config_intrusiveBatteryLed"></add-resource>
     <bool name="config_intrusiveBatteryLed">true</bool>
 
     <!-- Setting this true forces the headset jack switches to use the/dev/input/event subsystem
@@ -239,6 +242,7 @@
     <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
 
     <!-- Configuration to support SIM contact batch operation -->
+    <add-resource type="bool" name="config_sim_phonebook_batch_operation"></add-resource>
     <bool name="config_sim_phonebook_batch_operation">false</bool>
 
     <!-- The RadioAccessFamilies supported by the device.

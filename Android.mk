@@ -162,4 +162,6 @@ $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wcd9320; \
 $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
     ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
 	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
+
+LOCAL_AAPT_FLAGS := --auto-add-overlay
 endif
