@@ -139,10 +139,9 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy
 
-# CM Hardware
-BOARD_USES_CYANOGEN_HARDWARE := true
+# Lineage Hardware
 BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw
+    hardware/lineage/lineagehw
 BACKLIGHT_PATH=/sys/class/leds/lcd-backlight/brightness
 
 # QCOM Power
