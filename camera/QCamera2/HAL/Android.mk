@@ -18,7 +18,7 @@ LOCAL_SRC_FILES := \
     QCameraThermalAdapter.cpp \
     wrapper/QualcommCamera.cpp
 
-LOCAL_CFLAGS = -Wall -Wextra -Werror
+LOCAL_CFLAGS += -Wall -Wextra -Werror
 
 LOCAL_CFLAGS += -DHAS_MULTIMEDIA_HINTS
 

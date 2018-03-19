@@ -3851,7 +3851,7 @@ void QCamera2HardwareInterface::jpegEvtHandle(jpeg_job_status_t status,
  *              none-zero failure code
  *==========================================================================*/
 int QCamera2HardwareInterface::thermalEvtHandle(
-        qcamera_thermal_level_enum_t level, void *userdata, void *data)
+        qcamera_thermal_level_enum_t level, void * /*userdata*/, void * /*data*/)
 {
     if (!mCameraOpened) {
         CDBG("%s: Camera is not opened, no need to handle thermal evt", __func__);
