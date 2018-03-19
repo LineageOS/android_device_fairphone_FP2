@@ -1703,21 +1703,13 @@ int32_t QCameraPostProcessor::encodeData(qcamera_jpeg_data_t *jpeg_job_data,
            /* dump image */
            if (mem && mem->data) {
                if (m_parent->mParameters.isUbiFocusEnabled()){
-#ifdef USE_KK_CODE
-                   CAM_DUMP_TO_FILE("/data/local/ubifocus", "DepthMapImage",
-#else
                    CAM_DUMP_TO_FILE("/data/misc/camera/ubifocus", "DepthMapImage",
-#endif
                                     -1, "y",
                                     (uint8_t *)mem->data,
                                     imgProp.size);
                }
                if (m_parent->mParameters.isMultiTouchFocusEnabled()) {
-#ifdef USE_KK_CODE
-                   CAM_DUMP_TO_FILE("/data/local/multiTouchFocus", "DepthMapImage",
-#else
                    CAM_DUMP_TO_FILE("/data/misc/camera/multiTouchFocus", "DepthMapImage",
-#endif
                                     -1, "y",
                                     (uint8_t *)mem->data,
                                     imgProp.size);
@@ -1751,11 +1743,7 @@ int32_t QCameraPostProcessor::encodeData(qcamera_jpeg_data_t *jpeg_job_data,
                     m_parent->mParameters.TPBodyMaskWidth(), tp_bodymask_height,
                     aspect_ratio, meta_offset, tp_meta_size);
 
-#ifdef USE_KK_CODE
-            CAM_DUMP_TO_FILE("/data/local/tp", "bm",
-#else
             CAM_DUMP_TO_FILE("/data/misc/camera/tp", "bm",
-#endif
                     -1, "y",
                     tp_meta,
                     tp_meta_size);

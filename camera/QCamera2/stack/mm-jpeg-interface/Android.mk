@@ -21,11 +21,6 @@ ifeq ($(strip $(TARGET_USES_ION)),true)
     LOCAL_CFLAGS += -DUSE_ION
 endif
 
-ifneq ($(call is-platform-sdk-version-at-least,20),true)
-LOCAL_CFLAGS += -DUSE_KK_CODE
-endif
-
-
 ifeq ($(call is-board-platform-in-list, msm8974),true)
     LOCAL_CFLAGS+= -DMM_JPEG_CONCURRENT_SESSIONS_COUNT=2
 else

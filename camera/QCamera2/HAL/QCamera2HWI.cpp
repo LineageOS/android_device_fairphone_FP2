@@ -1514,13 +1514,8 @@ uint8_t QCamera2HardwareInterface::getBufNumRequired(cam_stream_type_t stream_ty
                 ALOGE("get_min_undequeued_buffer_count  failed");
             }
         } else {
-            //preview window might not be set at this point. So, query directly
-            //from BufferQueue implementation of gralloc buffers.
-#ifdef USE_KK_CODE
-            minUndequeCount = BufferQueue::MIN_UNDEQUEUED_BUFFERS;
-#else
+            //preview window might not be set at this point.
             minUndequeCount = 2;
-#endif
         }
     }
 
@@ -2331,13 +2326,8 @@ bool QCamera2HardwareInterface::processUFDumps(qcamera_jpeg_evt_payload_t *evt)
        } else {
            snprintf(name, CAM_FN_CNT, "%d", 0);
        }
-#ifdef USE_KK_CODE
-       CAM_DUMP_TO_FILE("/data/local/ubifocus", name, index, "jpg",
-           dataPtr, dataLen);
-#else
        CAM_DUMP_TO_FILE("/data/misc/camera/ubifocus", name, index, "jpg",
            dataPtr, dataLen);
-#endif
        CDBG_HIGH("%s:%d] Dump the image %d %d allFocusImage %d", __func__, __LINE__,
            getOutputImageCount(), index, allFocusImage);
        setOutputImageCount(getOutputImageCount() + 1);
@@ -2391,13 +2381,8 @@ bool QCamera2HardwareInterface::processMTFDumps(qcamera_jpeg_evt_payload_t *evt)
        } else {
            strncpy(name, "0", CAM_FN_CNT - 1);
        }
-#ifdef USE_KK_CODE
-       CAM_DUMP_TO_FILE("/data/local/multiTouchFocus", name, index, "jpg",
-               dataPtr, dataLen);
-#else
        CAM_DUMP_TO_FILE("/data/misc/camera/multiTouchFocus", name, index, "jpg",
                dataPtr, dataLen);
-#endif
        CDBG("%s:%d] Dump the image %d %d allFocusImage %d", __func__, __LINE__,
                getOutputImageCount(), index, allFocusImage);
        setOutputImageCount(getOutputImageCount() + 1);

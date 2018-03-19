@@ -1525,76 +1525,8 @@ int32_t QCameraParameters::setJpegThumbnailSize(const QCameraParameters& params)
 
     CDBG("requested jpeg thumbnail size %d x %d", width, height);
 
-#ifdef USE_KK_CODE
-    size_t sizes_cnt = PARAM_MAP_SIZE(THUMBNAIL_SIZES_MAP);
-
-    cam_dimension_t dim;
-
-    // While taking livesnaphot match jpeg thumbnail size aspect
-    // ratio to liveshot size. For normal snapshot match thumbnail
-    // aspect ratio to picture size.
-    if (m_bRecordingHint) {
-        getLiveSnapshotSize(dim);
-    } else {
-        params.getPictureSize(&dim.width, &dim.height);
-    }
-
-    if (0 == dim.height) {
-        ALOGE("%s: picture size is invalid (%d x %d)", __func__, dim.width, dim.height);
-        return BAD_VALUE;
-    }
-    double picAspectRatio = (double)dim.width / (double)dim.height;
-
-    int optimalWidth = 0, optimalHeight = 0;
-    if (width != 0 || height != 0) {
-        // If input jpeg thumnmail size is (0,0), meaning no thumbnail needed
-        // hornor this setting.
-        // Otherwise, search for optimal jpeg thumbnail size that has the same
-        // aspect ratio as picture size.
-        // If missign jpeg thumbnail size with appropriate aspect ratio,
-        // just honor setting supplied by application.
-
-        // Try to find a size matches aspect ratio and has the largest width
-        for (size_t i = 0; i < sizes_cnt; i++) {
-            if (THUMBNAIL_SIZES_MAP[i].height == 0) {
-                // No thumbnail case, just skip
-                continue;
-            }
-            double ratio =
-                (double)THUMBNAIL_SIZES_MAP[i].width / THUMBNAIL_SIZES_MAP[i].height;
-            if (fabs(ratio - picAspectRatio) > ASPECT_TOLERANCE)  {
-                continue;
-            }
-            if (THUMBNAIL_SIZES_MAP[i].width > optimalWidth) {
-                optimalWidth = THUMBNAIL_SIZES_MAP[i].width;
-                optimalHeight = THUMBNAIL_SIZES_MAP[i].height;
-            }
-        }
-
-        if ((0 == optimalWidth) || (0 == optimalHeight)) {
-            // Optimal size not found
-            // Validate thumbnail size
-            for (size_t i = 0; i < sizes_cnt; i++) {
-                if (width == THUMBNAIL_SIZES_MAP[i].width &&
-                    height == THUMBNAIL_SIZES_MAP[i].height) {
-                    optimalWidth = width;
-                    optimalHeight = height;
-                    break;
-                }
-            }
-        }
-        if (optimalWidth == 0 && optimalHeight == 0) {
-            CDBG_HIGH("%s: Could not find optimal size", __func__);
-            optimalWidth = width;
-            optimalHeight = height;
-        }
-    }
-    set(KEY_JPEG_THUMBNAIL_WIDTH, optimalWidth);
-    set(KEY_JPEG_THUMBNAIL_HEIGHT, optimalHeight);
-#else
     set(KEY_JPEG_THUMBNAIL_WIDTH, width);
     set(KEY_JPEG_THUMBNAIL_HEIGHT, height);
-#endif
     return NO_ERROR;
 }
 
@@ -7661,7 +7593,6 @@ int32_t QCameraParameters::getStreamDimension(cam_stream_type_t streamType,
         //For CTS testPreviewPictureSizesCombination
         int cur_pic_width, cur_pic_height;
         CameraParameters::getPictureSize(&cur_pic_width, &cur_pic_height);
-#ifndef USE_KK_CODE
         {
             int minDimension;
             if((dim.width*dim.height) > (cur_pic_width*cur_pic_height)) {
@@ -7708,7 +7639,6 @@ int32_t QCameraParameters::getStreamDimension(cam_stream_type_t streamType,
                 break;
             }
         }
-#endif
 
         if ((dim.width > cur_pic_width && dim.height < cur_pic_height)
                 || (dim.width < cur_pic_width && dim.height > cur_pic_height)) {
