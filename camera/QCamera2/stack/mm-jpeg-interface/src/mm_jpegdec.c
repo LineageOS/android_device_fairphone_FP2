@@ -998,12 +998,12 @@ OMX_ERRORTYPE mm_jpegdec_fbd(OMX_HANDLETYPE hComponent,
   return ret;
 }
 
-OMX_ERRORTYPE mm_jpegdec_event_handler(OMX_HANDLETYPE hComponent,
+OMX_ERRORTYPE mm_jpegdec_event_handler(OMX_HANDLETYPE hComponent __unused,
   OMX_PTR pAppData,
   OMX_EVENTTYPE eEvent,
   OMX_U32 nData1,
   OMX_U32 nData2,
-  OMX_PTR pEventData)
+  OMX_PTR pEventData __unused)
 {
   mm_jpeg_job_session_t *p_session = (mm_jpeg_job_session_t *) pAppData;
 

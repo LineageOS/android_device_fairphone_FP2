@@ -2211,10 +2211,6 @@ int32_t mm_jpeg_create_session(mm_jpeg_obj *my_obj,
   p_session->meta_enc_key = NULL;
   p_session->meta_enc_keylen = 0;
 
-#ifdef MM_JPEG_READ_META_KEYFILE
-  mm_jpeg_read_meta_keyfile(p_session, META_KEYFILE);
-#endif
-
   return rc;
 }
 
@@ -2565,12 +2561,12 @@ OMX_ERRORTYPE mm_jpeg_fbd(OMX_HANDLETYPE hComponent,
 
 
 
-OMX_ERRORTYPE mm_jpeg_event_handler(OMX_HANDLETYPE hComponent,
+OMX_ERRORTYPE mm_jpeg_event_handler(OMX_HANDLETYPE hComponent __unused,
   OMX_PTR pAppData,
   OMX_EVENTTYPE eEvent,
   OMX_U32 nData1,
   OMX_U32 nData2,
-  OMX_PTR pEventData)
+  OMX_PTR pEventData __unused)
 {
   mm_jpeg_job_session_t *p_session = (mm_jpeg_job_session_t *) pAppData;
 
