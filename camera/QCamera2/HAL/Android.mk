@@ -1,21 +1,22 @@
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
+
 LOCAL_SRC_FILES := \
-        QCamera2Factory.cpp \
-        QCamera2Hal.cpp \
-        QCamera2HWI.cpp \
-        QCameraMem.cpp \
-        ../util/QCameraQueue.cpp \
-        ../util/QCameraCmdThread.cpp \
-        QCameraStateMachine.cpp \
-        QCameraChannel.cpp \
-        QCameraStream.cpp \
-	QCameraPostProc.cpp \
-        QCamera2HWICallbacks.cpp \
-        QCameraParameters.cpp \
-        QCameraThermalAdapter.cpp \
-        wrapper/QualcommCamera.cpp
+    QCamera2Factory.cpp \
+    QCamera2Hal.cpp \
+    QCamera2HWI.cpp \
+    QCameraMem.cpp \
+    ../util/QCameraQueue.cpp \
+    ../util/QCameraCmdThread.cpp \
+    QCameraStateMachine.cpp \
+    QCameraChannel.cpp \
+    QCameraStream.cpp \
+    QCameraPostProc.cpp \
+    QCamera2HWICallbacks.cpp \
+    QCameraParameters.cpp \
+    QCameraThermalAdapter.cpp \
+    wrapper/QualcommCamera.cpp
 
 LOCAL_CFLAGS = -Wall -Wextra -Werror
 
@@ -29,15 +30,15 @@ LOCAL_CFLAGS += -DHAS_MULTIMEDIA_HINTS
 #endif
 
 LOCAL_C_INCLUDES := \
-        $(LOCAL_PATH)/../stack/common \
-        frameworks/native/include/media/openmax \
-        $(call project-path-for,qcom-display)/libgralloc \
-        $(call project-path-for,qcom-media)/libstagefrighthw \
-        $(LOCAL_PATH)/../../mm-image-codec/qexif \
-        $(LOCAL_PATH)/../../mm-image-codec/qomx_core \
-        $(LOCAL_PATH)/../util \
-        $(LOCAL_PATH)/wrapper \
-        system/media/camera/include
+    $(LOCAL_PATH)/../stack/common \
+    frameworks/native/include/media/openmax \
+    $(call project-path-for,qcom-display)/libgralloc \
+    $(call project-path-for,qcom-media)/libstagefrighthw \
+    $(LOCAL_PATH)/../../mm-image-codec/qexif \
+    $(LOCAL_PATH)/../../mm-image-codec/qomx_core \
+    $(LOCAL_PATH)/../util \
+    $(LOCAL_PATH)/wrapper \
+    system/media/camera/include
 
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
