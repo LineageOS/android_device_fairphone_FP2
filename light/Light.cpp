@@ -36,15 +36,14 @@ namespace implementation {
 #define RED_LED         LEDS "red/"
 #define GREEN_LED       LEDS "green/"
 #define BLUE_LED        LEDS "blue/"
-#define RGB_LED         LEDS "rgb/"
 
+#define BLINK           "blink"
 #define BRIGHTNESS      "brightness"
 #define DUTY_PCTS       "duty_pcts"
 #define START_IDX       "start_idx"
 #define PAUSE_LO        "pause_lo"
 #define PAUSE_HI        "pause_hi"
 #define RAMP_STEP_MS    "ramp_step_ms"
-#define RGB_BLINK       "rgb_blink"
 
 /*
  * 8 duty percent steps.
@@ -120,7 +119,9 @@ static void handleNotification(const LightState& state) {
     }
 
     /* Disable blinking. */
-    set(RGB_LED RGB_BLINK, 0);
+    set(RED_LED BLINK, 0);
+    set(GREEN_LED BLINK, 0);
+    set(BLUE_LED BLINK, 0);
 
     if (state.flashMode == Flash::TIMED) {
         /*
@@ -159,7 +160,12 @@ static void handleNotification(const LightState& state) {
         set(BLUE_LED RAMP_STEP_MS, stepDuration);
 
         /* Enable blinking. */
-        set(RGB_LED RGB_BLINK, 1);
+        if (redBrightness > 0)
+            set(RED_LED BLINK, 1);
+        if (greenBrightness > 0)
+            set(GREEN_LED BLINK, 1);
+        if (blueBrightness > 0)
+            set(BLUE_LED BLINK, 1);
     } else {
         set(RED_LED BRIGHTNESS, redBrightness);
         set(GREEN_LED BRIGHTNESS, greenBrightness);
