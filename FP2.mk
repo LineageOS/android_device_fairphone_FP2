@@ -67,8 +67,7 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
-    tinymix
+    libqcomvoiceprocessingdescriptors
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
