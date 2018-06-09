@@ -261,5 +261,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ProximitySensorTools
 
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2018-04-01
+
 # Call the proprietary setup
 $(call inherit-product, vendor/fairphone/FP2/FP2-vendor.mk)
