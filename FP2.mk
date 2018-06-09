@@ -166,7 +166,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.msm8974
+    android.hardware.power@1.0-service-qti
 
 # Thermal
 PRODUCT_COPY_FILES += \
