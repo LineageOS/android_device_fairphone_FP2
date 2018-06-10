@@ -77,8 +77,6 @@ media.stagefright.enable-http=true
 media.stagefright.enable-player=true
 media.stagefright.enable-qcp=true
 media.stagefright.enable-scan=true
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
 media.stagefright.use-awesome=true
 # 37491 is decimal sum of supported codecs in AAL
 # codecs: AVI AC3 ASF AAC QCP DTS 3G2 MP2TS
