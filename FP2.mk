@@ -237,6 +237,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
+
 # Proximity Calibration
 PRODUCT_PACKAGES += \
     ProximitySensorTools
