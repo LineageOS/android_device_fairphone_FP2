@@ -104,7 +104,6 @@ PRODUCT_PACKAGES += \
 
 # Dalvik/HWUI
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Display
 PRODUCT_AAPT_CONFIG := normal
