@@ -100,12 +100,10 @@ DEVICE_PROVISIONED=1
 persist.radio.apm_sim_not_pwdn=1
 persist.radio.multisim.config=dsds
 rild.libargs=-d /dev/smd0
-rild.libpath=/vendor/lib/libril-qc-qmi-1.so
+rild.libpath=/vendor/lib/libril-wrapper.so
 # Start in global mode
 ro.telephony.default_network=9,9
 telephony.lteOnGsmDevice=1
-persist.radio.flexmap_type=none
-ro.telephony.ril_class=FP2RIL
 
 # sdcardfs
 ro.sys.sdcardfs=true

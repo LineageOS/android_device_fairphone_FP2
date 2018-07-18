@@ -131,7 +131,6 @@ TARGET_USES_QCOM_WCNSS_QMI := true
 
 # Radio
 TARGET_RIL_VARIANT := caf
-BOARD_RIL_CLASS := ../../../device/fairphone/FP2/ril/
 
 # GPS
 BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
