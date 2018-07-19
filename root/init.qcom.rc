@@ -243,7 +243,7 @@ on property:bluetooth.hsic_ctrl=unbind_hsic
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
-    group camera system inet input graphics
+    group camera system inet input graphics gps
 
 on property:sys.boot_completed=1
     start qrngp
