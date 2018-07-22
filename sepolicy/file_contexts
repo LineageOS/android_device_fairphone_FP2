@@ -1,3 +1,9 @@
-/dev/block/platform/msm_sdcc\.1/by-name/persist         u:object_r:persist_block_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/persist             u:object_r:persist_block_device:s0
 
-/persist/sns.reg u:object_r:sensor_calibration_file:s0
+/persist/sns.reg                                            u:object_r:sensor_calibration_file:s0
+
+/sys/devices/leds-qpnp-(.*)?/leds(/.*)?                     u:object_r:sysfs_leds:s0
+/sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds(/.*)?    u:object_r:sysfs_leds:s0
+
+/sys/devices/mdp\.0/caps				    u:object_r:sysfs_graphics:s0
+
