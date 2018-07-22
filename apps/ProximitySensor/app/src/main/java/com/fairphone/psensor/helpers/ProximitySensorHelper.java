@@ -25,7 +25,7 @@ public class ProximitySensorHelper {
     /**
      * Command to read the sensor value.
      */
-    private static final String READ_COMMAND = "/system/bin/senread";
+    private static final String READ_COMMAND = "/vendor/bin/senread";
     /**
      * Result prefix returned by the reading command.
      */
