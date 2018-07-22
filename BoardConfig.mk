@@ -146,7 +146,9 @@ BOARD_SEPOLICY_DIRS += \
 # Lineage Hardware
 BOARD_HARDWARE_CLASS += \
     hardware/lineage/lineagehw
-BACKLIGHT_PATH=/sys/class/leds/lcd-backlight/brightness
+
+# Charger
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # QCOM Power
 TARGET_HAS_LEGACY_POWER_STATS := true
