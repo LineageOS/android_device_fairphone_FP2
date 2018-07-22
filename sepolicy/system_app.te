@@ -1,2 +1,0 @@
-allow system_app sensor_calibration_file:file rw_file_perms;
-
