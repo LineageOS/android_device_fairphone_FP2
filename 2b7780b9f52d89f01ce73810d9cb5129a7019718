@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "43cd86c1_dd1bd20a",
+        "filename": "ril-wrapper/ril-wrapper.c",
+        "patchSetId": 5
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 16208
+      },
+      "writtenOn": "2018-07-23T07:09:26Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "2b7780b9f52d89f01ce73810d9cb5129a7019718",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
