@@ -115,7 +115,7 @@ static void handleNotification(const LightState& state) {
     set(GREEN_LED BLINK, 0);
     set(BLUE_LED BLINK, 0);
 
-    if (state.flashMode == Flash::TIMED) {
+    if (state.flashMode == Flash::TIMED && state.flashOnMs > 1) {
         /*
          * If the flashOnMs duration is not long enough to fit ramping up
          * and down at the default step duration, step duration is modified
