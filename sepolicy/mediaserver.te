@@ -1,1 +1,0 @@
-allow mediaserver audio_device:chr_file rw_file_perms;
