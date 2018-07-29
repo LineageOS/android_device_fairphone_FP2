@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "980dc12c_21d37428",
+        "filename": "FP2.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-29T19:30:38Z",
+      "side": 1,
+      "message": "Should be in vendor in order to work",
+      "range": {
+        "startLine": 29,
+        "startChar": 48,
+        "endLine": 29,
+        "endChar": 54
+      },
+      "revId": "c19e56fafbde1cf9fed9ead7ade1ac7fa69fd685",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f61f907_dc5f6f6e",
+        "filename": "media/media_profiles_8974.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-29T19:30:38Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "c19e56fafbde1cf9fed9ead7ade1ac7fa69fd685",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "12528048_66c5896f",
+        "filename": "media/media_profiles_8974.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-29T19:30:38Z",
+      "side": 1,
+      "message": "useless formatting change",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 5
+      },
+      "revId": "c19e56fafbde1cf9fed9ead7ade1ac7fa69fd685",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
