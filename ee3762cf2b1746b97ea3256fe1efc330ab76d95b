@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54d05708_fd4d48e5",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-29T19:46:25Z",
+      "side": 1,
+      "message": "Use spaces",
+      "range": {
+        "startLine": 8,
+        "startChar": 24,
+        "endLine": 8,
+        "endChar": 28
+      },
+      "revId": "ee3762cf2b1746b97ea3256fe1efc330ab76d95b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
