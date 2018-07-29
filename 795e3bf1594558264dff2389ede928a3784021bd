@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "30a680ca_b741d70f",
+        "filename": "proprietary-files-qc.txt",
+        "patchSetId": 6
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-29T19:35:03Z",
+      "side": 1,
+      "message": "AFAIK you can\u0027t move this to vendor",
+      "range": {
+        "startLine": 126,
+        "startChar": 34,
+        "endLine": 126,
+        "endChar": 76
+      },
+      "revId": "795e3bf1594558264dff2389ede928a3784021bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e65ee7ca_e4d30b7b",
+        "filename": "proprietary-files-qc.txt",
+        "patchSetId": 6
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-29T19:35:03Z",
+      "side": 1,
+      "message": "Typo",
+      "range": {
+        "startLine": 143,
+        "startChar": 25,
+        "endLine": 143,
+        "endChar": 26
+      },
+      "revId": "795e3bf1594558264dff2389ede928a3784021bd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
