@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c5d893c3_ee8f92e6",
+        "filename": "ril-wrapper/ril-wrapper.c",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-29T19:44:18Z",
+      "side": 1,
+      "message": "Use spaces not tabs",
+      "range": {
+        "startLine": 67,
+        "startChar": 0,
+        "endLine": 69,
+        "endChar": 11
+      },
+      "revId": "cc4d9bbc8284f480ce35b974c9311541d46f7e0d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
