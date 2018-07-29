@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "97fd3432_8f942f58",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-29T19:26:25Z",
+      "side": 1,
+      "message": "Should be 2951, 2952",
+      "range": {
+        "startLine": 12,
+        "startChar": 14,
+        "endLine": 12,
+        "endChar": 24
+      },
+      "revId": "af51079adda0a0821b92ec4098756ea522b71401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "249b931d_0434dc5a",
+        "filename": "gps/izat.conf",
+        "patchSetId": 5
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-29T19:26:25Z",
+      "side": 1,
+      "message": "oem_2952",
+      "range": {
+        "startLine": 181,
+        "startChar": 47,
+        "endLine": 181,
+        "endChar": 55
+      },
+      "revId": "af51079adda0a0821b92ec4098756ea522b71401",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
