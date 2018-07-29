@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a9162d72_2b1bf70e",
+        "filename": "lineage.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-29T19:19:49Z",
+      "side": 1,
+      "message": "2017-2018",
+      "range": {
+        "startLine": 1,
+        "startChar": 19,
+        "endLine": 1,
+        "endChar": 20
+      },
+      "revId": "033d3130a56043331481e704ec514af9f0211858",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
