@@ -22,6 +22,30 @@
       "revId": "12ab36d7a725da167c283eb382b24dd82cc0f858",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6bc3f61_743c1fa4",
+        "filename": "FP2.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2018-07-30T19:43:58Z",
+      "side": 1,
+      "message": "Actually nevermind, this actually exists but you don\u0027t need to explicitly include it, it\u0027s a build time dependency of android.hardware.camera.provider@2.4-impl-legacy so it\u0027s automatically built",
+      "parentUuid": "e59c733b_1b433898",
+      "range": {
+        "startLine": 236,
+        "startChar": 4,
+        "endLine": 236,
+        "endChar": 33
+      },
+      "revId": "12ab36d7a725da167c283eb382b24dd82cc0f858",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
