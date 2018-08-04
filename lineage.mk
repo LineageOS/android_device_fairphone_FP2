@@ -30,8 +30,8 @@ PRODUCT_MODEL := FP2
 PRODUCT_GMS_CLIENTID_BASE := android-FP2
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="FP2-user no clue what to put here" \
+    PRIVATE_BUILD_DESC="FP2-user 6.0.1 FP2-gms-18.04.1 FP2-gms-18.04.1 release-keys" \
     PRODUCT_NAME=FP2 \
     TARGET_DEVICE=FP2
 
-BUILD_FINGERPRINT := Fairphone/FP2/FP2:6.0.1/FP2-gms-17.09.3/FP2-gms-17.09.3:user/release-keys
+BUILD_FINGERPRINT := Fairphone/FP2/FP2:6.0.1/FP2-gms-18.04.1/FP2-gms-18.04.1:user/release-keys
