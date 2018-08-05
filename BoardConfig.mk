@@ -64,6 +64,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/root/fstab.qcom
+LZMA_RAMDISK_TARGETS := recovery
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
