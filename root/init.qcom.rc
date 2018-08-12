@@ -378,9 +378,9 @@ service hciattach /vendor/bin/init.qcom.bt.sh
     class late_start
     user bluetooth
     group bluetooth net_bt_admin oem_2950 diag radio
-    seclabel u:r:bluetooth_loader:s0
     disabled
     oneshot
+#    seclabel u:r:bluetooth_loader:s0
 
 on property:vendor.bluetooth.hciattach=true
     start hciattach
