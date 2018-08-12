@@ -19,6 +19,6 @@
 
 #define BTM_DEF_LOCAL_NAME   "Fairphone FP2"
 
-#define BLE_VND_INCLUDED   TRUE
+//#define BLE_VND_INCLUDED   TRUE
 
 #endif
