@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4bf308d3_d91f782e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-19T15:31:35Z",
+      "side": 1,
+      "message": "Just a tip. Next time use commit\u0027s sha1sum here instead of the change-id. For github this means nothing at all and in this case in gerrit it matches several changes.",
+      "range": {
+        "startLine": 9,
+        "startChar": 40,
+        "endLine": 9,
+        "endChar": 81
+      },
+      "revId": "2f4ab2a497f45f9d026a2257cb29301001f43ee7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
