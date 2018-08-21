@@ -64,7 +64,7 @@ ro.hwui.texture_cache_flushrate=0.4
 ro.hwui.texture_cache_size=72
 
 # Media
-audio.offload.buffer.size.kb=32
+vendor.audio.offload.buffer.size.kb=32
 debug.mdpcomp.4k2kSplit=1
 debug.mdpcomp.idletime=9000
 debug.mdpcomp.logs=0
