@@ -9,7 +9,7 @@ qcom.hw.aac.encoder=true
 # Bluetooth
 bluetooth.hfp.client=1
 ro.bluetooth.alwaysbleon=true
-qcom.bluetooth.soc=smd
+vendor.qcom.bluetooth.soc=pronto
 ro.bluetooth.hfp.ver=1.7
 ro.qualcomm.bt.hci_transport=smd
 ro.bluetooth.dun=false
