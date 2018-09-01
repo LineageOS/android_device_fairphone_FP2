@@ -1,0 +1,16 @@
+<ExternalCamera>
+    <Provider>
+        <!-- Internal video devices to be ignored by external camera HAL -->
+        <ignore>
+            <id>0</id>
+            <id>1</id>
+            <id>2</id>
+            <id>32</id>
+            <id>33</id>
+            <id>34</id>
+            <id>35</id>
+            <id>38</id>
+            <id>39</id>
+        </ignore>
+    </Provider>
+</ExternalCamera>
