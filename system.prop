@@ -3,17 +3,8 @@
 #
 
 # Audio
-audio.offload.gapless.enabled=false
 dev.pm.dyn_samplingrate=1
-persist.audio.fluence.speaker=true
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.speaker.prot.enable=false
 qcom.hw.aac.encoder=true
-ro.qc.sdk.audio.fluencetype=none
-ro.qc.sdk.audio.ssr=false
-tunnel.audio.encode = false
-use.voice.path.for.pcm.voip=false
 
 # Bluetooth
 bluetooth.hfp.client=1
@@ -74,7 +65,6 @@ ro.hwui.texture_cache_size=72
 
 # Media
 audio.offload.buffer.size.kb=32
-av.offload.enable=true
 debug.mdpcomp.4k2kSplit=1
 debug.mdpcomp.idletime=9000
 debug.mdpcomp.logs=0
