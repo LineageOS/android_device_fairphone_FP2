@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "abe1c0e3_2df30bcd",
+        "filename": "light/Light.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 5503
+      },
+      "writtenOn": "2018-09-02T18:15:10Z",
+      "side": 1,
+      "message": "This looks odd. How are you setting an object to nullptr?",
+      "revId": "ab87a1d35e98a0802697b79cd1522fdf75b65f2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
