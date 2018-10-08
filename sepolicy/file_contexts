@@ -8,3 +8,5 @@
 /(vendor|system/vendor)/bin/init\.qcom\.fm\.sh              u:object_r:qti_init_shell_exec:s0
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.FP2            u:object_r:hal_light_default_exec:s0
+
+/sys/devices/qpnp-bms-(.*)?/power_supply/bms(/.*)?                                   u:object_r:sysfs_battery_supply:s0
