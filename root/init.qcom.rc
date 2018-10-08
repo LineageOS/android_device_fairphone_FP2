@@ -32,7 +32,6 @@ import /vendor/etc/init/hw/init.qcom.power.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
-    symlink /data/tombstones /tombstones
 
     # Turn off backlight on blank
     write /sys/class/leds/lcd-backlight/trigger "backlight"
