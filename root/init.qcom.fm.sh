@@ -26,9 +26,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-setprop hw.fm.init 0
+setprop vendor.hw.fm.init 0
 
-mode=`getprop hw.fm.mode`
+mode=`getprop vendor.hw.fm.mode`
 version=197632
 
 LOG_TAG="qcom-fm"
@@ -85,6 +85,6 @@ case $exit_code_fm_qsoc_patches in
    ;;
 esac
 
-setprop hw.fm.init 1
+setprop vendor.hw.fm.init 1
 
 exit 0
