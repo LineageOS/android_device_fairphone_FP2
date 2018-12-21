@@ -404,7 +404,7 @@ on property:init.svc.surfaceflinger=running
 service charger /charger
     class charger
     critical
-    seclabel u:r:charger:s0
+    seclabel u:r:healthd:s0
 
 service TCMDServer /system/bin/TCMDServer
     class main
