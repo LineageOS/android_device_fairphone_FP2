@@ -174,6 +174,7 @@ TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)/twrp
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file"
 TW_INCLUDE_CRYPTO := true
+TW_CRYPTO_USE_SBIN_VOLD := true
 TW_MTP_DEVICE := "/dev/mtp_usb"
 TW_NO_LEGACY_PROPS := true
 TW_THEME := portrait_hdpi
