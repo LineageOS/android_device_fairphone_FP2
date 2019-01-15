@@ -62,6 +62,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl
 
 # Boot animation
@@ -71,6 +72,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
 # Media
@@ -115,7 +117,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.memtrack@1.0-impl
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
 
 # Features
 PRODUCT_COPY_FILES += \
@@ -210,6 +213,7 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
+    android.hardware.gnss@1.0-service \
     gps.msm8974
 
 PRODUCT_COPY_FILES += \
@@ -225,6 +229,7 @@ PRODUCT_PACKAGES += \
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service \
     keystore.msm8974
 
 # FM radio
@@ -266,7 +271,8 @@ PRODUCT_BOOT_JARS += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
 
 # Proximity Calibration
 PRODUCT_PACKAGES += \
