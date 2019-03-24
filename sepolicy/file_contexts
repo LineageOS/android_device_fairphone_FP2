@@ -5,8 +5,6 @@
 /sys/devices/leds-qpnp-(.*)?/leds(/.*)?                     u:object_r:sysfs_leds:s0
 /sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds(/.*)?    u:object_r:sysfs_leds:s0
 
-/sys/devices/mdp\.0/caps                                    u:object_r:sysfs_graphics:s0
-
 /(vendor|system/vendor)/bin/init\.qcom\.fm\.sh              u:object_r:qti_init_shell_exec:s0
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.FP2            u:object_r:hal_light_default_exec:s0
