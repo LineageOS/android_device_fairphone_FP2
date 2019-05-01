@@ -394,10 +394,11 @@ on property:init.svc.surfaceflinger=stopped
 on property:init.svc.surfaceflinger=running
     start ppd
 
-service charger /charger
+service charger /system/bin/charger
     class charger
+    group system graphics
     critical
-    seclabel u:r:healthd:s0
+    seclabel u:r:charger:s0
 
 service TCMDServer /system/bin/TCMDServer
     class main
