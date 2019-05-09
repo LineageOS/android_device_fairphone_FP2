@@ -170,6 +170,7 @@ MALLOC_SVELTE := true
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
+-include vendor/lineagetwrp/BoardConfigExtra.mk
 TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)/twrp
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file"
