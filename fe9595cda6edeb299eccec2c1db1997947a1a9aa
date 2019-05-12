@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d0f042a7_88ede901",
+        "filename": "camera/QCamera2/HAL/QCamera2HWI.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1696,
+      "author": {
+        "id": 16624
+      },
+      "writtenOn": "2019-05-12T19:57:27Z",
+      "side": 1,
+      "message": "Tabs instead of spaces",
+      "revId": "fe9595cda6edeb299eccec2c1db1997947a1a9aa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "806e547f_1bae3302",
+        "filename": "camera/QCamera2/HAL/QCamera2HWI.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1742,
+      "author": {
+        "id": 16624
+      },
+      "writtenOn": "2019-05-12T19:57:27Z",
+      "side": 1,
+      "message": "Tabs instead of spaces",
+      "revId": "fe9595cda6edeb299eccec2c1db1997947a1a9aa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4cac4a84_803d6566",
+        "filename": "camera/QCamera2/HAL/QCameraMem.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 16624
+      },
+      "writtenOn": "2019-05-12T19:57:27Z",
+      "side": 1,
+      "message": "Two spaces were removed",
+      "revId": "fe9595cda6edeb299eccec2c1db1997947a1a9aa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
