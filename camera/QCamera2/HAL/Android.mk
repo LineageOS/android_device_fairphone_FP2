@@ -55,8 +55,9 @@ LOCAL_SHARED_LIBRARIES += android.hidl.token@1.0-utils android.hardware.graphics
 LOCAL_STATIC_LIBRARIES := libarect
 LOCAL_HEADER_LIBRARIES := libnativebase_headers
 
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
