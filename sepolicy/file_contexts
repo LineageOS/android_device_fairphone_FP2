@@ -2,6 +2,8 @@
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.FP2 u:object_r:hal_light_default_exec:s0
 
+/dev/block/platform/msm_sdcc.1/by-name/pad u:object_r:misc_block_device:s0
+
 # cgroup
 /dev/cpuset(/.*)? u:object_r:cgroup:s0
 /dev/stune(/.*)? u:object_r:cgroup:s0
