@@ -1,6 +1,3 @@
-# Bluetooth
-vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
-
 # Camera
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 lib/libchromatix_imx135_liveshot.so:vendor/lib/libchromatix_imx135_liveshot.so
