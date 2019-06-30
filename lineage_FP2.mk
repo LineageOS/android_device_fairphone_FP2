@@ -14,6 +14,7 @@
 
 # Inherit framework first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 
 # Inherit from FP2 device
 $(call inherit-product, device/fairphone/FP2/FP2.mk)
