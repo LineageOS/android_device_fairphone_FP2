@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cfcdb47b_495de035",
+        "filename": "FP2.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-08-29T10:06:41Z",
+      "side": 1,
+      "message": "$(LOCAL_PATH)",
+      "range": {
+        "startLine": 253,
+        "startChar": 4,
+        "endLine": 253,
+        "endChar": 24
+      },
+      "revId": "a533a39a3edfd2c9e33fdeab963ed82c41320f28",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bb4b7e96_db3c6724",
+        "filename": "FP2.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2019-08-29T10:06:41Z",
+      "side": 1,
+      "message": "$(TARGET_COPY_OUT_SYSTEM)",
+      "range": {
+        "startLine": 253,
+        "startChar": 57,
+        "endLine": 253,
+        "endChar": 63
+      },
+      "revId": "a533a39a3edfd2c9e33fdeab963ed82c41320f28",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
