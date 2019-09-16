@@ -415,3 +415,6 @@ service fm_dl /vendor/bin/init.qcom.fm.sh
     group system
     disabled
     oneshot
+
+on property:apexd.status=ready
+    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
