@@ -227,7 +227,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <!--<hal format="hidl">
         <name>vendor.lineage.power</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -235,7 +235,7 @@
             <name>ILineagePower</name>
             <instance>default</instance>
         </interface>
-    </hal>
+    </hal>-->
     <hal format="hidl">
         <name>vendor.lineage.trust</name>
         <transport>hwbinder</transport>
