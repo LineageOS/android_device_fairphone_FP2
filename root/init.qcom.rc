@@ -367,7 +367,6 @@ service hciattach /vendor/bin/init.qcom.bt.sh
     class late_start
     user bluetooth
     group bluetooth net_bt_admin oem_2950 diag radio
-    seclabel u:r:bluetooth_loader:s0
     disabled
     oneshot
 
@@ -397,7 +396,6 @@ on property:init.svc.surfaceflinger=running
 service charger /charger
     class charger
     critical
-    seclabel u:r:healthd:s0
 
 service TCMDServer /system/bin/TCMDServer
     class main
