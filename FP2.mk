@@ -88,8 +88,6 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes \
     libbson \
     libcnefeatureconfig \
     libnl_2 \
