@@ -199,6 +199,7 @@
          format is UMTS|LTE|... -->
     <string name="config_radio_access_family">GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|LTE|HSPAP|GSM|TD_SCDMA|WCDMA|LTE_CA</string>
 
+<<<<<<< HEAD   (c2970a FP2: use TARGET_COPY_OUT_SYSTEM instead of system directly)
     <!-- Values for GPS configuration -->
     <string-array translatable="false" name="config_gpsParameters">
         <item>XTRA_SERVER_1=https://xtrapath1.izatcloud.net/xtra3grc.bin</item>
@@ -210,5 +211,10 @@
         <item>SUPL_PORT=7275</item>
         <item>SUPL_MODE=1</item>
         <item>LPP_PROFILE=0</item>
+=======
+    <!-- The list of components which should be automatically disabled for a specific device. -->
+    <string-array name="config_deviceDisabledComponents" translatable="false">
+        <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
+>>>>>>> CHANGE (113af0 FP2: Disable NearbyMessagingService)
     </string-array>
 </resources>
