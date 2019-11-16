@@ -1,2 +1,7 @@
-allow system_app sensor_calibration_file:file rw_file_perms;
-allow system_app sensors:unix_stream_socket connectto;
+# fixes:
+# irphone.psensor: type=1400 audit(0.0:137): avc: denied { read } for name="sns.reg" dev="mmcblk0p14" ino=113 scontext=u:r:system_app:s0 tcontext=u:object_r:sensor_calibration_file:s0 tclass=file permissive=0
+# irphone.psensor: type=1400 audit(0.0:126): avc: denied { write } for name="sns.reg" dev="mmcblk0p14" ino=113 scontext=u:r:system_app:s0 tcontext=u:object_r:sensor_calibration_file:s0 tclass=file permissive=0
+# irphone.psensor: type=1400 audit(0.0:115): avc: denied { open } for name="sns.reg" dev="mmcblk0p14" ino=113 scontext=u:r:system_app:s0 tcontext=u:object_r:sensor_calibration_file:s0 tclass=file permissive=0
+# irphone.psensor: type=1400 audit(0.0:27): avc: denied { getattr } for path="/persist/sns.reg" dev="mmcblk0p14" ino=113 scontext=u:r:system_app:s0 tcontext=u:object_r:sensor_calibration_file:s0 tclass=file permissive=0
+
+allow system_app sensor_calibration_file:file { getattr open read write };
