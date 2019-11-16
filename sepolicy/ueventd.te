@@ -1,0 +1,1 @@
+allow ueventd proc:file { open read getattr };

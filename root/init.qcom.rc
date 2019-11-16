@@ -400,7 +400,7 @@ service charger /system/bin/charger
     group system graphics input
     capabilities SYS_BOOT
     critical
-    seclabel u:r:charger:s0
+    seclabel u:r:healthd:s0
 
 service TCMDServer /system/bin/TCMDServer
     class main
@@ -412,7 +412,7 @@ service loc_launcher /vendor/bin/loc_launcher
     class late_start
     group gps inet net_raw diag oem_2950 net_admin wifi
 
-service fm_dl /vendor/bin/init.qcom.fm.sh
+service fm_dl /vendor/bin/init.qti.fm.sh
     class late_start
     user root
     group system
