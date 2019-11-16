@@ -1,0 +1,3 @@
+# fixes:
+# SELinux : avc:  denied  { find } for interface=android.hardware.boot::IBootControl sid=u:r:vold:s0 pid=235 scontext=u:r:vold:s0 tcontext=u:object_r:hal_bootctl_hwservice:s0 tclass=hwservice_manager permissive=0
+allow vold hal_bootctl_hwservice:hwservice_manager find;
