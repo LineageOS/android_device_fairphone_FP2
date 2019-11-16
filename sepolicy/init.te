@@ -1,2 +1,1 @@
-# Allow init to write in debugfs
-allow init debugfs:file write;
+allow init sysfs_leds:lnk_file read;
