@@ -1,2 +1,4 @@
-# OTA with encrypted f2fs
-allow system_server ota_package_file:dir getattr;
+# fixes:
+# audit(0.0:122): avc: denied { getattr } for path="/proc/last_kmsg" dev="proc" ino=4026542590 scontext=u:r:system_server:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+
+allow system_server proc:file getattr;

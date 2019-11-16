@@ -249,7 +249,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio \
-    init.qcom.fm.sh
+    init.qti.fm.sh
 
 # Camera
 PRODUCT_PACKAGES += \

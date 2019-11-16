@@ -1,0 +1,12 @@
+# fixes:
+# servicemanager: type=1400 audit(0.0:110): avc: denied { search } for name="2214" dev="proc" ino=19758 scontext=u:r:servicemanager:s0 tcontext=u:r:netmgrd:s0 tclass=dir permissive=0
+allow servicemanager netmgrd:dir search;
+
+# fixes:
+# servicemanager: type=1400 audit(0.0:112): avc: denied { read } for name="current" dev="proc" ino=15988 scontext=u:r:servicemanager:s0 tcontext=u:r:netmgrd:s0 tclass=file permissive=0
+# servicemanager: type=1400 audit(0.0:107): avc: denied { open } for name="current" dev="proc" ino=20752 scontext=u:r:servicemanager:s0 tcontext=u:r:netmgrd:s0 tclass=file permissive=0
+allow servicemanager netmgrd:file { open read };
+
+# fixes
+# servicemanager: type=1400 audit(0.0:107): avc: denied { getattr } for scontext=u:r:servicemanager:s0 tcontext=u:r:netmgrd:s0 tclass=process permissive=0
+allow servicemanager netmgrd:process getattr;
