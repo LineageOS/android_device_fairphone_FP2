@@ -1,0 +1,6 @@
+# fixes:
+# ueventd : type=1400 audit(0.0:4): avc: denied { read } for name="compatible" dev="proc" ino=4026531945 scontext=u:r:ueventd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+# ueventd : type=1400 audit(0.0:4): avc: denied { open } for name="compatible" dev="proc" ino=4026531945 scontext=u:r:ueventd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+# ueventd : type=1400 audit(0.0:4): avc: denied { getattr } for path="/proc/device-tree/firmware/android/compatible" dev="proc" ino=4026531945 scontext=u:r:ueventd:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=0
+allow ueventd proc:file { open read getattr };
+

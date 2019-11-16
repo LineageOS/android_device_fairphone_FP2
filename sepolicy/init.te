@@ -1,2 +1,4 @@
-# Allow init to write in debugfs
-allow init debugfs:file write;
+# fixes:
+# init    : type=1400 audit(0.0:10): avc: denied { read } for name="device" dev="sysfs" ino=24631 scontext=u:r:init:s0 tcontext=u:object_r:sysfs_leds:s0 tclass=lnk_file permissive=0
+allow init sysfs_leds:lnk_file read;
+
