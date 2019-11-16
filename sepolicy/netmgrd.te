@@ -1,0 +1,11 @@
+# fixes:
+# ndc     : type=1400 audit(0.0:117): avc: denied { call } for scontext=u:r:netmgrd:s0 tcontext=u:r:servicemanager:s0 tclass=binder permissive=0
+binder_call(netmgrd, servicemanager);
+
+# fixes:
+# avc:  denied  { find } for service=netd pid=2284 uid=0 scontext=u:r:netmgrd:s0 tcontext=u:object_r:netd_service:s0 tclass=service_manager permissive=0
+allow netmgrd netd_service:service_manager find;
+
+# fixes:
+# avc:  denied  { find } for service=dnsresolver pid=2284 uid=0 scontext=u:r:netmgrd:s0 tcontext=u:object_r:dnsresolver_service:s0 tclass=service_manager permissive=0
+allow netmgrd dnsresolver_service:service_manager find;
