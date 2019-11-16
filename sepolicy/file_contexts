@@ -1,12 +1,15 @@
-/dev/block/platform/msm_sdcc.1/by-name/pad                  u:object_r:misc_block_device:s0
+# fixes:
+# build error while packaging - until https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy/+/261512 is merged
+/firmware(/.*)? u:object_r:firmware_file:s0
 
-/persist/sns.reg                                            u:object_r:sensor_calibration_file:s0
+# fixes:
+# sensors.qcom: type=1400 audit(0.0:33): avc: denied { getattr } for path="/persist/sns.reg" dev="mmcblk0p14" ino=113 scontext=u:r:sensors:s0 tcontext=u:object_r:persist_file:s0 tclass=file permissive=0
+/persist/sns.reg u:object_r:sensor_calibration_file:s0
 
-/sys/devices/leds-qpnp-(.*)?/leds(/.*)?                     u:object_r:sysfs_leds:s0
-/sys/devices/mdp(.*)/qcom,mdss_fb_primary(.*)/leds(/.*)?    u:object_r:sysfs_leds:s0
+# fixes:
+# init    : type=1400 audit(0.0:40): avc: denied { execute_no_trans } for path="/system/vendor/bin/hw/android.hardware.light@2.0-service.FP2" dev="mmcblk0p13" ino=3319 scontext=u:r:init:s0 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.FP2 u:object_r:hal_light_default_exec:s0
 
-/(vendor|system/vendor)/bin/init\.qcom\.fm\.sh              u:object_r:qti_init_shell_exec:s0
-
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.FP2            u:object_r:hal_light_default_exec:s0
-
-/sys/devices/qpnp-bms-(.*)?/power_supply/bms(/.*)?                                   u:object_r:sysfs_battery_supply:s0
+# fixes:
+# healthd : type=1400 audit(0.0:15): avc: denied { read } for name="type" dev="sysfs" ino=27573 scontext=u:r:healthd:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=0
+/sys/devices/qpnp-bms-(.*)?/power_supply/bms(/.*)? u:object_r:sysfs_battery_supply:s0
