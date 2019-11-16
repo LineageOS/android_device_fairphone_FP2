@@ -1,1 +1,3 @@
+# fixes
+# sensors.qcom: type=1400 audit(0.0:33): avc: denied { getattr } for path="/persist/sns.reg" dev="mmcblk0p14" ino=113 scontext=u:r:sensors:s0 tcontext=u:object_r:persist_file:s0 tclass=file permissive=0
 allow sensors sensor_calibration_file:file rw_file_perms;
