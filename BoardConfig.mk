@@ -94,7 +94,6 @@ USE_XML_AUDIO_POLICY_CONF := 1
 
 # Camera
 TARGET_USES_MEDIA_EXTENSIONS := true
-USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Graphics
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
