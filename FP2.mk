@@ -276,11 +276,11 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service
 
 # Telephony
-PRODUCT_PACKAGES += \
-    qti-telephony-common
+#PRODUCT_PACKAGES += \
+#    qti-telephony-common
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
 
 # Vibrator
 PRODUCT_PACKAGES += \
