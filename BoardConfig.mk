@@ -170,6 +170,9 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 TARGET_INIT_VENDOR_LIB := libinit_msm8974
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8974
 
+# Wait for qseecomd
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+
 # Malloc
 MALLOC_SVELTE := true
 
