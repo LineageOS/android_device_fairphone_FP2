@@ -6,6 +6,10 @@
 # init    : type=1400 audit(0.0:40): avc: denied { execute_no_trans } for path="/system/vendor/bin/hw/android.hardware.light@2.0-service.FP2" dev="mmcblk0p13" ino=3319 scontext=u:r:init:s0 tcontext=u:object_r:vendor_file:s0 tclass=file permissive=0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.FP2 u:object_r:hal_light_default_exec:s0
 
+# cgroup
+/dev/cpuset(/.*)? u:object_r:cgroup:s0
+/dev/stune(/.*)? u:object_r:cgroup:s0
+
 # fixes:
 # healthd : type=1400 audit(0.0:15): avc: denied { read } for name="type" dev="sysfs" ino=27573 scontext=u:r:healthd:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=0
 /sys/devices/qpnp-bms-(.*)?/power_supply/bms(/.*)? u:object_r:sysfs_battery_supply:s0
