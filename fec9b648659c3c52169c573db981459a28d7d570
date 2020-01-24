@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a72d88e_0ec8633f",
+        "filename": "sepolicy/init.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 18205
+      },
+      "writtenOn": "2020-01-24T18:09:22Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy/+/267561/1",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 36
+      },
+      "revId": "fec9b648659c3c52169c573db981459a28d7d570",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bc08eb42_4da9c47e",
+        "filename": "sepolicy/netmgrd.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 18205
+      },
+      "writtenOn": "2020-01-24T18:09:22Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy/+/267559/2",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 0
+      },
+      "revId": "fec9b648659c3c52169c573db981459a28d7d570",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e72baa22_36ad3989",
+        "filename": "sepolicy/servicemanager.te",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 18205
+      },
+      "writtenOn": "2020-01-24T18:09:22Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy/+/267559/2",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 0
+      },
+      "revId": "fec9b648659c3c52169c573db981459a28d7d570",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
