@@ -503,15 +503,15 @@
         <path name="incall-rec-uplink" />
     </path>
 
-   <path name="hfp-sco">
+    <path name="hfp-sco">
         <ctl name="SLIMBUS_0_RX Port Mixer INTERNAL_BT_SCO_TX" value="1" />
         <ctl name="MultiMedia6 Mixer SLIM_0_TX" value="1" />
         <ctl name="SLIMBUS_DL_HL Switch" value="1" />
-   </path>
-   <path name="hfp-sco-wb">
+    </path>
+    <path name="hfp-sco-wb">
         <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="hfp-sco" />
-   </path>
+    </path>
 
     <path name="incall-rec-uplink bt-sco-wb">
         <path name="incall-rec-uplink" />
@@ -714,38 +714,38 @@
         <!--ctl name="IIR2 INP1 MUX" value="RX1" /-->
         <ctl name="RX7 MIX1 INP1" value="RX1" />
         <ctl name="RX7 Digital Volume" value="87" />
-		<ctl name="SPK DRV Volume" value="8" />
-		<!--ctl name="IIR2 INP1 Volume" value="84" />
-		<ctl name="IIR2 Band1" id ="0" value="264734248" />
+	<ctl name="SPK DRV Volume" value="8" />
+	<!--ctl name="IIR2 INP1 Volume" value="84" />
+	    <ctl name="IIR2 Band1" id ="0" value="264734248" />
 	    <ctl name="IIR2 Band1" id ="1" value="544273329" />
 	    <ctl name="IIR2 Band1" id ="2" value="264734248" />
-		<ctl name="IIR2 Band1" id ="3" value="544324364" />
-		<ctl name="IIR2 Band1" id ="4" value="261084074" />
-		<ctl name="IIR2 Band2" id ="0" value="268435456" />
-		<ctl name="IIR2 Band2" id ="1" value="0" />
-		<ctl name="IIR2 Band2" id ="2" value="0" />
-		<ctl name="IIR2 Band2" id ="3" value="0" />
-		<ctl name="IIR2 Band2" id ="4" value="0" />
-		<ctl name="IIR2 Band3" id ="0" value="268435456" />
-		<ctl name="IIR2 Band3" id ="1" value="0" />
-		<ctl name="IIR2 Band3" id ="2" value="0" />
-		<ctl name="IIR2 Band3" id ="3" value="0" />
-		<ctl name="IIR2 Band3" id ="4" value="0" />
-		<ctl name="IIR2 Band4" id ="0" value="268435456" />
-		<ctl name="IIR2 Band4" id ="1" value="0" />
-		<ctl name="IIR2 Band4" id ="2" value="0" />
-		<ctl name="IIR2 Band4" id ="3" value="0" />
-		<ctl name="IIR2 Band4" id ="4" value="0" />
-		<ctl name="IIR2 Band5" id ="0" value="268435456" />
-		<ctl name="IIR2 Band5" id ="1" value="0" />
-		<ctl name="IIR2 Band5" id ="2" value="0" />
-		<ctl name="IIR2 Band5" id ="3" value="0" />
-		<ctl name="IIR2 Band5" id ="4" value="0" />
-		<ctl name="IIR2 Enable Band1" value="1" />
-		<ctl name="IIR2 Enable Band2" value="0" />
-		<ctl name="IIR2 Enable Band3" value="0" />
-		<ctl name="IIR2 Enable Band4" value="0" />
-		<ctl name="IIR2 Enable Band5" value="0" /-->
+	    <ctl name="IIR2 Band1" id ="3" value="544324364" />
+	    <ctl name="IIR2 Band1" id ="4" value="261084074" />
+	    <ctl name="IIR2 Band2" id ="0" value="268435456" />
+	    <ctl name="IIR2 Band2" id ="1" value="0" />
+	    <ctl name="IIR2 Band2" id ="2" value="0" />
+	    <ctl name="IIR2 Band2" id ="3" value="0" />
+	    <ctl name="IIR2 Band2" id ="4" value="0" />
+	    <ctl name="IIR2 Band3" id ="0" value="268435456" />
+	    <ctl name="IIR2 Band3" id ="1" value="0" />
+	    <ctl name="IIR2 Band3" id ="2" value="0" />
+	    <ctl name="IIR2 Band3" id ="3" value="0" />
+	    <ctl name="IIR2 Band3" id ="4" value="0" />
+	    <ctl name="IIR2 Band4" id ="0" value="268435456" />
+	    <ctl name="IIR2 Band4" id ="1" value="0" />
+	    <ctl name="IIR2 Band4" id ="2" value="0" />
+	    <ctl name="IIR2 Band4" id ="3" value="0" />
+	    <ctl name="IIR2 Band4" id ="4" value="0" />
+	    <ctl name="IIR2 Band5" id ="0" value="268435456" />
+	    <ctl name="IIR2 Band5" id ="1" value="0" />
+	    <ctl name="IIR2 Band5" id ="2" value="0" />
+	    <ctl name="IIR2 Band5" id ="3" value="0" />
+	    <ctl name="IIR2 Band5" id ="4" value="0" />
+	    <ctl name="IIR2 Enable Band1" value="1" />
+	    <ctl name="IIR2 Enable Band2" value="0" />
+	    <ctl name="IIR2 Enable Band3" value="0" />
+	    <ctl name="IIR2 Enable Band4" value="0" />
+	    <ctl name="IIR2 Enable Band5" value="0" /-->
     </path>
 
     <path name="speaker-fluid">
@@ -800,7 +800,7 @@
 
     <path name="speaker-mic">
         <path name="adc3" />
-		<ctl name="AUDIO_REF_EC_UL9 MUX" value="SLIM_RX" />
+	<ctl name="AUDIO_REF_EC_UL9 MUX" value="SLIM_RX" />
     </path>
 
     <path name="speaker-mic-liquid">
@@ -837,14 +837,14 @@
 
     <path name="handset-mic">
         <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
-		<ctl name="SLIM TX7 MUX" value="DEC6" />
-		<ctl name="DEC6 MUX" value="ADC1" />
-		<ctl name="SLIM_0_TX Channels" value="One" />
-	</path>
-     <path name="handset-mic-aec-ns">
-		<path name="adc1" />
-		<ctl name="AUDIO_REF_EC_UL9 MUX" value="SLIM_RX" />
-     </path>
+	<ctl name="SLIM TX7 MUX" value="DEC6" />
+	<ctl name="DEC6 MUX" value="ADC1" />
+	<ctl name="SLIM_0_TX Channels" value="One" />
+    </path>
+    <path name="handset-mic-aec-ns">
+	<path name="adc1" />
+	<ctl name="AUDIO_REF_EC_UL9 MUX" value="SLIM_RX" />
+    </path>
     <path name="anc-handset">
         <ctl name="ANC Function" value="ON" />
         <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
@@ -1141,15 +1141,15 @@
     </path>
 
     <path name="dmic-endfire">
-		<ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
-		<ctl name="AIF1_CAP Mixer SLIM TX8" value="1" />
-		<ctl name="SLIM TX7 MUX" value="DEC6" />
-		<ctl name="DEC6 MUX" value="ADC1" />
-		<ctl name="SLIM TX8 MUX" value="DEC4" />
-		<ctl name="DEC4 MUX" value="ADC3" />
-		<ctl name="SLIM_0_TX Channels" value="Two" />
-		<ctl name="IIR1 INP1 MUX" value="DEC6" />
-	</path>
+	<ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
+	<ctl name="AIF1_CAP Mixer SLIM TX8" value="1" />
+	<ctl name="SLIM TX7 MUX" value="DEC6" />
+	<ctl name="DEC6 MUX" value="ADC1" />
+	<ctl name="SLIM TX8 MUX" value="DEC4" />
+	<ctl name="DEC4 MUX" value="ADC3" />
+	<ctl name="SLIM_0_TX Channels" value="Two" />
+	<ctl name="IIR1 INP1 MUX" value="DEC6" />
+    </path>
 
     <path name="dmic-endfire-liquid">
         <path name="speaker-dmic-endfire-liquid" />
