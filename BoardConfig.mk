@@ -142,9 +142,6 @@ BOARD_HARDWARE_CLASS += \
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
-# QCOM Power
-TARGET_USES_INTERACTION_BOOST := true
-
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
