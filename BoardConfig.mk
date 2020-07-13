@@ -69,9 +69,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/root/fstab.qcom
 LZMA_RAMDISK_TARGETS := recovery
 
-# Added to indicate that protobuf-c is supported in this build
-PROTOBUF_SUPPORTED := true
-
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
@@ -129,8 +126,6 @@ WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
 # GPS
 BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
-USE_DEVICE_SPECIFIC_GPS := true
-USE_DEVICE_SPECIFIC_LOC_API := true
 
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
