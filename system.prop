@@ -16,6 +16,7 @@ ro.bluetooth.hfp.ver=1.7
 ro.qualcomm.bt.hci_transport=smd
 ro.bluetooth.dun=false
 ro.bluetooth.sap=false
+ro.boot.btmacaddr=00:00:00:00:00:00
 
 # Cabl
 ro.qualcomm.cabl=1
