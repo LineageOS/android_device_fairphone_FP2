@@ -63,6 +63,7 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8974 \
     audio.r_submix.default \
     audio.usb.default \
+    libaudioclient_shim \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
