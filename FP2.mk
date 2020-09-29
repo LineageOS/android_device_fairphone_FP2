@@ -128,6 +128,10 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
 
+# Healthd
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-service
+
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
