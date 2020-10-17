@@ -159,6 +159,9 @@ TARGET_FM_LEGACY_PATCHLOADER := true
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
+# Legacy memfd
+TARGET_HAS_MEMFD_BACKPORT := true
+
 # Wait for qseecomd
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
