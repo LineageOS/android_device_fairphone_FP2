@@ -38,25 +38,6 @@ LOCAL_LDFLAGS += -Wl,--export-dynamic
 LOCAL_C_INCLUDES:= \
     $(LOCAL_PATH)/platform_lib_abstractions
 
-LOCAL_COPY_HEADERS_TO:= gps.utils/
-LOCAL_COPY_HEADERS:= \
-   loc_log.h \
-   loc_cfg.h \
-   log_util.h \
-   linked_list.h \
-   msg_q.h \
-   MsgTask.h \
-   LocHeap.h \
-   LocThread.h \
-   LocTimer.h \
-   loc_target.h \
-   loc_timer.h \
-   LocSharedLock.h \
-   platform_lib_abstractions/platform_lib_includes.h \
-   platform_lib_abstractions/platform_lib_time.h \
-   platform_lib_abstractions/platform_lib_macros.h \
-   loc_misc_utils.h
-
 LOCAL_MODULE := libgps.utils
 LOCAL_MODULE_OWNER := qcom
 LOCAL_VENDOR_MODULE := true
@@ -65,3 +46,8 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 #endif # BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libgps.utils_headers
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH) $(LOCAL_PATH)/platform_lib_abstractions
+include $(BUILD_HEADER_LIBRARY)
