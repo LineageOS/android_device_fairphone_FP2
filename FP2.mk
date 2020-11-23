@@ -63,7 +63,6 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8974 \
     audio.r_submix.default \
     audio.usb.default \
-    audio_policy.msm8974 \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -99,7 +98,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbson \
     libcnefeatureconfig \
-    libnl_2 \
     libtinyxml \
     libxml2
 
@@ -116,7 +114,6 @@ PRODUCT_PACKAGES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
-    copybit.msm8974 \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     liboverlay \
