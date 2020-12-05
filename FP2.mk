@@ -251,8 +251,7 @@ PRODUCT_PACKAGES += \
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service \
-    keystore.msm8974
+    android.hardware.keymaster@3.0-service
 
 # FM radio
 PRODUCT_PACKAGES += \
