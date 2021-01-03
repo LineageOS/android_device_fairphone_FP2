@@ -35,6 +35,8 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 TARGET_KERNEL_CONFIG := lineageos_FP2_defconfig
 TARGET_KERNEL_SOURCE := kernel/fairphone/msm8974
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += console=ttyHSL0,115200,n8
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_IMAGE_NAME := zImage
 
