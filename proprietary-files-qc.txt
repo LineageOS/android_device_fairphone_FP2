@@ -106,7 +106,10 @@ vendor/lib/libsystem_health_mon.so
 -app/shutdownlistener/shutdownlistener.apk:vendor/app/shutdownlistener/shutdownlistener.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|61ddb707d25a574a19315eb573e3cda5416b342e
 lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
-bin/netmgrd:vendor/bin/netmgrd|690415e9dba475b062d3090c131b0f9d71ab0e02
+
+# netmgrd taken from oppo/msm8974
+bin/netmgrd:vendor/bin/netmgrd|6d953fa4d4614ff6a56db9b7078be343da093e44
+
 bin/qmuxd:vendor/bin/qmuxd
 bin/radish:vendor/bin/radish
 bin/rfs_access:vendor/bin/rfs_access
