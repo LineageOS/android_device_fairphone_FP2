@@ -65,9 +65,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaudioclient_shim \
     libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors
+    libqcomvisualizer
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
