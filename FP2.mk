@@ -65,9 +65,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio_policy.msm8974 \
     libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors
+    libqcomvisualizer
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
