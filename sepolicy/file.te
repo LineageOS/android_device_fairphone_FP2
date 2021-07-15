@@ -1,2 +1,3 @@
+type mediadrm_vendor_data_file, file_type, data_file_type;
 type proc_last_kmsg, fs_type, proc_type;
 type sensor_calibration_file, file_type;

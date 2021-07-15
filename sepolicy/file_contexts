@@ -10,3 +10,7 @@
 /dev/stune(/.*)? u:object_r:cgroup:s0
 
 /sys/devices/qpnp-bms-(.*)?/power_supply/bms(/.*)? u:object_r:sysfs_battery_supply:s0
+
+# DRM
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey u:object_r:hal_drm_clearkey_exec:s0
+/data/vendor/mediadrm(/.*)? u:object_r:mediadrm_vendor_data_file:s0
