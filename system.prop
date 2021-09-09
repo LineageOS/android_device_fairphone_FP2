@@ -118,5 +118,4 @@ ro.vendor.extension_library=libqti-perfd-client.so
 wifi.interface=wlan0
 
 # Wifi Display
-persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
