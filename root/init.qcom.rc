@@ -45,12 +45,6 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
     write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
 
-on init
-    # Set the property to indicate type of virtual display to 0
-    # 0 indicates that virtual display is not a Wifi display and that the
-    # session is not exercised through RemoteDisplay in the android framework
-    setprop persist.sys.wfd.virtual 0
-
 on fs
     mount_all /vendor/etc/fstab.qcom
 
