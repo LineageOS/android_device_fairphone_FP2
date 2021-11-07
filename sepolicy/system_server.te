@@ -1,3 +1,4 @@
+allow system_server app_zygote:process getpgid;
 allow system_server proc_last_kmsg:file r_file_perms;
 
 get_prop(system_server, userspace_reboot_exported_prop);
